@@ -1,0 +1,95 @@
+{% extends "PasswordManagerCoreBundle::layout.html.twig" %}
+
+{% block title %}
+
+    Test - {{ parent() }}
+
+{% endblock %}
+ {% block body %}
+     {{ parent() }}
+ {% endblock %}
+
+{% block passwordmanager_platform_body_index %}
+    <div id="list-server"  class="py-5 gradient-overlay bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="py-5 col-md-12">
+                    <div class="row">
+                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-unlock-alt"></i></div>
+                        <div class="col-8">
+                            <h5 class="mb-3"><b>Mes mots de passes</b></h5>
+                            <p class="my-1">Retrouver la liste de vos mots de passe selon les catégories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="bg_list-mdp">
+        <h2 id="list-mdp-title">Liste de mes mots de passe</h2>
+        <h4 id="sub-list-mdp-title">Pour plus d'information et gérer votre mot de passe , cliquer sur la colonne <b>lien du site web</b></h4>
+        <h5 id="sub-list-mdp-title">Pour votre confort, vous pouvez faire une recherche, trier, vos mots de passe.</h5>
+
+                    <table id="list-pass-table"  class="table table-striped ">
+                        <thead>
+                        <tr>
+                            <th class="sorting">Id</th>
+                            <th class="sorting">Titre</th>
+                            <th class="sorting">Lien du site web</th>
+                            <th class="sorting">Login</th>
+                            <th class="sorting">Mot de passe</th>
+                            <th class="sorting">Ajouté le</th>
+                            <th class="sorting">Catégorie</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for advert in listAdverts %}
+                            <tr>
+                                <td> {{ advert.id }}</td>
+                                <td>{{ advert.title }}</td>
+                                <td> <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}">
+                                        {{ advert.title }}
+                                    </a></td>
+                                <td>{{ advert.login }}</td>
+                                <td>{{ advert.password }}</td>
+                                <td>le {{ advert.date|date('d/m/Y') }}</td>
+                                <td>
+                                    {% if not advert.categories.empty %}
+
+                                            {% for category in advert.categories %}
+                                                {{ category.name }}{% if not loop.last %}<br> {% endif %}
+                                            {% endfor %}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+{#                <ul class="pagination">
+                    #}{# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}{#
+                    {% for p in range(1, nbPages) %}
+                        <li{% if p == page %} class="active"{% endif %}>
+                            <a href="{{ path('password_manager_platform_home', {'page': p}) }}">{{ p }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>#}
+
+            <div style="width:50%;display:block;margin:0 auto;">
+                <a class="btn btn-lg btn-secondary mx-1" href="/web/app_dev.php/platform/add/advert" style="margin: 0 auto;display: block;">Ajouter un mot de passe à ma liste</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#list-pass-table').DataTable(
+                {
+                    "language": {
+                        "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                    }
+                }
+            );
+        });
+    </script>
+{% endblock %}

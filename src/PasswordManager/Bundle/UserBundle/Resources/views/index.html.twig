@@ -1,0 +1,76 @@
+{% extends "PasswordManagerCoreBundle::layout.html.twig" %}
+
+{% block title %}
+ Accueil | {{ parent() }}
+{% endblock %}
+ {% block body %}
+     {{ parent() }}
+
+ {% endblock %}
+
+{% block passwordmanager_platform_body_index %}
+    {{ parent() }}
+    <div class="py-5 text-center opaque-overlay" style='background-image: url("{{ absolute_url(asset('img/O7MF5N0.jpg')) }}");'>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-12 text-white">
+                    <h1 class="display-3 mb-4">Bienvenue sur le gestionnaire de passe</h1>
+                    <p class="lead mb-5">un outil dédié pour vos besoins  de stockage de mot de passe</p>
+                    {% if  listAdverts  %}
+                    <a class="btn btn-lg btn-outline-light mx-1"  href="{{ path('password_manager_platform_add') }}">Ajouter un mot de passe à ma liste</a>
+                    <a class="btn btn-lg btn-primary mx-1"  href="{{ path('password_manager_platform_home')}}">Consulter ma liste de mot de passe</a>
+                    {% else %}
+                        <a class="btn btn-lg btn-primary mx-1"  href="{{ path('password_manager_platform_add') }}">Ajouter un mot de passe à ma liste</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5 gradient-overlay bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="py-5 col-md-6">
+                    <a class="link-categories-wel" href="platform">
+                    <div class="row">
+                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
+                        <div class="col-8">
+                            <h5 class="mb-3"><b>Liste des serveurs</b></h5>
+                            <p class="my-1">Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</p>
+                        </div>
+
+                    </div>
+                    </a>
+                </div>
+                <div class="py-5 col-md-6">
+                    <div class="row">
+                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa-map-o"></i></div>
+                        <div class="col-8">
+                            <h5 class="mb-3"><b>Liste des sites web</b></h5>
+                            <p class="my-1">Design unique interfaces by customizing Bootstrap theme. Modify colors, fonts and grid setting without opening any CSS file. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="py-5 col-md-6">
+                    <div class="row">
+                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
+                        <div class="col-8">
+                            <h5 class="mb-3"><b>Accès admin</b></h5>
+                            <p class="my-1">Accèder à vos mots de passe d'administration de vos sites web préférés.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-5 col-md-6">
+                    <div class="row">
+                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa-code"></i></div>
+                        <div class="col-8">
+                            <h5 class="mb-3"><b>Applications</b></h5>
+                            <p class="my-1">Work on top of native HTML and SASS files. Extending, customizing and integrating JavaScript is a breeze. With no limits. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

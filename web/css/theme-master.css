@@ -1,0 +1,148 @@
+#bg-login-wall{
+    background-image: url("../img/background-login.jpg");
+    background-size: 100%;
+}
+
+#block-form{
+    margin-top: 5%;
+}
+
+.pb-3.icon.awesome {
+    display: inline;
+    margin-left: 10px;
+}
+
+#link-to-register li{
+display:inline;
+}
+
+#link-to-register li a{
+    display:inline-block;
+    margin:10px;
+}
+
+a{
+    color:#292b2c;
+}
+
+.btn .mt-2 .btn-outline-dark
+{
+    color:#343a40;
+}
+
+@media(min-width: 768px){
+
+    nav .navbar {
+        border-radius: 0px !important;
+    }
+
+}
+.navbar{
+    margin-bottom: 0px !important;
+}
+
+.bg-secondary .p-4.col-md-4 {
+    text-align: center !important;
+}
+.py-5.gradient-overlay.bg-dark.text-white .py-5.col-md-6 a{
+
+    color:#ffffff !important;
+}
+
+a:hover{
+    text-decoration: unset !important;
+}
+
+#list-server{
+
+    border-top: 5px #868e96 solid;
+}
+
+#table-pass h2{
+
+    text-align:center;
+}
+
+#table-pass{
+
+    margin: 5% auto 5%;
+
+}
+
+#list-footer li{
+    display:inline;
+    margin: 5px;
+}
+
+#list-mdp-title{
+    text-align:center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#bg_list-mdp{
+    margin-bottom:200px;
+}
+
+#sub-list-mdp-title{
+
+    text-align:center;
+    margin-bottom: 30px;
+}
+
+footer .col-md-12.mt-3 p.text-center.text-white {
+    margin-bottom: 11px;
+    margin-top: 10px;
+}
+
+
+#bg-index-first-content{
+
+    background-image: url("../img/O7MF5N0.jpg");
+    width:100%;
+}
+
+.navbar {
+
+    border-radius: 0px !important;
+}
+
+#navbarSupportedContent {
+
+    margin-left: 0px !important;
+}
+
+#logo-add-pass{
+
+    margin: 0 auto !important;
+    display: block;
+    margin-bottom:30px !important;
+}
+
+#text-delete-pass{
+    margin-top:100px;
+    text-align:center;
+    margin-bottom: 150px;
+}
+
+#list-pass-table_wrapper{
+    display:inherit !important;
+    width: 80% ;
+    margin: 0 auto;
+
+}
+
+#list-pass-table_wrapper .row:nth-child(1){
+
+    margin-bottom: 30px;
+}
+
+.num-pass-index{
+    color:#428bca;
+}
+
+body#body-login{
+	
+	background-color: transparent !important;
+}
+

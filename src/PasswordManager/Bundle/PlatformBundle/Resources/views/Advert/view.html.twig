@@ -1,0 +1,133 @@
+{% extends "PasswordManagerPlatformBundle::layout.html.twig" %}
+{% block title %}
+
+  Visualisation des détails du mot de passe | {{ parent() }}
+
+{% endblock %}
+ {% block body %}
+     {{ parent() }}
+ {% endblock %}
+{% block passwordmanager_platform_body_index %}
+  <div id="list-server" class="py-5 gradient-overlay bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="py-5 col-md-12">
+          <div class="row">
+            <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa-map-o"></i></div>
+            <div class="col-8">
+              <h4 class="mb-3"><b>Détails du mot de passe</b></h4>
+              <h5 class="mb-3"><b>Catégorie : </b></h5>
+              <p class="my-1">{% for category in advert.categories %}
+                      {{ category.name }}{% if not loop.last %}, {% endif %}
+                  {% endfor %} </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{#{% if advert.image is not null %}
+<img
+  src="{{ asset(advert.image.uploadDir ~ '/' ~ advert.image.id ~ '.' ~ advert.image.url) }}"
+  alt="{{ advert.image.alt }}"
+/>
+{% endif %}#}
+{#
+  {% if listAdvertSkills|length > 0 %}
+  <div>
+    Cette annonce requiert les compétences suivantes :
+    <ul>
+      {% for advertSkill in listAdvertSkills %}
+        <li>{{ advertSkill.skill.name }} : niveau {{ advertSkill.level }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
+#}
+
+<br/><br/>
+<div>
+{% for list in listApplication %}
+
+  <p> {{ list.content }}"</p>
+
+{% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card text-center">
+        <div class="card-header">
+          <h2>{{ advert.title }}</h2>
+        </div>
+        <div class="card-block">
+          <br/><br/>
+          <p class="card-text" style="text-align: center;padding: 30px;"> {{ advert.content }}</p>
+
+          {% if advert.url %}
+        <p><a href="{{ advert.url }}" target="_blank" class="btn btn-primary">Accéder au site Web</a></p>
+        {% endif %}
+          <br/><br/>
+
+        </div>
+        <br/><br/>
+        <div class="card-footer text-muted">
+          <p>
+            <b>Login :</b><span id="selc-text" >{{ advert.login }}</span>
+            <button class="field-clipboard" data-clipboard-target="#selc-text">
+              Copier dans le presse-papier
+            </button>
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          <p>
+            <b>Mot de passe : </b><span id="selc-text-2" >{{ advert.password }}</span>
+            <button style="float:right;margin-right:20px;" class="field-clipboard" data-clipboard-target="#selc-text-2">
+              <img  style="width:16px;" src="{{ absolute_url(asset('img/copy.png')) }}" alt="Copier dans le presse-papier">
+            </button>
+          </p>
+        </div>
+        <a href="{{ path('password_manager_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
+          <i class="glyphicon glyphicon-edit"></i>
+          Modifier le mot de passe
+        </a>
+        <a href="{{ path('password_manager_platform_delete', {'id': advert.id}) }}" class="btn btn-secondary">
+          <i class="glyphicon glyphicon-trash"></i>
+          Supprimer le mot de passe
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <br/><br/>
+
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-12">
+  <p>
+
+    <a href="{{ path('password_manager_platform_home') }}" class="btn btn-default">
+
+      <i class="glyphicon glyphicon-chevron-left"></i>
+
+      Retour à la liste
+
+    </a>
+
+
+
+  </p>
+
+  </div>
+  </div>
+  </div>
+<h1>
+   {{ render(controller("PasswordManagerPlatformBundle:Advert:list", {'limit': 3})) }}
+</h1>
+  <script>
+      new Clipboard('.field-clipboard');
+  </script>
+
+{% endblock %}

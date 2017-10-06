@@ -1,0 +1,36 @@
+{% extends "PasswordManagerCoreBundle::layout.html.twig" %}
+{% block title %}
+  Modifier une annonce - {{ parent() }}
+{% endblock %}
+
+{% block passwordmanager_platform_body_index %}
+
+    {{ parent() }}
+
+    <div id="list-server"  class="py-5 gradient-overlay bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="py-5 col-md-12">
+                    <div class="row">
+                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-plus-circle"></i></div>
+                        <div class="col-8">
+                            <h5 class="mb-3"><b>Modifier un mot de passe</b></h5>
+                            <p class="my-1">Modifier un mot de passe selon de nouvelles regles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2 id="list-mdp-title">Modifier le mot de passe</h2>
+    <img id="logo-add-pass" src= "{{ absolute_url(asset('favicon/favicon.png')) }}">
+
+  {{ include("PasswordManagerPlatformBundle:Advert:form.html.twig") }}
+
+
+   {# <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+     Retour à l'annonce
+    </a>#}
+  </p>
+{% endblock %} 

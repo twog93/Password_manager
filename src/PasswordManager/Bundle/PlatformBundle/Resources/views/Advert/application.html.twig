@@ -1,0 +1,26 @@
+{% extends "PasswordManagerPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+ {% block body %}
+     {{ parent() }}
+ {% endblock %}
+{% block passwordmanager_platform_body %}
+
+  <h2>Liste des annonces</h2>
+
+  <ul>
+
+  {% for list in listApplications %}
+<li>
+ <a href="{{ path('password_manager_platform_view', {'id': list.advert.id}) }}">{{ list.advert.title }}</a> 
+<p>Les candidatures :</p>
+<p>{{ list.content }} par {{ list.author }} le {{ list.date|date('d/m/Y') }}</p>
+ </li> 
+
+{% endfor %}
+
+  </ul>
+
+{% endblock %}

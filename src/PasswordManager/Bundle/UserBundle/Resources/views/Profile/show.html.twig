@@ -1,0 +1,13 @@
+
+
+{% block profile %}
+    Page en cours d'implémentation
+
+    <a  href="{{ path('password_manager_core_home')}}">Retour à l'accueil</a>
+
+{% endblock %}
+
+{% block fos_user_content %}
+    {% include "@FOSUser/Profile/show_content.html.twig" %}
+{% endblock fos_user_content %}
+

@@ -1,0 +1,11 @@
+password_manager_core_home:
+    path:     /
+    defaults: { _controller: PasswordManagerCoreBundle:Home:index }
+
+password_manager_core_contact:
+    path:    /contact
+    defaults:  { _controller:PasswordManagerCoreBundle:Home:contact }
+
+password_manager_core_pass_generator:
+    path:    /generateur/mot-de-passe
+    defaults:  { _controller:PasswordManagerCoreBundle:Home:generator }

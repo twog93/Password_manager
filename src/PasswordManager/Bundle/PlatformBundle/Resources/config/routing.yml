@@ -1,0 +1,42 @@
+password_manager_platform_home:
+    path:    /{page}
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:index, page: 1 }
+    requirements:
+        page: \d*
+
+password_manager_platform_view:
+    path:    /advert/{id}
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:view }
+
+password_manager_platform_view_slug:
+    path:  /{year}/{slug}.{_format}
+    defaults:
+        _controller: PasswordManagerPlatformBundle:Advert:viewSlug 
+        format:     html
+    requirements:
+        year:  \d{4}
+        format:  html|xml|csv
+
+password_manager_platform_add:
+    path:    /add/advert
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:add }
+
+password_manager_platform_edit:
+    path:    /edit/{id}
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:edit }
+    requirements:
+        id: \d+
+
+password_manager_platform_delete:
+    path:      /delete/{id}
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:delete }
+    requirements:
+        id: \d+
+
+password_manager_platform_test:
+    path:    /test
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:listAnnonce }
+
+password_manager_platform_ordered:
+    path:    /list/advert
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:listAnnonce }

@@ -1,5 +1,5 @@
 Password Manager
-=======
+============
 
 
 [![N|Solid](https://symfony.com/images/v5/pictos/home-main-illu.svg)](http://gerald-duveau.fr)
@@ -16,3 +16,28 @@ This application is intended to facilitate the management of passwords
 - Secure management of password storage.
 - Transversality of the use of these passwords in the context of work.
 - Propose a tool with a simple interface with an adminstration access
+
+
+# Installing
+
+
+Under redaction
+
+
+
+# Built With
+
+| Plugin | Link |
+| ------ | ------ |
+| FOSUserBundle | <https://eee>|
+| Sonata Admin |  <https://eee> |
+| Encrypt PLugin | <https://eee> |
+| ORM | <https://eee>|
+
+
+## License
+
+MIT
+
+
+Developped by Gérald DUVEAU

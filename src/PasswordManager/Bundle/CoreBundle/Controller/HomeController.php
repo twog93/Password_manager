@@ -33,6 +33,9 @@ class HomeController extends Controller
 	
 	 public function contactAction(Request $request)
     {
+		
+		 $useremail = $this->getUser()->getEmail();
+		$mailer = $this->container->get('mailer');
         // Vérification si anonyme ou authentifier
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             // Sinon redirection login page
@@ -51,9 +54,36 @@ class HomeController extends Controller
             $contact->setUser($user);
             $em->persist($contact);
             $em->flush();
-
-
             $request->getSession()->getFlashBag()->add('notice', 'message bien enregistrée.');
+			
+			
+			//Envois email Admin
+			$message = (new \Swift_Message('Message utilisateur'))
+			->setFrom($useremail)
+			->setTo('testee@yopmail.com')
+			->setBody(
+				$this->renderView(
+                'PasswordManagerCoreBundle:Home:mailing-contact.html.twig',
+                array('subject' => $contact->getSubject(),
+							'body' => $contact->getBody())
+            ),
+            'text/html'
+        );
+        /*
+         * If you also want to include a plaintext version of the message
+        ->addPart(
+            $this->renderView(
+                'Emails/registration.txt.twig',
+                array('name' => $name)
+            ),
+            'text/plain'
+        )
+        */
+	
+
+		$mailer->send($message);
+			
+			
             return $this->redirectToRoute('password_manager_core_home');
 
         }
@@ -89,6 +119,9 @@ class HomeController extends Controller
         return $this->render('PasswordManagerCoreBundle:Home:generate_password.html.twig');
 
 
+	
+    }	
 
-    }
+	
 }
+

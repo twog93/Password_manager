@@ -26,7 +26,6 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-		 $pattern = 'D%';
 		 
         $builder
         ->add('subject')

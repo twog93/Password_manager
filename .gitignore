@@ -19,3 +19,4 @@ app/config/parameters.yml
 /i.php
 /var\logs
 /tests/
+app/config/config.yml

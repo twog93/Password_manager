@@ -58,14 +58,15 @@ class HomeController extends Controller
 			
 			
 			//Envois email Admin
-			$message = (new \Swift_Message('Message utilisateur'))
-			->setFrom($useremail)
-			->setTo('testee@yopmail.com')
+			$message = (new \Swift_Message('Confirmation de réception de votre message'))
+			->setFrom('geraldduveau@gmail.com')
+			->setTo('2gcorps@gmail.com')
 			->setBody(
 				$this->renderView(
                 'PasswordManagerCoreBundle:Home:mailing-contact.html.twig',
                 array('subject' => $contact->getSubject(),
-							'body' => $contact->getBody())
+                        'author' => $user->getUsername(),
+					'body' => $contact->getBody())
             ),
             'text/html'
         );
@@ -79,7 +80,19 @@ class HomeController extends Controller
             'text/plain'
         )
         */
-	
+	   $messageToAdmin = (new \Swift_Message("Demande d'information"))
+            ->setFrom('formContat-gmp@afbiodiversite.fr')
+            ->setTo('contac-gmp@afbiodiversite.Fr')
+            ->setBody(
+                $this->renderView(
+                'PasswordManagerCoreBundle:Home:mailing-contact-admin.html.twig',
+                array('subject' => $contact->getSubject(),
+                      'author' => $user->getUsername(),
+                      'body' => $contact->getBody(),
+                      'email' => $suer->getEmail())
+            ),
+            'text/html'
+        );
 
 		$mailer->send($message);
 			

@@ -5,6 +5,7 @@ namespace PasswordManager\Bundle\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -36,5 +37,5 @@ class User extends BaseUser
      * @ORM\ManyToOne(targetEntity="\PasswordManager\Bundle\PlatformBundle\Entity\Advert")
      * @ORM\JoinColumn(nullable=true)
      */
-    
+
 }

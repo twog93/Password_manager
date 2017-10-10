@@ -19,10 +19,22 @@
                         <div class="card-body p-5 bg-light text-left">
                             <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Création compte</h3>
                             <p>Surcharger formulaire</p>
+                            {% if app.request.hasPreviousSession %}
+                                {% for type, messages in app.session.flashbag.all() %}
+                                    {% for message in messages %}
+                                        <div class="flash-{{ type }}">
+                                            {{ message }}
+                                        </div>
+                                    {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+
                             {% block fos_user_content %}
                                 {% include "@FOSUser/Registration/register_content.html.twig" %}
                                 <a style="display:inherit;text-align:center;" href="../login">Se connecter</a>
                             {% endblock fos_user_content %}
+
+
                         </div>
                     </div>
                 </div>

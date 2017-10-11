@@ -85,6 +85,11 @@ fos_user:
       address: "geraldduveau@gmail.com"
       sender_name: "gg"
     use_username_form_type: true
+    service:
+      mailer: fos_user.mailer.twig_swift
+    resetting:
+      email:
+            template:  email/resetting.email.twig
 assetic:
     debug:  '%kernel.debug%'
 

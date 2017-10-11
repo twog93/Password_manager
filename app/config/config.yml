@@ -65,8 +65,8 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: 'gmail'
-    username: ''
-    password: ''
+    username: 'geraldduveau@gmail.com'
+    password: 'Dbzhsx92'
     spool: { type: memory }
 
 # Stof\DoctrineExtensionsBundle configuration
@@ -82,8 +82,8 @@ fos_user:
     group:
         group_class:   PasswordManager\Bundle\UserBundle\Entity\Group
     from_email:
-      address: "%mailer_user%"
-      sender_name: "%mailer_user%"
+      address: "geraldduveau@gmail.com"
+      sender_name: "gg"
     use_username_form_type: true
 assetic:
     debug:  '%kernel.debug%'

@@ -27,7 +27,7 @@
                                 <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
                                     <div>
                                         <label for="username">{{ 'resetting.request.username'|trans }}</label>
-                                        <input type="text" id="username" name="username" required="required" />
+                                        <input class="form-control" type="text" id="username" name="username" required="required" />
                                     </div>
                                     <div id="button-init-pass-tools">
                                         <input class="btn mt-2 btn-outline-dark" type="submit" value="{{ 'Initialiser le mot de passe'|trans }}" />
@@ -35,7 +35,7 @@
                                 </form>
                                 <div>
                                     <ul id="link-to-register">
-                                        <li><a href="register">Créer un compte</a></li>
+                                        <li><a href="../register">Créer un compte</a></li>
                                         <li><a style="display:inherit;text-align:center;" href="../login">Se connecter</a></li>
                                     </ul>
                                 </div>

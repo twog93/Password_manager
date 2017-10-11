@@ -89,7 +89,7 @@ class HomeController extends Controller
                 array('subject' => $contact->getSubject(),
                       'author' => $user->getUsername(),
                       'body' => $contact->getBody(),
-                      'email' => $suer->getEmail())
+                      'email' => $user->getEmail())
             ),
             'text/html'
         );

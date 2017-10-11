@@ -157,3 +157,23 @@ body#body-login{
     border: 1px solid transparent;
     border-radius: 0.25rem;
 }
+
+#form-add-password .control-label.required{
+
+    margin-bottom: 7px !important;
+}
+
+
+#plainPassword label .control-label.required:nth-child(1){
+
+    display:none;
+}
+
+#profil-card{
+
+    margin-bottom:50px;
+}
+#img-profil{
+
+    padding-right:10px;
+}

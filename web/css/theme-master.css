@@ -146,3 +146,19 @@ body#body-login{
 	background-color: transparent !important;
 }
 
+#bg-login-wall .help-block .list-unstyled{
+
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin-top: 5px;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+#form-add-password .control-label.required{
+
+    margin-bottom: 7px !important;
+}

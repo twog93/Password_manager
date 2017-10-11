@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 use Ambta\DoctrineEncryptBundle\Configuration\Encrypted;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
  * Advert
@@ -64,7 +65,7 @@ class Advert
 
     /**
      * @var string
-     * @Assert\Length(min=10, minMessage="Le titre doit faire au moins {{ limit }} caractères.")
+     * @Assert\Length(min=5, minMessage="Le titre doit faire au moins {{ limit }} caractères.")
      * @ORM\Column(name="title", type="string", length=255)
      */
     private $title;
@@ -72,19 +73,20 @@ class Advert
     /**
      * @var string
      * @Assert\Length(min=5, minMessage="L'url doit faire au moins {{ limit }} caractères.")
+     * @Assert\Url(message = "L'url '{{ value }}' n'est pas une url valide de type 'http:'")
      * @ORM\Column(name="url", type="string", length=255)
      */
     private $url;
 
     /**
      * @var string
-     *
      * @ORM\Column(name="login", type="string", length=255)
      */
     private $login;
 
     /**
      * @ORM\Column(name="password", type="string", length=255)
+     * @Assert\Length(min=4, minMessage="Pour des raisons de sécurité, votre mot de passe ne peut être inférieur à {{ limit }} caractères.")
      * @Encrypted
      * @var int
      */
@@ -103,12 +105,7 @@ class Advert
 
     private $updatedAt;
 
-    /**
-   * @ORM\Column(name="published", type="boolean")
-   */
 
-    private $published = true;
-	
 	public function __construct()
 
   {
@@ -199,32 +196,6 @@ class Advert
     public function getContent()
     {
         return $this->content;
-    }
-	
-	
-
-    /**
-     * Set published
-     *
-     * @param boolean $published
-     *
-     * @return Advert
-     */
-    public function setPublished($published)
-    {
-        $this->published = $published;
-
-        return $this;
-    }
-
-    /**
-     * Get published
-     *
-     * @return boolean
-     */
-    public function getPublished()
-    {
-        return $this->published;
     }
 
     public function addCategory(Category $category){

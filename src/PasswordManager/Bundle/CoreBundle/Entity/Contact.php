@@ -3,6 +3,7 @@
 namespace PasswordManager\Bundle\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Contact
@@ -23,14 +24,14 @@ class Contact
 
     /**
      * @var string
-     *
+     *@Assert\Length(min=6, minMessage=" Votre sujet doit comporter au minimum {{ limit }} caractères.")
      * @ORM\Column(name="subject", type="string", length=255)
      */
     private $subject;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="body", type="text")
      */
     private $body;

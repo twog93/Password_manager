@@ -1,10 +1,43 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            </div>
+        <div class="col-md-8">
+        <div class="well" id="form-add-password">
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                {# Les erreurs générales du formulaire. #}
+                {{ form_errors(form) }}
+                <div class="form-group">
+                    {{ form_label(form.title, "Titre du mot de passe") }}
+                    {{ form_widget(form.title, {'attr': {'pattern': '.*'}}) }}
+                    {{ form_errors(form.title) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.url, "Lien du site web") }}
+                    {{ form_errors(form.url) }}
+                    {{ form_widget(form.url, {'attr': {'pattern': '.*'}}) }}
 
-<div class="well">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-  {{ form(form) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.login, "Identifiant d'accès") }}
+                    {{ form_errors(form.login) }}
+                    {{ form_widget(form.login, {'attr': {'pattern': '.*'}}) }}
+                </div>
+            <div class="form-group">
+                {{ form_label(form.password, "Mot de passe associé") }}
+                {{ form_errors(form.password) }}
+                {{ form_widget(form.password, {'attr': {'pattern': '.*'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_label(form.content, "Informations supplémentaires") }}
+                {{ form_errors(form.content) }}
+                {{ form_widget(form.content, {'attr': {'pattern': '.*'}}) }}
+            </div>
+                {{ form_end(form) }}
+                </form>
+            </div>
+            </div>
+            <div class="col-md-2">
             </div>
         </div>
-    </div>
 </div>

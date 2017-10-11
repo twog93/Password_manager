@@ -100,4 +100,3 @@ sonata_block:
 sonata_admin:
     templates:
         layout: standard_layout.html.twig
-

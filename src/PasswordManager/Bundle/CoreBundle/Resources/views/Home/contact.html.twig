@@ -18,15 +18,31 @@
     </div>
 <h2 id="list-mdp-title" >Formulaire de contact</h2>
 <img id="logo-add-pass" src= "{{ absolute_url(asset('img/speech-bubble.png')) }}">
-
-<div class="well">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-    {{ form(form) }}
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-8">
+                <div class="well" id="form-add-contact">
+                    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                    {# Les erreurs générales du formulaire. #}
+                    {{ form_errors(form) }}
+                    <div class="form-group">
+                        {{ form_label(form.subject, "Sujet de votre demande") }}
+                        {{ form_widget(form.subject, {'attr': {'pattern': '.*'}}) }}
+                        {{ form_errors(form.subject) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.body, "Contenu de votre message") }}
+                        {{ form_errors(form.body) }}
+                        {{ form_widget(form.body, {'attr': {'pattern': '.*'}}) }}
+                    </div>
+                    {{ form_end(form) }}
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-2">
             </div>
         </div>
     </div>
-
-</div>
     {% endblock %}

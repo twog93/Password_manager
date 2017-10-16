@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ absolute_url(asset('css/theme.css')) }}" type="text/css">
         <link rel="stylesheet" href="{{ absolute_url(asset('css/theme-master.css')) }}" type="text/css">
-        <title>Gestionnaire de mot de passe | Création compte utilisateur</title>
+        <title>Gestionnaire de mot de passe | Initialisation de votre mot de passe</title>
     </head>
     <body id="bg-login-wall">
     <div>
@@ -17,29 +17,18 @@
                 <div class="col-md-6" id="book">
                     <div class="card">
                         <div class="card-body p-5 bg-light text-left">
-                            <i class="fa fa-user-plus fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Création compte</h3>
+                            <i class="fa fa-undo fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Modification de votre mot de passe</h3>
                             <br/>
                             <br />
                             {% block fos_user_content %}
-                                <form></form>
-                                {{ form_start(form) }}
-                                {# Les erreurs générales du formulaire. #}
-                                {{ form_errors(form) }}
-                                <div class="form-group">
-                                    {{ form_label(form.email, "Adresse e-mail") }}
-                                    {{ form_widget(form.email, {'attr': {'pattern': '.*'}}) }}
-                                    {{ form_errors(form.email) }}
+
+                                {% trans_default_domain 'FOSUserBundle' %}
+
+                                {{ form_start(form, { 'action': path('fos_user_resetting_reset', {'token': token}), 'attr': { 'class': 'fos_user_resetting_reset' } }) }}
+                                {{ form_widget(form) }}
+                                <div>
+                                    <input type="submit" value="{{ 'resetting.reset.submit'|trans }}" />
                                 </div>
-                                <div class="form-group">
-                                    {{ form_label(form.username, "Nom d'utilisateur") }}
-                                    {{ form_widget(form.username, {'attr': {'pattern': '.*'}}) }}
-                                    {{ form_errors(form.username) }}
-                                </div>
-                                <div class="form-group" id="plainPassword">
-                                    {{ form_widget(form.plainPassword) }}
-                                    {{ form_errors(form.plainPassword) }}
-                                </div>
-                                <input class="btn mt-2 btn-outline-dark" type="submit" value="{{ 'Création du compte' }}" />
                                 {{ form_end(form) }}
 
                                 <a style="display:inherit;text-align:center;" href="../login">Se connecter</a>

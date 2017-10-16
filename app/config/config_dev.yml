@@ -40,6 +40,12 @@ monolog:
 #swiftmailer:
 #    delivery_addresses: ['me@example.com']
 swiftmailer:
+<<<<<<< HEAD
     transport: gmail
     username:  'geraldduveau@gmail.com'
     password:  'Dbzhsx92'
+=======
+    transport: 'gmail'
+    username:  'geraldduveau@gmail.com'
+    password:  'Dbzhsx92'
+>>>>>>> fix-alert-message

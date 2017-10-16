@@ -1,13 +1,70 @@
-
-
-{% block profile %}
-    Page en cours d'implémentation
-
-    <a  href="{{ path('password_manager_core_home')}}">Retour à l'accueil</a>
-
+{% extends "PasswordManagerCoreBundle::layout.html.twig" %}
+{% block passwordmanager_platform_body_index %}
+<div id="list-server"  class="py-5 gradient-overlay bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="py-5 col-md-12">
+                <div class="row">
+                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
+                    <div class="col-8">
+                        <h5 class="mb-3"><b>Mon profil</b></h5>
+                        <p class="my-1">Consulter, modifier votre profil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h2 id="list-mdp-title" >Mon profil</h2>
+    <img id="logo-add-pass" src= "{{ absolute_url(asset('img/user.png')) }}">
+</div>
+<div class="container">
+        <div class="row">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                    <div class="card" id="profil-card">
+                        <h4 class="card-header bg-dark text-white"> {{ user.username }}
+                            <div class="float-right small">
+                                <a class="btn btn-raised btn-danger" href="#" title="Ver perfil de Miguel92" data-toggle="tooltip" data-placement="top">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-raised btn-danger" href="mailto:{{ user.email }}" title="Mon E-mail">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </a>
+                                <a class="btn btn-raised btn-danger" href="#" title="Seguir usuario">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </h4>
+                        <div class="card-body">
+                            <div class="image float-left user-l" id="img-profil">
+                                <img src="http://68.media.tumblr.com/tumblr_lw2lhqjrel1qfmi03o11_r1_500.gif"  style="width:250px;" class="img-thumbnail" alt="avatar">
+                            </div>
+                            <div>
+                            <h4 class="card-title">Mes informations personnelles </h4>
+                                <p class="card-text">
+                                <b>Nom d'utilisateur : </b>{{ user.username }}
+                                </p>
+                                <p class="card-text">
+                                    <b>Adresse email : </b>{{ user.email }}
+                                </p>
+                                    <b>Roles : </b>
+                                    <ul id="list-roles">
+                                    {% for roles in user.roles %}
+                                        <li>{{ roles|replace({'_': ' ', "ROLE": " "})|lower }}</li>
+                                    {% endfor %}
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+    </div>
+<div class="row">
+        <br/><br/>
+    </div>
 {% endblock %}
-
-{% block fos_user_content %}
-    {% include "@FOSUser/Profile/show_content.html.twig" %}
-{% endblock fos_user_content %}
-

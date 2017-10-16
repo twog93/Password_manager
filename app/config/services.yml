@@ -34,6 +34,8 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
   # ...
+
+  # ...Add path for admin form
     admin.advert:
         class: PasswordManager\Bundle\PlatformBundle\Admin\AdvertAdmin
         arguments: [~, PasswordManager\Bundle\PlatformBundle\Entity\Advert, ~]

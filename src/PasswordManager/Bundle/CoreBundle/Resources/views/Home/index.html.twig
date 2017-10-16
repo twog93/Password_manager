@@ -48,12 +48,26 @@
                                     {% endfor %}
                                 {% endif %}
                             {% endfor %}
-                           Vous avez {{ i }} mots de passe dans cette liste.
+                            <span class="num-pass-index">Vous avez {{ i }} mots de passe dans cette liste.</span>
                         </div>
                     </div>
                     </a>
                     {% endif %}
                 {% endif %}
+                    {% if listAdverts is empty %}
+                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=ftp-sftp">
+                                <div class="row">
+                                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
+                                    <div class="col-8">
+                                        <h5 class="mb-3"><b>Liste des serveurs</b></h5>
+                                        <p class="my-1">Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</p>
+                                        <span class="num-pass-index">
+                                            Cette catégorie est vide.
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                    {% endif %}
                 </div>
                 <div class="py-5 col-md-6">
                     {% if   listAdverts is defined   %}
@@ -79,6 +93,21 @@
                                 </div>
                             </a>
                         {% endif %}
+                    {% endif %}
+                    {% if  listAdverts is empty  %}
+
+                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=sql">
+                                <div class="row">
+                                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
+                                    <div class="col-8">
+                                        <h5 class="mb-3"><b>Accès base de données</b></h5>
+                                        <p class="my-1">Accèder à vos bases de données.</p>
+                                        <span class="num-pass-index">
+                                            Cette catégorie est vide.
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
                     {% endif %}
                 </div>
             </div>
@@ -108,6 +137,18 @@
                             </a>
                         {% endif %}
                     {% endif %}
+                    {% if listAdverts is empty %}
+                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=user-admin">
+                                <div class="row">
+                                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
+                                    <div class="col-8">
+                                        <h5 class="mb-3"><b>Accès site web par identifiant</b></h5>
+                                        <p class="my-1">Accèder à vos mots de passe de connection de vos sites web préférés.</p>
+                                        <span class="num-pass-index">Cette catégorie est vide.</span>
+                                    </div>
+                                </div>
+                            </a>
+                    {% endif %}
                 </div>
                 <div class="py-5 col-md-6">
                     {% if   listAdverts is defined   %}
@@ -134,6 +175,18 @@
                             </a>
                         {% endif %}
                     {% endif %}
+                    {% if listAdverts is empty %}
+                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=user-admin">
+                                <div class="row">
+                                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
+                                    <div class="col-8">
+                                        <h5 class="mb-3"><b>Accès site web par identifiant</b></h5>
+                                        <p class="my-1">Accèder à vos mots de passe de connection de vos sites web préférés.</p>
+                                        <span class="num-pass-index">Cette catégorie est vide</span>
+                                    </div>
+                                </div>
+                            </a>
+                    {%  endif %}
                 </div>
                 <div class="py-5 col-md-3">
                 </div>
@@ -162,6 +215,18 @@
                             </a>
                         {% endif %}
                     {% endif %}
+                    {% if listAdverts is empty %}
+                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=divers">
+                                <div class="row">
+                                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
+                                    <div class="col-8">
+                                        <h5 class="mb-3"><b>Accès aux divers mots de passe</b></h5>
+                                        <p class="my-1">Accèder à vos mots de passe inclassables.</p>
+                                        <span class="num-pass-index">Cette catégorie est vide</span>
+                                    </div>
+                                </div>
+                            </a>
+                    {%  endif %}
                 </div>
                 <div class="py-5 col-md-3">
                 </div>

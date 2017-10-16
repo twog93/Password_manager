@@ -34,13 +34,13 @@ class AdvertType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-		 $pattern = 'D%';
+		 $defaultValue = 'D%';
 		 
         $builder
         ->add('title')
         ->add('url',UrlType::Class)
         ->add('login')
-        ->add('password', PasswordType::Class)
+        ->add('password')
         ->add('content')
             /*
 
@@ -72,8 +72,7 @@ class AdvertType extends AbstractType
             'choice_label' => 'name',
             'multiple' => true,
             'expanded' => true,
-
-
+            'required' => true,
             ))
         ->add('save', SubmitType::class);
 

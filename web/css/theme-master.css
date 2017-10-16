@@ -228,7 +228,7 @@ body#body-login{
 }
 
 .cta {
-    background: #F65D7C;
+    background: #428BCA;
     color: #fff;
     padding: 15px;
     position: fixed;
@@ -248,12 +248,12 @@ body#body-login{
 }
 
 @keyframes newsletter-attention {
-    0% { padding: 15px; background: #F65D7C; }
-    8% { padding: 15px; background: #F65D7C; }
-    11% { padding: 25px 15px; background:#F65D7C }
-    13% { padding: 10px; background: #F65D7C;}
-    15% { padding: 15px; background: #F65D7C; }
-    17% { padding: 12px; background: #F65D7C; }
-    19% { padding: 15px; background: #F65D7C; }
+    0% { padding: 15px; background: #428BCA; }
+    8% { padding: 15px; background: #428BCA; }
+    11% { padding: 25px 15px; background:#428BCA }
+    13% { padding: 10px; background: #428BCA;}
+    15% { padding: 15px; background: #428BCA; }
+    17% { padding: 12px; background: #428BCA; }
+    19% { padding: 15px; background: #428BCA; }
     100% { padding: 15px;}
 }

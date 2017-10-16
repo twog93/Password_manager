@@ -43,8 +43,12 @@ class HomeController extends Controller
         }
 
         $user = $this->getUser();
-        $contact = new Contact();
 
+
+        $userId = $this->getUser()->getId();
+        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+
+        $contact = new Contact();
         // Ajout du formulaire de contact
         $form = $this->get('form.factory')->create(ContactType::class, $contact);
 
@@ -54,6 +58,7 @@ class HomeController extends Controller
             $contact->setUser($user);
             $em->persist($contact);
             $em->flush();
+
             $request->getSession()->getFlashBag()->add('notice', 'message bien enregistrée.');
 			
 			
@@ -95,8 +100,9 @@ class HomeController extends Controller
         );
 
 		$mailer->send($message);
-			
-			
+
+            $request->getSession()->getFlashBag()->add('notice', "Votre message a été envoyé à l'équipe support");
+
             return $this->redirectToRoute('password_manager_core_home');
 
         }
@@ -107,7 +113,8 @@ class HomeController extends Controller
 
         return $this->render('PasswordManagerCoreBundle:Home:contact.html.twig', array(
 
-            'form' => $form->createView(),));
+            'form' => $form->createView(),
+            'listAdverts' => $listAdverts,));
 
   }
 

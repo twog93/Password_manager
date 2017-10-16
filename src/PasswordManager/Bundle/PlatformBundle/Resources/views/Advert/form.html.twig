@@ -3,7 +3,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-  {{ form(form) }}
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                <div class="form-group">
+                    {{ form_label(form.title, "Titre de l'annonce") }}
+                    {{ form_widget(form.title, {'attr': {'class': 'form-control','pattern': '.*'}}) }}
+                    {{ form_errors(form.title) }}
+
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.url, "Lien du site web") }}
+                    {{ form_errors(form.url) }}
+                    {{ form_widget(form.url, {'attr': {'class': 'form-control','pattern': '.*'}}) }}
+                </div>
+
+
+                {{ form_end(form) }}
+                </form>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-{% block fos_user_content %}
+
 <!DOCTYPE html>
 <html id="bg-login-wall">
     <head>
@@ -18,31 +18,46 @@
                 <div class="col-md-6" id="book">
                     <div class="card">
                         <div class="card-body p-5 bg-light text-left">
-                            <i class="fa fa-user-circle fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Connexion</h3>
-                            <form action="{{ path("fos_user_security_check") }}" method="post">
-                                {% if csrf_token %}
-                                    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-                                {% endif %}
+                            <i class="fa fa-user-circle fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Connexion<br/></h3>
+                            <br/><br/>
+                            {# On affiche les messages flash que définissent les contrôleurs du bundle #}
+
+                            {% block fos_user_content %}
+
+                                <form action="{{ path("fos_user_security_check") }}" method="post">
                                 <div class="form-group">
-                                <label for="username">{{ 'security.login.username'|trans }}</label>
+                                <label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label>
                                 <input class="form-control" placeholder="Votre identifiant" type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
                                 </div>
                                 <div class="form-group">
-                                <label for="password">{{ 'security.login.password'|trans }}</label>
-                                <input  class="form-control" placeholder="Saisissez votre mot de passe" type="password" id="password" name="_password" required="required" />
+                                <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
+                                <input  class="form-control" placeholder="Votre mot de passe" type="password" id="password" name="_password" required="required" />
                                 </div>
                                 <div class="form-group">
                                 <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-                                <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+                                <label for="remember_me">{{ 'security.login.remember_me'|trans({}, 'FOSUserBundle') }}</label>
+                                </div>
+                                {% if csrf_token %}
+                                     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                {% endif %}
+
+                                    <div>
+                                        {% if error %}
+                                            <div class="alert alert-danger">
+                                                {{ error.messageKey|trans(error.messageData, 'security')|trim('.') }}
+                                            </div>
+                                        {%  endif %}
+                                    <input class="btn mt-2 btn-outline-dark" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
                                 </div>
                                 <div>
-                                    <input class="btn mt-2 btn-outline-dark" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-                                </div>
-                                <div><ul id="link-to-register">
+                                    <ul id="link-to-register">
                                         <li><a href="register">Créer un compte</a></li>
                                         <li><a href="resetting/request">mot de passe perdue</a></li>
-                                    </ul></div>
+                                    </ul>
+                                </div>
                             </form>
+
+                            {% endblock fos_user_content %}
                         </div>
                     </div>
                 </div>
@@ -55,4 +70,3 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     </body>
 </html>
-{% endblock fos_user_content %}

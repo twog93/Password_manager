@@ -146,3 +146,114 @@ body#body-login{
 	background-color: transparent !important;
 }
 
+#bg-login-wall .help-block .list-unstyled{
+
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    margin-top: 5px;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+#form-add-password .control-label.required{
+
+    margin-bottom: 7px !important;
+}
+
+
+#plainPassword label .control-label.required:nth-child(1){
+
+    display:none;
+}
+
+#profil-card{
+
+    margin-bottom:50px;
+}
+#img-profil{
+
+    padding-right:10px;
+}
+
+.popup {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    transition: all 1s ease;
+}
+
+.popup-container {
+    height: 80px;
+}
+
+
+.popup-active {
+    overflow: hidden;
+}
+
+.popup {
+    height: 100%;
+    width: 100%;
+}
+
+.popup-form {
+    top: 0;
+    height: calc(100% - 49px);
+}
+
+.popup-form * {
+    opacity: 1;
+}
+
+.popup-form {
+    top: 0;
+}
+
+
+.popup-close {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #252525;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.cta {
+    background: #428BCA;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.cta.newsletter-attention {
+    -webkit-animation: newsletter-attention 1s infinite; /* Safari 4+ */
+    -moz-animation:    newsletter-attention 1s infinite; /* Fx 5+ */
+    -o-animation:      newsletter-attention 1s infinite; /* Opera 12+ */
+    animation:         newsletter-attention 1s infinite; /* IE 10+, Fx 29+ */
+    animation-delay: 8s;
+    animation-duration: 6s;
+}
+
+@keyframes newsletter-attention {
+    0% { padding: 15px; background: #428BCA; }
+    8% { padding: 15px; background: #428BCA; }
+    11% { padding: 25px 15px; background:#428BCA }
+    13% { padding: 10px; background: #428BCA;}
+    15% { padding: 15px; background: #428BCA; }
+    17% { padding: 12px; background: #428BCA; }
+    19% { padding: 15px; background: #428BCA; }
+    100% { padding: 15px;}
+}

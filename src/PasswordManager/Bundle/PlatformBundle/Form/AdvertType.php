@@ -34,13 +34,13 @@ class AdvertType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-		 $pattern = 'D%';
+		 $defaultValue = 'D%';
 		 
         $builder
         ->add('title')
         ->add('url',UrlType::Class)
         ->add('login')
-        ->add('password', PasswordType::Class)
+        ->add('password')
         ->add('content')
             /*
 
@@ -72,13 +72,12 @@ class AdvertType extends AbstractType
             'choice_label' => 'name',
             'multiple' => true,
             'expanded' => true,
-
-
+            'required' => true,
             ))
         ->add('save', SubmitType::class);
 
         // On ajoute une fonction qui va écouter un évènement
-        $builder->addEventListener(
+       /* $builder->addEventListener(
             FormEvents::PRE_SET_DATA,    // 1er argument : L'évènement qui nous intéresse : ici, PRE_SET_DATA
             function(FormEvent $event) { // 2e argument : La fonction à exécuter lorsque l'évènement est déclenché
                 // On récupère notre objet Advert sous-jacent
@@ -98,7 +97,7 @@ class AdvertType extends AbstractType
                     $event->getForm()->remove('published');
                 }
             }
-        );
+        );*/
     }
     
     /**

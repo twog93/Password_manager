@@ -22,6 +22,7 @@ class UserAdmin extends AbstractAdmin
                 'property' => 'name'
 
             ))
+            ->add('enabled')
         ;
 
         if ($this->isCurrentRoute('edit')) {

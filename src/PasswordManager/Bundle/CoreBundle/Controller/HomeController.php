@@ -134,10 +134,15 @@ class HomeController extends Controller
             // Sinon redirection login page
             return $this->redirectToRoute('password_manager_core');
         }
-
+        $userId = $this->getUser()->getId();
+        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
         $user = $this->getUser();
 
-        return $this->render('PasswordManagerCoreBundle:Home:generate_password.html.twig');
+        return $this->render('PasswordManagerCoreBundle:Home:generate_password.html.twig', array(
+
+            'listAdverts' => $listAdverts,)
+
+        );
 
 
 	

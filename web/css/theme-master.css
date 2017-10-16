@@ -257,3 +257,8 @@ body#body-login{
     19% { padding: 15px; background: #428BCA; }
     100% { padding: 15px;}
 }
+
+div#generator-pass{
+
+    margin-bottom:90px;
+}

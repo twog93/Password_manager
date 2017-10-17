@@ -1,10 +1,59 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% block fos_user_content  %}
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ absolute_url(asset('css/theme.css')) }}" type="text/css">
+        <link rel="stylesheet" href="{{ absolute_url(asset('css/theme-master.css')) }}" type="text/css">
+        <title>Gestionnaire de mot de passe | Confirmation nouvel utilisateur</title>
+    </head>
+    <body id="bg-login-wall">
+    <div>
+        <div class="container w-100">
+            <div class="row" id="block-form" >
+                <div class="align-self-center col-md-6 text-white">
+                    <h1 class="text-center text-md-left text-white display-3">Gestionnaire de mot de passe</h1>
+                </div>
+                <div class="col-md-6" id="book">
+                    <div class="card">
+                        <div class="card-body p-5 bg-light text-left">
+                            <i class="fa fa-undo fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Confirmation de création compte</h3>
+                            <br/>
+                            <br />
+                                {% trans_default_domain 'FOSUserBundle' %}
 
-{% trans_default_domain 'FOSUserBundle' %}
+                                <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
+                                    <p>Nous vous confirmons la création de votre compte</p>
+                                    {% if targetUrl %}
+                                        <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+                                    {% endif %}
+                                </form>
+                                <div>
+                                    <ul id="link-to-register">
+                                        <li><a style="display:inherit;text-align:center;" href="../login">Se connecter</a></li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/4df86cf1bf.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    </body></html>
+{% endblock %}
 
-{% block fos_user_content %}
-    <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+
+
+
+
+
+
     {% if targetUrl %}
     <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
-{% endblock fos_user_content %}
+
+
+

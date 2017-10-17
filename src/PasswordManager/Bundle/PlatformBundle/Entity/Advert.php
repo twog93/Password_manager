@@ -26,12 +26,13 @@ class Advert
 
     /**
     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Category", cascade={"persist"})
+     * @Assert\NotBlank()
     */
 
    private $categories;
 
     /**
-    * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")
+    * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")*
     */
     private $applications;
 
@@ -108,8 +109,6 @@ class Advert
 	public function __construct()
 
   {
-
-    // Par défaut, la date de l'annonce est la date d'aujourd'hui
 
     $this->date = new \Datetime();
     $this->categories = new ArrayCollection();

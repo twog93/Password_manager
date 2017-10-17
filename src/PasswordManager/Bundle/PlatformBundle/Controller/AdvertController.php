@@ -49,6 +49,10 @@ class AdvertController extends Controller
 
   public function viewAction($id){
 
+      //If user got 1 pass
+      $userId = $this->getUser()->getId();
+      $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+
     $em = $this->getDoctrine()->getManager();
     $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
     //$categories = $em->getRepository('PasswordManagerPlatformBundle:AdvertSkill')->find($id);
@@ -66,6 +70,7 @@ class AdvertController extends Controller
         'listApplication' => $listApplication,
         'listAdvertSkills' => $listAdvertSkills,
         'listCategories' => $listCategories,
+        'listAdverts' => $listAdverts
 		));
   }
 
@@ -144,7 +149,8 @@ class AdvertController extends Controller
    
     return $this->render('PasswordManagerPlatformBundle:Advert:add.html.twig', array(
 
-      'form' => $form->createView(),));
+      'form' => $form->createView(),
+        'listAdverts' => $listAdverts));
      
 	}
 
@@ -154,6 +160,10 @@ class AdvertController extends Controller
 
      $em = $this->getDoctrine()->getManager();
      $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
+
+      //If user got 1 pass
+      $userId = $this->getUser()->getId();
+      $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
     
       if(null === $advert){
 

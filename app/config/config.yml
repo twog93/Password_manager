@@ -64,9 +64,9 @@ doctrine:
 
 # Swiftmailer Configuration
 swiftmailer:
-    transport: 'gmail'
-    username: 'geraldduveau@gmail.com'
-    password: 'Dbzhsx92'
+    transport: 'smtp'
+    username: 'contact-gmp@afbiodiversite.fr'
+    password: ''
     spool: { type: memory }
 
 # Stof\DoctrineExtensionsBundle configuration
@@ -82,8 +82,8 @@ fos_user:
     group:
         group_class:   PasswordManager\Bundle\UserBundle\Entity\Group
     from_email:
-      address: "geraldduveau@gmail.com"
-      sender_name: "gg"
+      address: "contact-gmp@afbiodiversite.fr"
+      sender_name: "L'équipe support"
     use_username_form_type: true
     service:
       mailer: fos_user.mailer.twig_swift

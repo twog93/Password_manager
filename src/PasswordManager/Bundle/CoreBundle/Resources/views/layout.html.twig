@@ -11,14 +11,14 @@
           <link rel="stylesheet" href="{{ absolute_url(asset('css/theme-master.css')) }}" type="text/css">
           <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css')) }}">
           <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css')) }}">
+          <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
         {# Script #}
           <script src="{{ absolute_url(asset('js/font_awesome/4df86cf1bf.js')) }}"></script>
           <script src="{{ absolute_url(asset('js/jquery-1.12.4.js')) }}"></script>
           <script src="{{ absolute_url(asset('js/jquery.min.js')) }}"></script>
           <script src="{{ absolute_url(asset('js/bootstrap.min.js')) }}"></script>
-          <script src="{{ absolute_url(asset('js/jquery.dataTables.min.js')) }}"></script>
-          <script src="{{ absolute_url(asset('js/dataTables.bootstrap.min.js')) }}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+          <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+
       {% endblock %}
     </head>
     <body>
@@ -47,9 +47,6 @@
                      <li class="nav-item">
                              <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Contact</a>
                      </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('password_manager_core_pass_generator') }}">Générateur de mot de passe</a>
-                    </li>
                      <li class="nav-item">
                         <a class="nav-link text-white" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                      </li>
@@ -98,36 +95,21 @@
                     </div>
                 </div>
             </div>
-            {# On affiche tous les messages flash dont le nom est « notice » #}
-            {% for message in app.session.flashbag.get('notice') %}
-                    <div class="container">
-                        <div class="popup">
-                            <div class="popup-container">
-                                <div class="cta js-popup-toggle text-center newsletter-attention">
-                                    <p><i class="fa fa-pencil-square-o"></i> {{ message }} (<span class="popup-dismiss">Fermer le message</span>)</p>
-                                </div>
-                            </div>
-                        </div><!-- popup -->
-                    </div>
-            {% endfor %}
         </footer>
       {% block javascripts %}
-        <script>
 
-        $(document).ready(function() {
-
-            $(".js-popup-toggle").on('click', function(){
-                ("body").toggleClass("popup-active");
+        {# <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> #}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#list-pass-table').DataTable(
+                    {
+                        "language": {
+                            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                        }
+                    }
+                );
             });
-
-            $(".popup-dismiss").on('click', function() {
-                $(".popup").css("display", "none");
-            });
-        });
-
         </script>
-
-
       {% endblock %}
 
     {% endblock %}

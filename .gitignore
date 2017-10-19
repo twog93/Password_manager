@@ -20,3 +20,4 @@ app/config/parameters.yml
 /var\logs
 /tests/
 /app/config/config.yml
+/web/config.php

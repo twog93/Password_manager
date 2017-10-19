@@ -55,7 +55,6 @@ class AdvertController extends Controller
 
     $em = $this->getDoctrine()->getManager();
     $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
-    //$categories = $em->getRepository('PasswordManagerPlatformBundle:AdvertSkill')->find($id);
 
     if (null === $advert) {
       throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
@@ -87,7 +86,7 @@ class AdvertController extends Controller
           $nbPerPage = 3;
           $userId = $this->getUser()->getId();
           $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-          //$listAdverts->getAdverts($page, $nbPerPage);
+
 
           $nbPages = ceil(count($listAdverts) / $nbPerPage);
           if ($page > $nbPages) {
@@ -95,10 +94,6 @@ class AdvertController extends Controller
               throw $this->createNotFoundException("La page ".$page." n'existe pas.");
 
           }
-          //$em = $this->getDoctrine()->getManager();
-          //$listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->findAll();
-
-
 
           return $this->render('PasswordManagerPlatformBundle:Advert:index.html.twig', array(
 
@@ -133,11 +128,7 @@ class AdvertController extends Controller
 
      if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 
-
-              // On enregistre notre objet $advert dans la base de données, par exemple
-              // c'est elle qui déplace l'image là où on veut les stocker
-            //  $advert->getImage()->upload();
-
+         
               $em = $this->getDoctrine()->getManager();
               $advert->setUser($user);
               $em->persist($advert);

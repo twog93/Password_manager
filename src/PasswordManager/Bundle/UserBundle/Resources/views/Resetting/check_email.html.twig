@@ -1,11 +1,11 @@
-{% block fos_user_content  %}
+{% block register %}
     <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ absolute_url(asset('css/theme.css')) }}" type="text/css">
         <link rel="stylesheet" href="{{ absolute_url(asset('css/theme-master.css')) }}" type="text/css">
-        <title>Gestionnaire de mot de passe | Confirmation nouvel utilisateur</title>
+        <title>Gestionnaire de mot de passe | Envois de votre mot de passe</title>
     </head>
     <body id="bg-login-wall">
     <div>
@@ -17,22 +17,29 @@
                 <div class="col-md-6" id="book">
                     <div class="card">
                         <div class="card-body p-5 bg-light text-left">
-                            <i class="fa fa-undo fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Confirmation de création compte</h3>
+                            <i class="fa fa-undo fa-4x" aria-hidden="true"></i><h3 class="pb-3 icon awesome">Initialisation du mot de passe</h3>
                             <br/>
                             <br />
-                                {% trans_default_domain 'FOSUserBundle' %}
+                            {% block fos_user_content %}
 
-                                <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request">
-                                    <p>Nous vous confirmons la création de votre compte</p>
-                                    {% if targetUrl %}
-                                        <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-                                    {% endif %}
-                                </form>
+                            {% trans_default_domain 'FOSUserBundle' %}
+
+                                <div class="alert alert-success">
+                                    <p>
+                                        {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
+                                    </p>
+                                </div>
+
                                 <div>
                                     <ul id="link-to-register">
+                                        <li><a href="../register">Créer un compte</a></li>
                                         <li><a style="display:inherit;text-align:center;" href="../login">Se connecter</a></li>
                                     </ul>
                                 </div>
+
+                            {% endblock fos_user_content %}
+
+
                         </div>
                     </div>
                 </div>
@@ -44,16 +51,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     </body></html>
 {% endblock %}
-
-
-
-
-
-
-
-    {% if targetUrl %}
-    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
-
-
-

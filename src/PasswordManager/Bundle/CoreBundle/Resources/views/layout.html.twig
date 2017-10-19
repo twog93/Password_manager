@@ -11,13 +11,17 @@
           <link rel="stylesheet" href="{{ absolute_url(asset('css/theme-master.css')) }}" type="text/css">
           <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css')) }}">
           <link rel="stylesheet" href="{{ absolute_url(asset('css/bootstrap.min.css')) }}">
-        {# Script #}
+          <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/r-2.2.0/datatables.min.js"></script>
+
+          {# Script #}
           <script src="{{ absolute_url(asset('js/font_awesome/4df86cf1bf.js')) }}"></script>
           <script src="{{ absolute_url(asset('js/jquery-1.12.4.js')) }}"></script>
           <script src="{{ absolute_url(asset('js/jquery.min.js')) }}"></script>
           <script src="{{ absolute_url(asset('js/bootstrap.min.js')) }}"></script>
-          <script src="{{ absolute_url(asset('js/jquery.dataTables.min.js')) }}"></script>
-          <script src="{{ absolute_url(asset('js/dataTables.bootstrap.min.js')) }}"></script>
+          <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.16/r-2.2.0/datatables.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+
+
       {% endblock %}
     </head>
     <body>
@@ -43,6 +47,9 @@
                      <li class="nav-item">
                             <a class="nav-link text-white" href="{{ path('fos_user_profile_show') }}">mon profil</a>
                         </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{{ path('password_manager_core_pass_generator') }}">Générateur de mot de passe</a>
+                    </li>
                      <li class="nav-item">
                              <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Contact</a>
                      </li>
@@ -98,6 +105,17 @@
       {% block javascripts %}
 
         {# <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> #}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#list-pass-table').DataTable(
+                    {
+                        "language": {
+                            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json"
+                        }
+                    }
+                );
+            });
+        </script>
       {% endblock %}
 
     {% endblock %}

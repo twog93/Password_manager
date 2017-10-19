@@ -16,7 +16,6 @@
                     {{ form_label(form.url, "Lien du site web") }}
                     {{ form_errors(form.url) }}
                     {{ form_widget(form.url, {'attr': {'pattern': '.*'}}) }}
-
                 </div>
                 <div class="form-group">
                     {{ form_label(form.login, "Identifiant d'accès") }}
@@ -34,10 +33,9 @@
                 {{ form_widget(form.content, {'attr': {'pattern': '.*'}}) }}
             </div>
                 {{ form_end(form) }}
-                </form>
             </div>
             </div>
             <div class="col-md-2">
             </div>
         </div>
-</div>
+    </div>

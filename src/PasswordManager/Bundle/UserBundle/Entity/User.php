@@ -5,6 +5,7 @@ namespace PasswordManager\Bundle\UserBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -12,6 +13,11 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="PasswordManager\Bundle\UserBundle\Repository\UserRepository")
  */
+
+
+/*@ORM\ManyToOne(targetEntity="\PasswordManager\Bundle\PlatformBundle\Entity\Advert")
+@ORM\JoinColumn(nullable=true)*/
+
 class User extends BaseUser
 {
     /**
@@ -32,9 +38,13 @@ class User extends BaseUser
      */
     protected $groups;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="\PasswordManager\Bundle\PlatformBundle\Entity\Advert")
-     * @ORM\JoinColumn(nullable=true)
-     */
-    
+
+
+
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+        $this->roles = array('ROLE_USER');
+    }
 }

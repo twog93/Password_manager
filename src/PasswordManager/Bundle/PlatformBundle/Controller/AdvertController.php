@@ -49,6 +49,10 @@ class AdvertController extends Controller
 
   public function viewAction($id){
 
+      //If user got 1 pass
+      $userId = $this->getUser()->getId();
+      $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+
     $em = $this->getDoctrine()->getManager();
     $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
     //$categories = $em->getRepository('PasswordManagerPlatformBundle:AdvertSkill')->find($id);
@@ -66,6 +70,7 @@ class AdvertController extends Controller
         'listApplication' => $listApplication,
         'listAdvertSkills' => $listAdvertSkills,
         'listCategories' => $listCategories,
+        'listAdverts' => $listAdverts
 		));
   }
 
@@ -75,45 +80,49 @@ class AdvertController extends Controller
   }
   
   public function indexAction($page){
+      if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+          if ($page < 1) {
+              throw new NotFoundHttpException("La page ".$page." n'existe pas.");
+          }
+          $nbPerPage = 3;
+          $userId = $this->getUser()->getId();
+          $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+          //$listAdverts->getAdverts($page, $nbPerPage);
 
-    if ($page < 1) {
-      throw new NotFoundHttpException("La page ".$page." n'existe pas.");
-    }
-   $nbPerPage = 3;
-      $userId = $this->getUser()->getId();
-   $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-   //$listAdverts->getAdverts($page, $nbPerPage);
+          $nbPages = ceil(count($listAdverts) / $nbPerPage);
+          if ($page > $nbPages) {
 
-   $nbPages = ceil(count($listAdverts) / $nbPerPage);
-   if ($page > $nbPages) {
+              throw $this->createNotFoundException("La page ".$page." n'existe pas.");
 
-      throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+          }
+          //$em = $this->getDoctrine()->getManager();
+          //$listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->findAll();
 
-    }
-	 //$em = $this->getDoctrine()->getManager();  
-	 //$listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->findAll();
 
-	
-  
-    return $this->render('PasswordManagerPlatformBundle:Advert:index.html.twig', array(
 
-      'listAdverts' => $listAdverts,
+          return $this->render('PasswordManagerPlatformBundle:Advert:index.html.twig', array(
 
-      'nbPages'     => $nbPages,
+              'listAdverts' => $listAdverts,
 
-      'page'        => $page,
+              'nbPages'     => $nbPages,
 
-    ));
+              'page'        => $page,
+
+          ));
+      }
+      return $this->redirectToRoute('fos_user_security_login');
   }
   
   public function addAction(Request $request){
-      $userId = $this->getUser()->getId();
-      $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
       if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
           // Sinon redirection login page
           return $this->redirectToRoute('fos_user_security_login');
       }
+
+
+      $userId = $this->getUser()->getId();
+      $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
       $user = $this->getUser();
       //$username=$this->getUser()->getUsername();
@@ -144,16 +153,22 @@ class AdvertController extends Controller
    
     return $this->render('PasswordManagerPlatformBundle:Advert:add.html.twig', array(
 
-      'form' => $form->createView(),));
-     
+      'form' => $form->createView(),
+        'listAdverts' => $listAdverts));
+      
 	}
 
   public function editAction($id, Request $request){
 
+      if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
 
 
      $em = $this->getDoctrine()->getManager();
      $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
+
+      //If user got 1 pass
+      $userId = $this->getUser()->getId();
+      $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
     
       if(null === $advert){
 
@@ -181,9 +196,14 @@ class AdvertController extends Controller
           'listAdverts' => $listAdverts
       ));
 
+      }
+      return $this->redirectToRoute('fos_user_security_login');
   }
 
   public function deleteAction($id, Request $request){
+
+      if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+
 
       $em = $this->getDoctrine()->getManager();
       $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
@@ -212,6 +232,8 @@ class AdvertController extends Controller
               'advert' => $advert,
               'form'   => $form->createView(),
               'listAdverts' => $listAdverts));
+      }
+      return $this->redirectToRoute('fos_user_security_login');
   } 
   
   public function listAction(){

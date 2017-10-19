@@ -24,8 +24,6 @@ class GroupType extends AbstractType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
-		 $pattern = 'D%';
 		 
         $builder
         ->add('name')

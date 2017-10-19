@@ -57,10 +57,10 @@ class HomeController extends Controller
             $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
 
-            //Envois email Admin
+            //Email to user
             $message = (new \Swift_Message('Confirmation de réception de votre message'))
-                ->setFrom('geraldduveau@gmail.com')
-                ->setTo('2gcorps@gmail.com')
+                ->setFrom('contact-gmp@afbiodiversite.fr')
+                ->setTo($useremail)
                 ->setBody(
                     $this->renderView(
                         'PasswordManagerCoreBundle:Home:mailing-contact.html.twig',
@@ -72,8 +72,8 @@ class HomeController extends Controller
                 );
 
             $messageToAdmin = (new \Swift_Message("Demande d'information"))
-                ->setFrom('formContat-gmp@afbiodiversite.fr')
-                ->setTo('contac-gmp@afbiodiversite.Fr')
+                ->setFrom($useremail)
+                ->setTo('contact-gmp@afbiodiversite.Fr')
                 ->setBody(
                     $this->renderView(
                         'PasswordManagerCoreBundle:Home:mailing-contact-admin.html.twig',
@@ -86,6 +86,7 @@ class HomeController extends Controller
                 );
 
             $mailer->send($message);
+            $mailer->send($messageToAdmin);
 
 
             // create message in BDD
@@ -105,9 +106,9 @@ class HomeController extends Controller
             return $this->render('PasswordManagerCoreBundle:Home:contact.html.twig', array(
                 'form' => $form->createView(),
                 'listAdverts' => $listAdverts,));
-  }
+    }
 
-    public function checkGetPass(){
+    protected function checkGetPass(){
 
         $userId = $this->getUser()->getId();
         $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
@@ -120,11 +121,12 @@ class HomeController extends Controller
         // Vérification si anonyme ou authentifier
         if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             // Sinon redirection login page
-            return $this->redirectToRoute('password_manager_core');
+            return $this->redirectToRoute('fos_user_security_login');
         }
-        $userId = $this->getUser()->getId();
-        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
         $user = $this->getUser();
+        $userId = $user->getId();
+        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+
 
         return $this->render('PasswordManagerCoreBundle:Home:generate_password.html.twig', array(
 

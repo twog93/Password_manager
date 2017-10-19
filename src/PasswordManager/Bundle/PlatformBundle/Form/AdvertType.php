@@ -33,8 +33,7 @@ class AdvertType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-
-		 $defaultValue = 'D%';
+        
 		 
         $builder
         ->add('title')

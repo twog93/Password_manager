@@ -43,7 +43,6 @@ twig:
 # Doctrine Configuration
 doctrine:
     dbal:
-        server_version: 5.6
         driver: pdo_mysql
         host: '%database_host%'
         port: '%database_port%'
@@ -75,13 +74,14 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
-
+#parameters for FOSUSerBundle | orverride modelUser
 fos_user:
     db_driver:     orm
     firewall_name: main
     user_class:    PasswordManager\Bundle\UserBundle\Entity\User
     group:
         group_class:   PasswordManager\Bundle\UserBundle\Entity\Group
+    # \Parameters Provider mail
     from_email:
       address: "contact-gmp@afbiodiversite.fr"
       sender_name: "L'équipe support"
@@ -91,9 +91,10 @@ fos_user:
     resetting:
       email:
             template:  email/resetting.email.twig
+# Manager path to css,js link
 assetic:
     debug:  '%kernel.debug%'
-
+#Sonata Bundle
 sonata_block:
     default_contexts: [cms]
     blocks:

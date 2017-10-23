@@ -1,3 +1,7 @@
+#
+## route for core Path and methods
+#
+
 password_manager_core:
     resource: "@PasswordManagerCoreBundle/Resources/config/routing.yml"
 
@@ -9,6 +13,9 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
+#
+## route for FOSUSerBundle
+#
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -31,7 +38,9 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
-
+#
+## route for administration
+#
 admin_area:
     resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
     prefix: /admin

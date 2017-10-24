@@ -12,11 +12,9 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 
-
-
+//Form contact Type
 class ContactType extends AbstractType
 {
-
 
     protected $username;
 
@@ -26,13 +24,12 @@ class ContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
 
-		 
+	//add 2 inputs for model
         $builder
         ->add('subject')
         ->add('body')
         ->add('save', SubmitType::class);
 
     }
-
-
 }
+

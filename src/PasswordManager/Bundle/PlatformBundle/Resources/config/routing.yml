@@ -1,8 +1,8 @@
 password_manager_platform_home:
-    path:    /{page}
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:index, page: 1 }
+    path:    /{category}
+    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:index , category: all }
     requirements:
-        page: \d*
+        category:  "[a-zA-Z0-9,.-]+"
 
 password_manager_platform_view:
     path:    /advert/{id}

@@ -5,11 +5,13 @@ namespace PasswordManager\Bundle\PlatformBundle\Controller;
 
 use PasswordManager\Bundle\PlatformBundle\Entity\ApplicationRepository;
 use PasswordManager\Bundle\PlatformBundle\Entity\AdvertRepository;
+use PasswordManager\Bundle\UserBundle\Repository\GroupRepository;
 use PasswordManager\Bundle\PlatformBundle\Entity\AdvertSkill;
 use PasswordManager\Bundle\PlatformBundle\Entity\Skill;
 use PasswordManager\Bundle\PlatformBundle\Entity\Application;
 use PasswordManager\Bundle\PlatformBundle\Entity\Image;
 use PasswordManager\Bundle\PlatformBundle\Entity\Advert;
+use PasswordManager\Bundle\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -78,33 +80,44 @@ class AdvertController extends Controller
     return new Response("Affichage de l'annonce d'id : ".$year . $slug . $format);
   }
   
-  public function indexAction($page){
+  public function indexAction($category){
+
+      // Check if user
       if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
-          if ($page < 1) {
-              throw new NotFoundHttpException("La page ".$page." n'existe pas.");
-          }
-          $nbPerPage = 3;
+
+          $listCategory = [];
+          array_push($listCategory , $category);
           $userId = $this->getUser()->getId();
-          $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+          $userGroup = $this->getDoctrine()->getManager()->getRepository('PasswordManagerUserBundle:User')->getGroupWithUser();
+          dump($userGroup[0]->getGroupNames());
+         // if(){}
+            //Sort by category
+            if($listCategory[0] != "all" or $listCategory[0] == ''){
+                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
 
+                if (!$listAdverts) {
 
-          $nbPages = ceil(count($listAdverts) / $nbPerPage);
-          if ($page > $nbPages) {
+                    throw $this->createNotFoundException("Vous n'avez pas de contenu dans cette catégorie");
+                }
 
-              throw $this->createNotFoundException("La page ".$page." n'existe pas.");
+                return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+
+                    'listAdverts' => $listAdverts,
+                ));
+            }
+            else
+                {
+                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+
+                return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+
+                        'listAdverts' => $listAdverts,
+                    ));
+            }
+
 
           }
 
-          return $this->render('PasswordManagerPlatformBundle:Advert:index.html.twig', array(
-
-              'listAdverts' => $listAdverts,
-
-              'nbPages'     => $nbPages,
-
-              'page'        => $page,
-
-          ));
-      }
       return $this->redirectToRoute('fos_user_security_login');
   }
   

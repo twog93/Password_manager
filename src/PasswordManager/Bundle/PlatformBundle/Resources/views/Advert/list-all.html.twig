@@ -1,31 +1,29 @@
-{% extends "PasswordManagerCoreBundle::layout.html.twig" %}
+{% extends "PasswordManagerPlatformBundle:Advert:index.html.twig" %}
 {% block title %}
-  Ajout mot de passe | {{ parent() }}
+  Liste de mes mots de passe | {{ parent() }}
 {% endblock %}
- {% block body %}
-     {{ parent() }}
- {% endblock %}
-{% block passwordmanager_platform_body_index %}
 
-    {{ parent() }}
+{% block passwordmanager_platform_list_all %}
+    <tbody>
+    {% for advert in listAdverts %}
+        <tr>
+            <td> {{ advert.id }}</td>
+            <td>{{ advert.title }}</td>
+            <td> <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}">
+                    {{ advert.title }}
+                </a></td>
+            <td>{{ advert.login }}</td>
+            <td>{{ advert.password }}</td>
+            <td>le {{ advert.date|date('d/m/Y') }}</td>
+            <td>
+                {% if not advert.categories.empty %}
 
-    <div id="list-server"  class="py-5 gradient-overlay bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="py-5 col-md-12">
-                    <div class="row">
-                        <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-plus-circle"></i></div>
-                        <div class="col-8">
-                            <h5 class="mb-3"><b>Ajouter un mot de passe</b></h5>
-                            <p class="my-1">Ajouter un mot de passe selon sa catégorie</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  <h2 id="list-mdp-title">Ajouter un mot de passe</h2>
-    <img id="logo-add-pass" src= "{{ absolute_url(asset('favicon/favicon.png')) }}">
-
-  {{ include("PasswordManagerPlatformBundle:Advert:form.html.twig") }}
+                    {% for category in advert.categories %}
+                        {{ category.name }}{% if not loop.last %}<br> {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
  {% endblock %}

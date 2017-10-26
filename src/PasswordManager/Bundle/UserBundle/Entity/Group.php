@@ -11,6 +11,7 @@ use FOS\UserBundle\Model\Group as BaseGroup;
  * @ORM\Table(name="fos_group")
  * @ORM\Entity(repositoryClass="PasswordManager\Bundle\UserBundle\Repository\GroupRepository")
  */
+
 class Group extends BaseGroup
 {
     /**

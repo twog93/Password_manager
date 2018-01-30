@@ -26,43 +26,47 @@
     </head>
     <body>
     {% block body %}
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark w-100" style="">
-        <a class="navbar-brand" href="{{ path('password_manager_core_home') }}"><i class="fa fa-key fa-fw fa-lg"></i></a>
-        <div class="container">
-            <a class="navbar-brand" href="#">Gestionnaire de mot de passe</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span> </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
+        {# nav  use asssetic#}
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark w-100" style="">
+            <a class="navbar-brand" href="{{ path('password_manager_core_home') }}"><i class="fa fa-key fa-fw fa-lg"></i></a>
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('password_manager_core_home') }}">Gestionnaire de mot de passe</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {# List menu + if user authentified#}
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ path('password_manager_core_home') }}">Accueil</a>
                     </li>
-                    {% if   listAdverts is defined   %}
+                        {% if   listAdverts is defined   %}
                         {% if   listAdverts %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ path('password_manager_platform_home') }}">Mes mots de passe</a>
                             </li>
                         {% endif %}
                     {% endif %}
-                     <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link text-white" href="{{ path('fos_user_profile_show') }}">mon profil</a>
                         </li>
-                    <li class="nav-item">
+                        <li class="nav-item">
                         <a class="nav-link text-white" href="{{ path('password_manager_core_pass_generator') }}">Générateur de mot de passe</a>
                     </li>
-                     <li class="nav-item">
+                        <li class="nav-item">
                              <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Contact</a>
                      </li>
-                     <li class="nav-item">
+                        <li class="nav-item">
                         <a class="nav-link text-white" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                      </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    {% block passwordmanager_platform_body_index %}
-
-    {% endblock %}
+        </nav>
+            {# to extends first template#}
+        {% block passwordmanager_platform_body_index %}
+        {% endblock %}
+        {# nav  Footer Section#}
         <footer>
             <div class="bg-secondary" style="">
                 <div class="container">
@@ -82,9 +86,9 @@
                                         </li>
                                     {% endif  %}
                                 {% endif  %}
-                                    <li >
-                                        <a class="text-white" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
-                                    </li>
+                                 <li >
+                                    <a class="text-white" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                                 </li>
                             </ul>
                         </div>
                         <div class="p-4 col-md-4">
@@ -103,8 +107,7 @@
             </div>
         </footer>
       {% block javascripts %}
-
-        {# <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> #}
+        {# <script Password Table list JS #}
         <script type="text/javascript">
             $(document).ready(function(){
                 $('#list-pass-table').DataTable(
@@ -117,7 +120,6 @@
             });
         </script>
       {% endblock %}
-
     {% endblock %}
     </body>
 </html>

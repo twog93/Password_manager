@@ -12,6 +12,8 @@ use PasswordManager\Bundle\CoreBundle\Form\ContactType;
 
 class HomeController extends Controller
 {
+
+    // Master page
     public function indexAction()
     {
         // Vérification si anonyme ou authentifier
@@ -28,9 +30,9 @@ class HomeController extends Controller
 		// renvois Login Page
 
         return $this->redirectToRoute('fos_user_security_login');
-
     }
-	
+
+    //Contact Page
 	 public function contactAction(Request $request)
     {
 
@@ -40,13 +42,14 @@ class HomeController extends Controller
             return $this->redirectToRoute('fos_user_security_login');
         }
 
+
+        //Check if user have Pass List true
         $user = $this->getUser();
         $userId = $this->getUser()->getId();
         $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
+        //Add Contact entity by form
         $contact = new Contact();
-
-        // Ajout du formulaire de contact
         $form = $this->get('form.factory')->create(ContactType::class, $contact);
 
         if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
@@ -71,6 +74,7 @@ class HomeController extends Controller
                     'text/html'
                 );
 
+            //Email to admin
             $messageToAdmin = (new \Swift_Message("Demande d'information"))
                 ->setFrom($useremail)
                 ->setTo('contact-gmp@afbiodiversite.Fr')
@@ -85,6 +89,8 @@ class HomeController extends Controller
                     'text/html'
                 );
 
+
+            //swiftmailer Send Mail
             $mailer->send($message);
             $mailer->send($messageToAdmin);
 
@@ -95,27 +101,28 @@ class HomeController extends Controller
             $em->persist($contact);
             $em->flush();
 
-
+            //Add flush message
             $request->getSession()->getFlashBag()->add('notice', "Votre message a été envoyé à l'équipe support");
             return $this->redirectToRoute('password_manager_core_home');
 
 
         }
 
-            // On passe la méthode createView() du formulaire à la vue
-            return $this->render('PasswordManagerCoreBundle:Home:contact.html.twig', array(
-                'form' => $form->createView(),
-                'listAdverts' => $listAdverts,));
+        // On passe la méthode createView() du formulaire à la vue
+        return $this->render('PasswordManagerCoreBundle:Home:contact.html.twig', array(
+            'form' => $form->createView(),
+            'listAdverts' => $listAdverts,));
     }
 
     protected function checkGetPass(){
-
+    //Under construction
         $userId = $this->getUser()->getId();
         $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
         return $listAdverts;
 
     }
 
+    // Password generator Page
     public function generatorAction()
     {
         // Vérification si anonyme ou authentifier
@@ -138,3 +145,4 @@ class HomeController extends Controller
 
     }
 }
+

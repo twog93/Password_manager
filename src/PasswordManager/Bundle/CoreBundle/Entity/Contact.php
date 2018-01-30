@@ -124,3 +124,4 @@ class Contact
         return $this->user;
     }
 }
+

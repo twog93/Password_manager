@@ -1,11 +1,12 @@
 password_manager_core_home:
     path:     /
     defaults: { _controller: PasswordManagerCoreBundle:Home:index }
-
+#routing to index page
 password_manager_core_contact:
     path:    /contact
     defaults:  { _controller:PasswordManagerCoreBundle:Home:contact }
-
+#routing to form contact page
 password_manager_core_pass_generator:
     path:    /generateur/mot-de-passe
     defaults:  { _controller:PasswordManagerCoreBundle:Home:generator }
+#routing to password generator page

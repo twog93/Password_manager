@@ -110,10 +110,13 @@
         </footer>
       {% block javascripts %}
         <script>
+
         $(document).ready(function() {
+
             $(".js-popup-toggle").on('click', function(){
                 ("body").toggleClass("popup-active");
             });
+
             $(".popup-dismiss").on('click', function() {
                 $(".popup").css("display", "none");
             });

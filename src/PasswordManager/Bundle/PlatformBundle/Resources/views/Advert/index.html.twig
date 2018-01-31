@@ -1,70 +1,10 @@
 {% extends "PasswordManagerPlatformBundle::layout.html.twig" %}
 
 {% block title %}
-  Accueil - {{ parent() }}
+  Liste de mes mots de passe - {{ parent() }}
 {% endblock %}
 
- {% block passwordmanager_platform_advert %}
-        <h4>Dernières annonces</h4>
-
-         {% for advert in listAdverts %}
-      <li>
-        <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}">
-          {{ advert.title }}
-        </a>
-        par {{ advert.author }},
-        le {{ advert.date|date('d/m/Y') }}
-      </li>
-    {% else %}
-      <li>Pas (encore !) d'annonces</li>
-    {% endfor %}
-<ul class="pagination">
-
-
-  {% for p in range(1, nbPages) %}
-
-    <li{% if p == page %} class="active"{% endif %}>
-
-      <a href="{{ path('password_manager_platform_home', {'page': p}) }}">{{ p }}</a>
-
-    </li>
-
-  {% endfor %}
-
-</ul>
-
-          {% endblock %}
 
 {% block passwordmanager_platform_body %}
 
-  <h2>Liste des annonces</h2>
-
-
-
-
-  <ul>
-    {% for advert in listAdverts %}
-      <li>
-        <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}">
-          {{ advert.title }}
-        </a>
-        par {{ advert.author }},
-        le {{ advert.date|date('d/m/Y') }}
-      </li>
-    {% else %}
-      <li>Pas (encore !) d'annonces</li>
-    {% endfor %}
-  </ul>
-
-  <p>
-Rechercher par catégorie:
-
-  </p>
-        <a href="platform/list/advert/">test</a>   <a href="platform/test/tag">test</a>   <a href="platform/test/tag">test</a>
-
-          <p>
-Rechercher les dernières candidatures:
-
-  </p>
-        <a href="platform/test">Les deux dernières candidatures</a>
 {% endblock %}

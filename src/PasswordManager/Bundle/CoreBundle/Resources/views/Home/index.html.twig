@@ -32,7 +32,7 @@
                 <div class="py-5 col-md-6">
                 {% if   listAdverts is defined   %}
                     {% if  listAdverts  %}
-                    <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'ftp-sftp'})}}">
+                    <a class="link-categories-wel" href='{{ path('password_manager_platform_home',{'category':"FTP,SFTP"})}}'>
                     <div class="row">
                         <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
                         <div class="col-8">
@@ -42,13 +42,19 @@
                             {% for advert in listAdverts %}
                                 {% if not advert.categories.empty %}
                                     {% for category in advert.categories %}
-                                        {% if category.name == "Accès FTP, SFTP" %}
+                                        {% if category.name == "FTP,SFTP" %}
                                             {% set i = i + 1 %}
                                         {% endif %}
                                     {% endfor %}
                                 {% endif %}
                             {% endfor %}
-                            <span class="num-pass-index">Vous avez {{ i }} mots de passe dans cette liste.</span>
+                            <span class="num-pass-index">Vous avez {{ i }}
+                                {% if i >= 2 %}
+                                    mots
+                                {% else %}
+                                    mot
+                                {% endif %}
+                                de passe dans cette liste.</span>
                         </div>
                     </div>
                     </a>
@@ -72,7 +78,7 @@
                 <div class="py-5 col-md-6">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
-                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'sql'})}}">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Sql'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
@@ -82,13 +88,19 @@
                                         {% for advert in listAdverts %}
                                             {% if not advert.categories.empty %}
                                                 {% for category in advert.categories %}
-                                                    {% if category.name == "Accès SQL" %}
+                                                    {% if category.name == "Sql" %}
                                                         {% set j = j + 1 %}
                                                     {% endif %}
                                                 {% endfor %}
                                             {% endif %}
                                         {% endfor %}
-                                        <span class="num-pass-index">Vous avez {{ j }} mots de passe dans cette liste.</span>
+                                        <span class="num-pass-index">Vous avez {{ j }}
+                                            {% if j >= 2 %}
+                                                mots
+                                            {% else %}
+                                                mot
+                                            {% endif %}
+                                            de passe dans cette liste.</span>
                                     </div>
                                 </div>
                             </a>
@@ -125,13 +137,19 @@
                                         {% for advert in listAdverts %}
                                             {% if not advert.categories.empty %}
                                                 {% for category in advert.categories %}
-                                                    {% if category.name == "Login utilisateur , administration" %}
+                                                    {% if category.name == "user-admin" %}
                                                         {% set j = j + 1 %}
                                                     {% endif %}
                                                 {% endfor %}
                                             {% endif %}
                                         {% endfor %}
-                                        <span class="num-pass-index">Vous avez {{ j }} mots de passe dans cette liste.</span>
+                                        <span class="num-pass-index">Vous avez {{ j }}
+                                            {% if j >= 2 %}
+                                                mots
+                                            {% else %}
+                                                mot
+                                            {% endif %}
+                                            de passe dans cette liste.</span>
                                     </div>
                                 </div>
                             </a>
@@ -153,7 +171,7 @@
                 <div class="py-5 col-md-6">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
-                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'ssh'})}}">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Ssh'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-code"></i></div>
                                     <div class="col-8">
@@ -163,13 +181,19 @@
                                         {% for advert in listAdverts %}
                                             {% if not advert.categories.empty %}
                                                 {% for category in advert.categories %}
-                                                    {% if category.name == "Accès SSH" %}
+                                                    {% if category.name == "Ssh" %}
                                                         {% set j = j + 1 %}
                                                     {% endif %}
                                                 {% endfor %}
                                             {% endif %}
                                         {% endfor %}
-                                        <span class="num-pass-index">Vous avez {{ j }} mots de passe dans cette liste.</span>
+                                        <span class="num-pass-index">Vous avez {{ j }}
+                                            {% if j >= 2 %}
+                                                mots
+                                                {% else %}
+                                                    mot
+                                            {% endif %}
+                                                de passe dans cette liste.</span>
                                     </div>
                                 </div>
                             </a>
@@ -193,7 +217,7 @@
                 <div class="py-5 col-md-6">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
-                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'divers'})}}">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Autres'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                     <div class="col-8">
@@ -209,7 +233,13 @@
                                                 {% endfor %}
                                             {% endif %}
                                         {% endfor %}
-                                        <span class="num-pass-index">Vous avez {{ j }} mots de passe dans cette liste.</span>
+                                        <span class="num-pass-index">Vous avez {{ j }}
+                                            {% if j >= 2 %}
+                                                mots
+                                            {% else %}
+                                                mot
+                                            {% endif %}
+                                            de passe dans cette liste.</span>
                                     </div>
                                 </div>
                             </a>

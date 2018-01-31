@@ -28,6 +28,25 @@ class AdvertRepository extends EntityRepository{
       ->getResult()
     ;
   }
+    public function getAdvertWithCategoriesByAuthor($user_id, array $categoryNames)
+    {
+        $qb = $this->createQueryBuilder('a');
+
+        // On fait une jointure avec l'entité Category avec pour alias « c »
+        $qb
+            ->join('a.categories', 'c')
+            ->addSelect('c')
+        ;
+
+        // Puis on filtre sur le nom des catégories à l'aide d'un IN
+        $qb->where($qb->expr()->in('c.name', $categoryNames))->andWhere('a.user = :user_id')->setParameter('user_id', $user_id);
+        // Enfin, on retourne le résultat
+        return $qb
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
   
    public function getAdverts($page, $nbPerPage)
   {

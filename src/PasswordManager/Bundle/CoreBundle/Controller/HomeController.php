@@ -60,7 +60,7 @@ class HomeController extends Controller
             $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
 
-            //Email to user
+            //Send email User
             $message = (new \Swift_Message('Confirmation de réception de votre message'))
                 ->setFrom('contact-gmp@afbiodiversite.fr')
                 ->setTo($useremail)
@@ -74,7 +74,7 @@ class HomeController extends Controller
                     'text/html'
                 );
 
-            //Email to admin
+            //Send email to admin
             $messageToAdmin = (new \Swift_Message("Demande d'information"))
                 ->setFrom($useremail)
                 ->setTo('contact-gmp@afbiodiversite.Fr')

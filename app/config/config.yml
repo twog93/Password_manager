@@ -62,12 +62,12 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
-## Swiftmailer Configuration
-#swiftmailer:
-#    transport: ''
-#    username: ''
-#    password: ''
-#    spool: { type: memory }
+# Swiftmailer Configuration
+swiftmailer:
+    transport: 'smtp'
+    username: 'contact-gmp@afbiodiversite.fr'
+    password: ''
+    spool: { type: memory }
 
 # Stof\DoctrineExtensionsBundle configuration
 stof_doctrine_extensions:

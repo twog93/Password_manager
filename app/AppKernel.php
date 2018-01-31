@@ -36,7 +36,6 @@ class AppKernel extends Kernel
             $bundles[] = new Knp\Bundle\MenuBundle\KnpMenuBundle();
             $bundles[] =  new Sonata\AdminBundle\SonataAdminBundle();
             $bundles[] = new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle();
-            $bundles[] = new CoreSphere\ConsoleBundle\CoreSphereConsoleBundle();
 
 
             if ('dev' === $this->getEnvironment()) {

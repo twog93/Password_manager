@@ -48,11 +48,11 @@ class User extends BaseUser
         $this->roles = array('ROLE_USER');
     }
 
-    public function getGroups()
+    /*public function getGroups()
 
     {
 
         return $this->groups;
 
-    }
+    }*/
 }

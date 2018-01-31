@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe0bf44e-571f-4ac0-8725-a3321ebcc17f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/generate_password.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/generate_password.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,113 +15,37 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2214">
-              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-              <folding>
-                <marker date="1517408710349" expanded="true" signature="225:783" ph="{% block stylesheets ...%}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3330">
-              <caret line="185" column="63" lean-forward="false" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
-              <folding>
-                <marker date="1517408710353" expanded="true" signature="176:16004" ph="{% block passwordmanager_platform_body_index ...%}" />
-                <marker date="1517408710353" expanded="true" signature="1376:1511" ph="{% if   listAdverts is defined   ...%}" />
-                <marker date="1517408710353" expanded="true" signature="1432:1511" ph="{% if  listAdverts  ...%}" />
-                <marker date="1517408710353" expanded="true" signature="14773:14849" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="14773:14888" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="14773:14921" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="14773:14958" ph="{% if  listAdverts  ...%}" />
-                <marker date="1517408710353" expanded="true" signature="14773:14990" ph="{% if   listAdverts is defined   ...%}" />
-                <marker date="1517408710353" expanded="true" signature="14773:15857" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="14773:15943" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="15011:15835" ph="{% if listAdverts is empty ...%}" />
-                <marker date="1517408710353" expanded="true" signature="15148:15801" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="15198:15768" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="15383:15729" ph="..." />
-                <marker date="1517408710353" expanded="true" signature="15901:15924" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="36" column="90" lean-forward="false" selection-start-line="36" selection-start-column="90" selection-end-line="36" selection-end-column="90" />
-              <folding>
-                <marker date="1517408710349" expanded="true" signature="132:2780" ph="{...}" />
-                <marker date="1517408710349" expanded="true" signature="172:2318" ph="{...}" />
-                <marker date="1517408710349" expanded="true" signature="199:680" ph="..." />
-                <marker date="1517408710349" expanded="true" signature="199:1106" ph="..." />
-                <marker date="1517408710349" expanded="true" signature="1181:2285" ph="..." />
-                <marker date="1517408710349" expanded="true" signature="2036:2285" ph="..." />
-                <marker date="1517408710349" expanded="true" signature="2091:2275" ph="..." />
-                <marker date="1517408710349" expanded="true" signature="2352:2388" ph="{...}" />
-                <marker date="1517408710349" expanded="true" signature="2423:2506" ph="{...}" />
-                <marker date="1517408710349" expanded="true" signature="2539:2596" ph="{...}" />
-                <marker date="1517408710349" expanded="true" signature="2673:2778" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing_dev.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="25" column="42" lean-forward="false" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-              <folding>
-                <element signature="e#60#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generate_password.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/generate_password.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="59" />
-              <folding>
-                <element signature="e#3669#3707#0#HTML" expanded="true" />
-                <element signature="e#3806#3825#0#HTML" expanded="true" />
-                <element signature="e#4162#4187#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="499" column="20" lean-forward="false" selection-start-line="499" selection-start-column="20" selection-end-line="499" selection-end-column="20" />
+            <state relative-caret-position="-810">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Default/index.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -131,23 +54,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="form.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/form.html.twig">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list-all.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/list-all.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="standard_layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2538">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
               <folding>
-                <marker date="1517408710353" expanded="true" signature="1806:1811" ph="..." />
+                <marker date="1517409836933" expanded="true" signature="65:85" ph="{% block title ...%}" />
+                <marker date="1517409836933" expanded="true" signature="188:203" ph="{% block passwordmanager_platform_body ...%}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delete.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/delete.html.twig">
+      <file leaf-file-name="view.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -177,7 +141,6 @@
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/ContactType.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/list.html.twig" />
@@ -200,6 +163,7 @@
         <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/generate_password.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" />
       </list>
     </option>
   </component>
@@ -210,7 +174,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="247" />
     <option name="y" value="24" />
     <option name="width" value="1396" />
@@ -243,74 +207,13 @@
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
               <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
               <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="var" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -353,10 +256,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24621000" />
+    <option name="totallyTimeSpent" value="26336000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="247" y="24" width="1617" height="1062" extended-state="6" />
+    <frame x="247" y="24" width="1617" height="1062" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495356" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -408,30 +311,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/ContactRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/EnquiryRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Tests/Controller/DefaultControllerTest.php" />
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php" />
     <entry file="file://$PROJECT_DIR$/src/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -534,26 +413,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/list-ftp.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/list-all.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,62 +469,62 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517408710349" expanded="true" signature="2348:2389" ph=" @ORM\Column(name=&quot;password&quot;, type=&quot;string&quot;, length=255) ..." />
-            <marker date="1517408710349" expanded="true" signature="2423:2522" ph=" @var string ..." />
-            <marker date="1517408710349" expanded="true" signature="2555:2627" ph=" @ORM\Column(name=&quot;updated_at&quot;, type=&quot;datetime&quot;, nullable=true) ..." />
-            <marker date="1517408710349" expanded="true" signature="2687:2828" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="2836:2882" ph=" Get id ..." />
-            <marker date="1517408710349" expanded="true" signature="2912:2950" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="2959:3047" ph=" Set date ..." />
-            <marker date="1517408710349" expanded="true" signature="3084:3148" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="3157:3211" ph=" Get date ..." />
-            <marker date="1517408710349" expanded="true" signature="3243:3283" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="3292:3379" ph=" Set title ..." />
-            <marker date="1517408710349" expanded="true" signature="3418:3484" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="3493:3545" ph=" Get title ..." />
-            <marker date="1517408710349" expanded="true" signature="3578:3619" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="3628:3719" ph=" Set content ..." />
-            <marker date="1517408710349" expanded="true" signature="3762:3832" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="3841:3895" ph=" Get content ..." />
-            <marker date="1517408710349" expanded="true" signature="3930:3973" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="4027:4089" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="4147:4203" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="4241:4282" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="4342:4451" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="4515:4580" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="4618:4661" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="4668:4688" ph=" @ORM\PreUpdate ..." />
-            <marker date="1517408710349" expanded="true" signature="4721:4776" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="4787:4885" ph=" Set updatedAt ..." />
-            <marker date="1517408710349" expanded="true" signature="4932:5006" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5015:5074" ph=" Get updatedAt ..." />
-            <marker date="1517408710349" expanded="true" signature="5111:5156" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5201:5241" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5283:5323" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5332:5418" ph=" Set content ..." />
-            <marker date="1517408710349" expanded="true" signature="5455:5519" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5528:5579" ph=" Get user ..." />
-            <marker date="1517408710349" expanded="true" signature="5611:5651" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5660:5745" ph=" Set slug ..." />
-            <marker date="1517408710349" expanded="true" signature="5782:5846" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5855:5906" ph=" Get slug ..." />
-            <marker date="1517408710349" expanded="true" signature="5938:5978" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="5987:6093" ph=" Set nbApplications ..." />
-            <marker date="1517408710349" expanded="true" signature="6150:6234" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="6243:6305" ph=" Get nbApplications ..." />
-            <marker date="1517408710349" expanded="true" signature="6347:6397" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="6406:6489" ph=" Set url ..." />
-            <marker date="1517408710349" expanded="true" signature="6524:6586" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="6595:6645" ph=" Get url ..." />
-            <marker date="1517408710349" expanded="true" signature="6676:6715" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="6724:6811" ph=" Set login ..." />
-            <marker date="1517408710349" expanded="true" signature="6850:6916" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="6925:6977" ph=" Get login ..." />
-            <marker date="1517408710349" expanded="true" signature="7010:7051" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="7060:7153" ph=" Set password ..." />
-            <marker date="1517408710349" expanded="true" signature="7198:7270" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="7279:7334" ph=" Get password ..." />
-            <marker date="1517408710349" expanded="true" signature="7370:7414" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="2348:2389" ph=" @ORM\Column(name=&quot;password&quot;, type=&quot;string&quot;, length=255) ..." />
+            <marker date="1517409836933" expanded="true" signature="2423:2522" ph=" @var string ..." />
+            <marker date="1517409836933" expanded="true" signature="2555:2627" ph=" @ORM\Column(name=&quot;updated_at&quot;, type=&quot;datetime&quot;, nullable=true) ..." />
+            <marker date="1517409836933" expanded="true" signature="2687:2828" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="2836:2882" ph=" Get id ..." />
+            <marker date="1517409836933" expanded="true" signature="2912:2950" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="2959:3047" ph=" Set date ..." />
+            <marker date="1517409836933" expanded="true" signature="3084:3148" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="3157:3211" ph=" Get date ..." />
+            <marker date="1517409836933" expanded="true" signature="3243:3283" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="3292:3379" ph=" Set title ..." />
+            <marker date="1517409836933" expanded="true" signature="3418:3484" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="3493:3545" ph=" Get title ..." />
+            <marker date="1517409836933" expanded="true" signature="3578:3619" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="3628:3719" ph=" Set content ..." />
+            <marker date="1517409836933" expanded="true" signature="3762:3832" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="3841:3895" ph=" Get content ..." />
+            <marker date="1517409836933" expanded="true" signature="3930:3973" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="4027:4089" ph="..." />
+            <marker date="1517409836933" expanded="true" signature="4147:4203" ph="..." />
+            <marker date="1517409836933" expanded="true" signature="4241:4282" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="4342:4451" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="4515:4580" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="4618:4661" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="4668:4688" ph=" @ORM\PreUpdate ..." />
+            <marker date="1517409836933" expanded="true" signature="4721:4776" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="4787:4885" ph=" Set updatedAt ..." />
+            <marker date="1517409836933" expanded="true" signature="4932:5006" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5015:5074" ph=" Get updatedAt ..." />
+            <marker date="1517409836933" expanded="true" signature="5111:5156" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5201:5241" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5283:5323" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5332:5418" ph=" Set content ..." />
+            <marker date="1517409836933" expanded="true" signature="5455:5519" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5528:5579" ph=" Get user ..." />
+            <marker date="1517409836933" expanded="true" signature="5611:5651" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5660:5745" ph=" Set slug ..." />
+            <marker date="1517409836933" expanded="true" signature="5782:5846" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5855:5906" ph=" Get slug ..." />
+            <marker date="1517409836933" expanded="true" signature="5938:5978" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="5987:6093" ph=" Set nbApplications ..." />
+            <marker date="1517409836933" expanded="true" signature="6150:6234" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="6243:6305" ph=" Get nbApplications ..." />
+            <marker date="1517409836933" expanded="true" signature="6347:6397" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="6406:6489" ph=" Set url ..." />
+            <marker date="1517409836933" expanded="true" signature="6524:6586" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="6595:6645" ph=" Get url ..." />
+            <marker date="1517409836933" expanded="true" signature="6676:6715" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="6724:6811" ph=" Set login ..." />
+            <marker date="1517409836933" expanded="true" signature="6850:6916" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="6925:6977" ph=" Get login ..." />
+            <marker date="1517409836933" expanded="true" signature="7010:7051" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="7060:7153" ph=" Set password ..." />
+            <marker date="1517409836933" expanded="true" signature="7198:7270" ph="{...}" />
+            <marker date="1517409836933" expanded="true" signature="7279:7334" ph=" Get password ..." />
+            <marker date="1517409836933" expanded="true" signature="7370:7414" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -694,17 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <marker date="1517408710353" expanded="true" signature="65:85" ph="{% block title ...%}" />
-            <marker date="1517408710353" expanded="true" signature="188:203" ph="{% block passwordmanager_platform_body ...%}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/add.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -717,7 +569,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1517408710353" expanded="true" signature="1806:1811" ph="..." />
+            <marker date="1517409836933" expanded="true" signature="1806:1811" ph="..." />
           </folding>
         </state>
       </provider>
@@ -730,56 +582,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2214">
-          <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-          <folding>
-            <marker date="1517408710349" expanded="true" signature="225:783" ph="{% block stylesheets ...%}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3330">
-          <caret line="185" column="63" lean-forward="false" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
-          <folding>
-            <marker date="1517408710353" expanded="true" signature="176:16004" ph="{% block passwordmanager_platform_body_index ...%}" />
-            <marker date="1517408710353" expanded="true" signature="1376:1511" ph="{% if   listAdverts is defined   ...%}" />
-            <marker date="1517408710353" expanded="true" signature="1432:1511" ph="{% if  listAdverts  ...%}" />
-            <marker date="1517408710353" expanded="true" signature="14773:14849" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="14773:14888" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="14773:14921" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="14773:14958" ph="{% if  listAdverts  ...%}" />
-            <marker date="1517408710353" expanded="true" signature="14773:14990" ph="{% if   listAdverts is defined   ...%}" />
-            <marker date="1517408710353" expanded="true" signature="14773:15857" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="14773:15943" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="15011:15835" ph="{% if listAdverts is empty ...%}" />
-            <marker date="1517408710353" expanded="true" signature="15148:15801" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="15198:15768" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="15383:15729" ph="..." />
-            <marker date="1517408710353" expanded="true" signature="15901:15924" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="36" column="90" lean-forward="false" selection-start-line="36" selection-start-column="90" selection-end-line="36" selection-end-column="90" />
           <folding>
-            <marker date="1517408710349" expanded="true" signature="132:2780" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="172:2318" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="199:680" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="199:1106" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="1181:2285" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="2036:2285" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="2091:2275" ph="..." />
-            <marker date="1517408710349" expanded="true" signature="2352:2388" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="2423:2506" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="2539:2596" ph="{...}" />
-            <marker date="1517408710349" expanded="true" signature="2673:2778" ph="{...}" />
+            <marker date="1517409836929" expanded="true" signature="132:2780" ph="{...}" />
+            <marker date="1517409836929" expanded="true" signature="172:2318" ph="{...}" />
+            <marker date="1517409836929" expanded="true" signature="199:680" ph="..." />
+            <marker date="1517409836929" expanded="true" signature="199:1106" ph="..." />
+            <marker date="1517409836929" expanded="true" signature="1181:2285" ph="..." />
+            <marker date="1517409836929" expanded="true" signature="2036:2285" ph="..." />
+            <marker date="1517409836929" expanded="true" signature="2091:2275" ph="..." />
+            <marker date="1517409836929" expanded="true" signature="2352:2388" ph="{...}" />
+            <marker date="1517409836929" expanded="true" signature="2423:2506" ph="{...}" />
+            <marker date="1517409836929" expanded="true" signature="2539:2596" ph="{...}" />
+            <marker date="1517409836929" expanded="true" signature="2673:2778" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -788,14 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -827,6 +637,113 @@
             <element signature="e#3806#3825#0#HTML" expanded="true" />
             <element signature="e#4162#4187#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="185" column="63" lean-forward="false" selection-start-line="185" selection-start-column="63" selection-end-line="185" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2538">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/list-all.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <marker date="1517409836933" expanded="true" signature="65:85" ph="{% block title ...%}" />
+            <marker date="1517409836933" expanded="true" signature="188:203" ph="{% block passwordmanager_platform_body ...%}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

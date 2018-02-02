@@ -44,6 +44,13 @@ class Advert
     private $user;
 
     /**
+
+     * @ORM\Column(name="shared", type="boolean")
+
+     */
+    private $shared = false;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="id", type="integer")
@@ -446,5 +453,29 @@ class Advert
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * Set shared
+     *
+     * @param boolean $shared
+     *
+     * @return Advert
+     */
+    public function setShared($shared)
+    {
+        $this->shared = $shared;
+
+        return $this;
+    }
+
+    /**
+     * Get shared
+     *
+     * @return boolean
+     */
+    public function getShared()
+    {
+        return $this->shared;
     }
 }

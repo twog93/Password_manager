@@ -41,31 +41,6 @@ class AdvertType extends AbstractType
         ->add('login')
         ->add('password')
         ->add('content')
-            /*
-
-
-       * Rappel :
-       ** - 1er argument : nom du champ, 
-       ** - 2e argument : type du champ,
-       ** - 3e argument : tableau d'options du champ.
-	   
-	   	->add('categories',  EntityType::class, array(
-
-        'class'         => 'PasswordManagerPlatformBundle:Category',
-
-        'choice_label'  => 'name',
-
-        'multiple'      => true,
-
-        'query_builder' => function(CategoryRepository $repository) use($pattern) {
-
-          return $repository->getLikeQueryBuilder($pattern);
-
-        }
-
-      ))
-	        
-       */
 		   ->add('categories',EntityType::class, array(
             'class' => 'PasswordManagerPlatformBundle:Category',
             'choice_label' => 'name',
@@ -73,7 +48,8 @@ class AdvertType extends AbstractType
             'expanded' => true,
             'required' => true,
             ))
-        ->add('save', SubmitType::class);
+        ->add('shared', CheckboxType::class,array('label' => 'Partagé ce mot de passe au groupe'))
+        ->add('save', SubmitType::class,array('label' => 'Ajouté ce mot de passe'));
 
         // On ajoute une fonction qui va écouter un évènement
        /* $builder->addEventListener(
@@ -98,7 +74,7 @@ class AdvertType extends AbstractType
             }
         );*/
     }
-    
+
     /**
      * {@inheritdoc}
      */

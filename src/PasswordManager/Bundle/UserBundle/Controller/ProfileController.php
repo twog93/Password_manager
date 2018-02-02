@@ -33,11 +33,14 @@ class ProfileController extends BaseController
      *****************************************************/
     $userId = $user->getId();
     $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-
+    $userGroup = $this->getDoctrine()->getManager()->getRepository('PasswordManagerUserBundle:User')->getGroupWithUser();
+        $userGroup =$userGroup[0]->getGroupNames();
 
     return $this->render('@FOSUser/Profile/show.html.twig', array(
         'user' => $user,
-        'listAdverts' => $listAdverts
+        'listAdverts' => $listAdverts,
+        'userGroup' =>$userGroup
+
     ));
     }
 }

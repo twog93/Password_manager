@@ -50,25 +50,23 @@
                                 <p class="card-text">
                                     <b>Adresse email : </b>{{ user.email }}
                                 </p>
-                                <p class="card-text">
+                                <div class="card-text">
                                     <b>Roles : </b>
-                                    <ul id="list-roles ">
+                                    <ul id="list-roles " style="text-align: center;">
                                     {% for roles in user.roles %}
                                         <li>{{ roles|replace({'_': ' ', "ROLE": " "})|lower }}</li>
                                     {% endfor %}
                                     </ul>
-                                </p>
+                                </div>
 
-                                <p class="card-text">
+                                <div class="card-text">
                                     <b>Groupes : </b>
-                                <ul id="list-groups" style="float:right;">
-                                    {% for group in userGroup %}
-                                        <li>{{ group }}</li>
-                                    {% endfor %}
-
-
-                                </ul>
-                                </p>
+                                    <ul id="list-groups" style="text-align: center;">
+                                        {% for group in userGroup %}
+                                            <li>{{ group }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

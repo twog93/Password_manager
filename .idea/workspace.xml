@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ad327d-d6c0-4d94-a2b1-b6298283288b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/ProfileController.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/ProfileController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,10 +46,11 @@
       <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="54" column="55" lean-forward="false" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+            <state relative-caret-position="382">
+              <caret line="54" column="83" lean-forward="false" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
               <folding>
-                <element signature="e#3398#3418#0#HTML" expanded="true" />
+                <element signature="e#2943#2970#0#HTML" expanded="true" />
+                <element signature="e#3436#3463#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,6 +113,7 @@
       <find>selc-text-2</find>
       <find>Clipboard</find>
       <find>getGroupWithUser</find>
+      <find>&lt;p</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -334,7 +334,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28465000" />
+    <option name="totallyTimeSpent" value="28899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
@@ -823,10 +823,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="54" column="55" lean-forward="false" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
+        <state relative-caret-position="382">
+          <caret line="54" column="83" lean-forward="false" selection-start-line="54" selection-start-column="83" selection-end-line="54" selection-end-column="83" />
           <folding>
-            <element signature="e#3398#3418#0#HTML" expanded="true" />
+            <element signature="e#2943#2970#0#HTML" expanded="true" />
+            <element signature="e#3436#3463#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

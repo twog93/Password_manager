@@ -62,8 +62,13 @@
                                 <div class="card-text">
                                     <b>Groupes : </b>
                                     <ul id="list-groups" style="text-align: center;">
-                                        {% for group in userGroup %}
-                                            <li>{{ group }}</li>
+                                        {% if userGroup is empty %}
+
+                                           <li>Vous n'appartenez à aucun groupe</li>
+
+                                            {% endif %}
+                                        {% for key,value in userGroup %}
+                                        <li>{{ value.name }}</li>
                                         {% endfor %}
                                     </ul>
                                 </div>

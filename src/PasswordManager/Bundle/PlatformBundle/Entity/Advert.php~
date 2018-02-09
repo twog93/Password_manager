@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Symfony\Component\Validator\Constraints as Assert;
 use Ambta\DoctrineEncryptBundle\Configuration\Encrypted;
+use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
  * Advert
@@ -26,12 +27,21 @@ class Advert
 
     /**
     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Category", cascade={"persist"})
+     * @Assert\NotBlank()
     */
 
    private $categories;
 
+
     /**
-    * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group", cascade={"persist"})
+     * @Assert\NotBlank()
+     */
+
+    private $groups;
+
+    /**
+    * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")*
     */
     private $applications;
 
@@ -79,13 +89,13 @@ class Advert
 
     /**
      * @var string
-     *
      * @ORM\Column(name="login", type="string", length=255)
      */
     private $login;
 
     /**
      * @ORM\Column(name="password", type="string", length=255)
+     * @Assert\Length(min=4, minMessage="Pour des raisons de sécurité, votre mot de passe ne peut être inférieur à {{ limit }} caractères.")
      * @Encrypted
      * @var int
      */
@@ -108,8 +118,6 @@ class Advert
 	public function __construct()
 
   {
-
-    // Par défaut, la date de l'annonce est la date d'aujourd'hui
 
     $this->date = new \Datetime();
     $this->categories = new ArrayCollection();
@@ -195,32 +203,6 @@ class Advert
     public function getContent()
     {
         return $this->content;
-    }
-	
-	
-
-    /**
-     * Set published
-     *
-     * @param boolean $published
-     *
-     * @return Advert
-     */
-    public function setPublished($published)
-    {
-        $this->published = $published;
-
-        return $this;
-    }
-
-    /**
-     * Get published
-     *
-     * @return boolean
-     */
-    public function getPublished()
-    {
-        return $this->published;
     }
 
     public function addCategory(Category $category){

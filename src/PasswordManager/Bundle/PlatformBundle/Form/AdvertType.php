@@ -2,6 +2,7 @@
 
 namespace PasswordManager\Bundle\PlatformBundle\Form;
 
+
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,39 +17,48 @@ use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use PasswordManager\Bundle\UserBundle\Entity;
 use FOS\UserBundle\Form\Type\UsernameFormType;
-
+use PasswordManager\Bundle\UserBundle\Repository\GroupRepository;
+use FOS\UserBundle\Model\UserInterface;
 
 class AdvertType extends AbstractType
 {
 
 
-    protected $username;
 
-    public function __construct ( $username = null)
-    {
-        $this->username = $username ;
-    }
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        
-		 
+        // Arbitrairement, on récupère toutes les catégories qui commencent par "D"
+
+        dump($options);
+        $pattern = 6;
+
         $builder
         ->add('title')
         ->add('url')
         ->add('login')
         ->add('password')
         ->add('content')
+  ->add('groups',EntityType::class, array(
+                'class' => 'PasswordManagerUserBundle:Group',
+                'choice_label' => 'name',
+                'multiple' =>true,
+         //query_builder' => function(GroupRepository $repository){return $repository->getGroupWithUser();}
+            'query_builder' => function(GroupRepository $repository) use ($pattern){
+                    return $repository->getGroupWithUser($pattern);
+                                 }
+
+            ))
             /*
 
 
        * Rappel :
-       ** - 1er argument : nom du champ, 
+       ** - 1er argument : nom du champ,
        ** - 2e argument : type du champ,
        ** - 3e argument : tableau d'options du champ.
-	   
+
 	   	->add('categories',  EntityType::class, array(
 
         'class'         => 'PasswordManagerPlatformBundle:Category',
@@ -64,7 +74,7 @@ class AdvertType extends AbstractType
         }
 
       ))
-	        
+
        */
 		   ->add('categories',EntityType::class, array(
             'class' => 'PasswordManagerPlatformBundle:Category',
@@ -98,7 +108,7 @@ class AdvertType extends AbstractType
             }
         );*/
     }
-    
+
     /**
      * {@inheritdoc}
      */

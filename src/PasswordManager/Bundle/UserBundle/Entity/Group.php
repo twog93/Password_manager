@@ -23,4 +23,44 @@ class Group extends BaseGroup
      */
     protected $id;
 
+
+    /**
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\User" )
+
+     */
+    protected $users;
+
+    /**
+     * Add user
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\User $user
+     *
+     * @return Group
+     */
+    public function addUser(\PasswordManager\Bundle\UserBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\User $user
+     */
+    public function removeUser(\PasswordManager\Bundle\UserBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
 }

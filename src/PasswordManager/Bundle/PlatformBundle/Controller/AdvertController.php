@@ -25,7 +25,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-
+use Symfony\Component\Security\Core\SecurityContext;
 
 
 
@@ -87,10 +87,18 @@ class AdvertController extends Controller
 
           $listCategory = [];
           array_push($listCategory , $category);
-          $userId = $this->getUser()->getId();
-          $userGroup = $this->getDoctrine()->getManager()->getRepository('PasswordManagerUserBundle:User')->getGroupWithUser();
-          dump($userGroup[0]->getGroupNames());
-         // if(){}
+          $user = $this->getUser();
+          $userId = $user->getId();
+          $userGroup =  $user->getGroups()->getValues();
+          $listGroupOfUser = array();
+          foreach ($userGroup as $value) {
+
+
+
+            array_push($listGroupOfUser, $value->getName());
+
+          }
+
             //Sort by category
             if($listCategory[0] != "all" or $listCategory[0] == ''){
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
@@ -107,12 +115,14 @@ class AdvertController extends Controller
             }
             else
                 {
-                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-
+                    dump($userGroup);
+                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
                         'listAdverts' => $listAdverts,
                     ));
+
+
             }
 
 
@@ -120,7 +130,7 @@ class AdvertController extends Controller
 
       return $this->redirectToRoute('fos_user_security_login');
   }
-  
+
   public function addAction(Request $request){
 
       if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
@@ -141,7 +151,7 @@ class AdvertController extends Controller
 
      if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 
-         
+
               $em = $this->getDoctrine()->getManager();
               $advert->setUser($user);
               $em->persist($advert);
@@ -154,12 +164,12 @@ class AdvertController extends Controller
 
 
     // On passe la méthode createView() du formulaire à la vue
-   
+
     return $this->render('PasswordManagerPlatformBundle:Advert:add.html.twig', array(
 
       'form' => $form->createView(),
         'listAdverts' => $listAdverts));
-      
+
 	}
 
   public function editAction($id, Request $request){
@@ -173,7 +183,7 @@ class AdvertController extends Controller
       //If user got 1 pass
       $userId = $this->getUser()->getId();
       $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-    
+
       if(null === $advert){
 
         throw new NotFoundHttpException("Le mot de passe d'id ".$id." n'existe pas.");
@@ -238,25 +248,25 @@ class AdvertController extends Controller
               'listAdverts' => $listAdverts));
       }
       return $this->redirectToRoute('fos_user_security_login');
-  } 
-  
+  }
+
   public function listAction(){
 
      $em = $this->getDoctrine()->getManager();
      $listAdverts =  $em->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategories(array('Développeur', 'Intégrateur'));
-  
+
      return $this->render('PasswordManagerPlatformBundle:Advert:list.html.twig', array(
      'listAdverts' => $listAdverts
      ));
   }
 
   public function menuAction($page){
-	  
+
 	    $em = $this->getDoctrine()->getManager();
       $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->getAdverts();
-	   
+
       return $this->render('PasswordManagerPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts ));
   }
-  
+
 
 }

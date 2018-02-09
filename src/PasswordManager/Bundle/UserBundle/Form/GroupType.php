@@ -37,9 +37,9 @@ class GroupType extends AbstractType
                 // On récupère notre objet Advert sous-jacent
                 $advert = $event->getData();
 
-                // Cette condition est importante, on en reparle plus loin
+
                 if (null === $advert) {
-                    return; // On sort de la fonction sans rien faire lorsque $advert vaut null
+                    return;
                 }
 
                 // Si l'annonce n'est pas publiée, ou si elle n'existe pas encore en base (id est null)

@@ -11,6 +11,7 @@ use FOS\UserBundle\Model\Group as BaseGroup;
  * @ORM\Table(name="fos_group")
  * @ORM\Entity(repositoryClass="PasswordManager\Bundle\UserBundle\Repository\GroupRepository")
  */
+
 class Group extends BaseGroup
 {
     /**
@@ -22,4 +23,10 @@ class Group extends BaseGroup
      */
     protected $id;
 
+
+    /**
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\User" )
+
+     */
+    protected $users;
 }

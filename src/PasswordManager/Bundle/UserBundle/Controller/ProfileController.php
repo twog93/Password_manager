@@ -21,9 +21,21 @@ class ProfileController extends BaseController
 {
 
 
+
+
+
+
     public function showAction()
     {
-    $user = $this->getUser();
+        $user = $this->getUser();
+        $userId = $user->getId();
+        $usergroup =  $user->getGroups()->getValues();
+
+
+        dump($user);
+        dump($userId);
+        dump($usergroup);
+
     if (!is_object($user) || !$user instanceof UserInterface) {
         throw new AccessDeniedException('This user does not have access to this section.');
     }
@@ -31,15 +43,13 @@ class ProfileController extends BaseController
     /*****************************************************
      * Add new functionality (e.g. log the profile) *
      *****************************************************/
-    $userId = $user->getId();
+
     $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-    $userGroup = $this->getDoctrine()->getManager()->getRepository('PasswordManagerUserBundle:User')->getGroupWithUser();
-        $userGroup =$userGroup[0]->getGroupNames();
 
     return $this->render('@FOSUser/Profile/show.html.twig', array(
         'user' => $user,
         'listAdverts' => $listAdverts,
-        'userGroup' =>$userGroup
+        'userGroup' =>$usergroup,
 
     ));
     }

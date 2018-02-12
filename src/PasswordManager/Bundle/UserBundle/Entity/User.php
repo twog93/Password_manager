@@ -28,8 +28,8 @@ class User extends BaseUser
 
 
     /**
-     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group" )
-
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group")
+     *
      */
     protected $groups;
 

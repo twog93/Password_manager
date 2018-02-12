@@ -19,11 +19,9 @@ class GroupRepository extends EntityRepository
     public function getGroupWithUser($pattern){
 
         return $this->createQueryBuilder('g')
-            ->leftJoin('g.users', 'u')
-        ->where('u.id = :pattern')
+            ->andWhere('g.name IN (:pattern)')
             ->setParameter('pattern', $pattern);
     }
-
 
 
 }

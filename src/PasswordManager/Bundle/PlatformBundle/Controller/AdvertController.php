@@ -143,11 +143,11 @@ class AdvertController extends Controller
       $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
       $user = $this->getUser();
-      //$username=$this->getUser()->getUsername();
+
         $advert = new Advert();
 
     // On ajoute le formulaire créer avec doctrine et la class AdvertType
-      $form = $this->get('form.factory')->create(AdvertType::class, $advert);
+      $form = $this->get('form.factory')->create(AdvertType::class, $advert, array('currentUser' => $user));
 
      if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 

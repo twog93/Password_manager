@@ -2,13 +2,3 @@ services:
 #    password_manager_core.example:
 #        class: PasswordManager\Bundle\CoreBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
-services:
-    password_manager_core.currentuser:
-        class: PasswordManager\Bundle\CoreBundle\Currentuser\Currentuser
-
-    app.my.form.type:
-        class: PasswordManager\Bundle\PlatformBundle\Form # this is your form type class
-        arguments:
-            - '@my.service' # this is the ID of the service you want to inject
-        tags:
-            - { name: form.type }

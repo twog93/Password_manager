@@ -17,3 +17,13 @@ services:
         arguments: ["@request_stack", "@doctrine.orm.entity_manager"] # Les données qu'on injecte au service : la requête et l'EntityManager
         tags:
             - { name: validator.constraint_validator, alias: passwordManager_platform_antiflood }  # C'est avec l'alias qu'on retrouvera le service
+
+    password_manager_core.currentuser:
+        class: PasswordManager\Bundle\PlatformBundle\Currentuser\Currentuser
+
+#    app.my.form.type:
+#        class: PasswordManager\Bundle\PlatformBundle\Form # this is your form type class
+#        arguments:
+#            - '@my.service' # this is the ID of the service you want to inject
+#        tags:
+#            - { name: form.type }

@@ -32,10 +32,6 @@ class ProfileController extends BaseController
         $usergroup =  $user->getGroups()->getValues();
 
 
-        dump($user);
-        dump($userId);
-        dump($usergroup);
-
     if (!is_object($user) || !$user instanceof UserInterface) {
         throw new AccessDeniedException('This user does not have access to this section.');
     }

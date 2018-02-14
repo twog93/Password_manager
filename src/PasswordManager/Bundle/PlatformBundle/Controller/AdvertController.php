@@ -179,7 +179,7 @@ class AdvertController extends Controller
 
      $em = $this->getDoctrine()->getManager();
      $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
-
+     $user = $this->getUser();
       //If user got 1 pass
       $userId = $this->getUser()->getId();
       $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
@@ -190,7 +190,7 @@ class AdvertController extends Controller
       }
       $userId = $this->getUser()->getId();
       $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-      $form = $this->get('form.factory')->create(AdvertEditType::class, $advert);
+      $form = $this->get('form.factory')->create(AdvertEditType::class, $advert, array('currentUser' => $user));
 
 
       if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {

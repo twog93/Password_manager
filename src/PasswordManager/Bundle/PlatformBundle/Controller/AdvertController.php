@@ -85,20 +85,22 @@ class AdvertController extends Controller
       // Check if user
       if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
 
+
+          //Charge list of category
           $listCategory = [];
           array_push($listCategory , $category);
+          //Get current user
           $user = $this->getUser();
           $userId = $user->getId();
+
+          //Get list of user groups
           $userGroup =  $user->getGroups()->getValues();
           $listGroupOfUser = array();
           foreach ($userGroup as $value) {
-
-
-
             array_push($listGroupOfUser, $value->getName());
-
           }
-
+          //get password list
+            dump($listCategory[0]);
             //Sort by category
             if($listCategory[0] != "all" or $listCategory[0] == ''){
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
@@ -115,6 +117,22 @@ class AdvertController extends Controller
             }
             else
                 {
+
+                    // add condtion if pass was shared
+                //      if($shared){
+                //        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
+                //        return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+                //        'listAdverts' => $listAdverts,
+                //     ));
+                //
+                //
+                //}else{
+                //
+                // $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
+                //      return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+                 //   'listAdverts' => $listAdverts,
+                //     ))
+                //   }
                     dump($userGroup);
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(

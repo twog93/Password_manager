@@ -20,7 +20,7 @@ class AppKernel extends Kernel
             new PasswordManager\Bundle\UserBundle\PasswordManagerUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-           // new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle()
+           // new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

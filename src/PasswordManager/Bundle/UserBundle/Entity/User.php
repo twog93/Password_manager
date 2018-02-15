@@ -6,6 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use FOS\UserBundle\Model\GroupInterface;
+use Doctrine\Common\Persistence\ObjectManager;
+use PasswordManager\Bundle\UserBundle\Entity\Group;
+use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityManager;
+
 
 /**
  * User
@@ -14,9 +20,6 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Entity(repositoryClass="PasswordManager\Bundle\UserBundle\Repository\UserRepository")
  */
 
-
-/*@ORM\ManyToOne(targetEntity="\PasswordManager\Bundle\PlatformBundle\Entity\Advert")
-@ORM\JoinColumn(nullable=true)*/
 
 class User extends BaseUser
 {
@@ -29,30 +32,22 @@ class User extends BaseUser
      */
     protected $id;
 
+
     /**
-     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group" )
-     * @ORM\JoinTable(name="user_user_group",
-     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
-     * )
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group")
+     *
      */
     protected $groups;
-
-
-
 
     public function __construct()
     {
         parent::__construct();
+
         // your own logic
         $this->roles = array('ROLE_USER');
+
+
+
     }
-
-    /*public function getGroups()
-
-    {
-
-        return $this->groups;
-
-    }*/
 }
+

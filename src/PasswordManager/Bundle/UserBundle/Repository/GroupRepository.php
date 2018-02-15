@@ -16,5 +16,13 @@ use Doctrine\ORM\QueryBuilder;
 class GroupRepository extends EntityRepository
 {
 
+    public function getGroupWithUser($pattern){
+
+        return $this->createQueryBuilder('g')
+            ->andWhere('g.name IN (:pattern)')
+            ->setParameter('pattern', $pattern);
+    }
+
 
 }
+

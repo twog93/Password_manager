@@ -32,6 +32,14 @@ class Advert
 
    private $categories;
 
+
+    /**
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group", cascade={"persist"})
+     * @Assert\NotBlank()
+     */
+
+    private $groups;
+
     /**
     * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")*
     */
@@ -453,6 +461,40 @@ class Advert
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * Add group
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\Group $group
+     *
+     * @return Advert
+     */
+    public function addGroup(\PasswordManager\Bundle\UserBundle\Entity\Group $group)
+    {
+        $this->groups[] = $group;
+
+        return $this;
+    }
+
+    /**
+     * Remove group
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\Group $group
+     */
+    public function removeGroup(\PasswordManager\Bundle\UserBundle\Entity\Group $group)
+    {
+        $this->groups->removeElement($group);
+    }
+
+    /**
+     * Get groups
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGroups()
+    {
+        return $this->groups;
     }
 
     /**

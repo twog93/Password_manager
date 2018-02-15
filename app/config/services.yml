@@ -19,7 +19,10 @@ services:
     #     arguments:
     #         $someArgument: 'some_value'
   # ...
-
+#    app.form.registration:
+#        class: PasswordManager\Bundle\UserBundle\Form\RegistrationType
+#        tags:
+#            - { name: form.type, alias: app_user_registration }
   # ...Add path for admin form
     admin.advert:
         class: PasswordManager\Bundle\PlatformBundle\Admin\AdvertAdmin

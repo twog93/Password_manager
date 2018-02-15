@@ -91,6 +91,10 @@ fos_user:
     resetting:
       email:
             template:  email/resetting.email.twig
+#    registration:
+#        form:
+#            type: PasswordManager\Bundle\UserBundle\Form\RegistrationType
+
 # Manager path to css,js link
 assetic:
     debug:  '%kernel.debug%'

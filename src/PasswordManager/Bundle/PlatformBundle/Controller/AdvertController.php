@@ -25,7 +25,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-
+use Symfony\Component\Security\Core\SecurityContext;
 
 
 
@@ -85,12 +85,22 @@ class AdvertController extends Controller
       // Check if user
       if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
 
+
+          //Charge list of category
           $listCategory = [];
           array_push($listCategory , $category);
-          $userId = $this->getUser()->getId();
-          $userGroup = $this->getDoctrine()->getManager()->getRepository('PasswordManagerUserBundle:User')->getGroupWithUser();
-          dump($userGroup[0]->getGroupNames());
-         // if(){}
+          //Get current user
+          $user = $this->getUser();
+          $userId = $user->getId();
+
+          //Get list of user groups
+          $userGroup =  $user->getGroups()->getValues();
+          $listGroupOfUser = array();
+          foreach ($userGroup as $value) {
+            array_push($listGroupOfUser, $value->getName());
+          }
+          //get password list
+            dump($listCategory[0]);
             //Sort by category
             if($listCategory[0] != "all" or $listCategory[0] == ''){
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
@@ -107,12 +117,30 @@ class AdvertController extends Controller
             }
             else
                 {
-                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
+                    // add condtion if pass was shared
+                //      if($shared){
+                //        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
+                //        return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+                //        'listAdverts' => $listAdverts,
+                //     ));
+                //
+                //
+                //}else{
+                //
+                // $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
+                //      return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+                 //   'listAdverts' => $listAdverts,
+                //     ))
+                //   }
+                    dump($userGroup);
+                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
                         'listAdverts' => $listAdverts,
                     ));
+
+
             }
 
 
@@ -120,7 +148,7 @@ class AdvertController extends Controller
 
       return $this->redirectToRoute('fos_user_security_login');
   }
-  
+
   public function addAction(Request $request){
 
       if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
@@ -133,15 +161,15 @@ class AdvertController extends Controller
       $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
       $user = $this->getUser();
-      //$username=$this->getUser()->getUsername();
+
         $advert = new Advert();
 
     // On ajoute le formulaire créer avec doctrine et la class AdvertType
-      $form = $this->get('form.factory')->create(AdvertType::class, $advert);
+      $form = $this->get('form.factory')->create(AdvertType::class, $advert, array('currentUser' => $user));
 
      if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
 
-         
+
               $em = $this->getDoctrine()->getManager();
               $advert->setUser($user);
               $em->persist($advert);
@@ -154,12 +182,12 @@ class AdvertController extends Controller
 
 
     // On passe la méthode createView() du formulaire à la vue
-   
+
     return $this->render('PasswordManagerPlatformBundle:Advert:add.html.twig', array(
 
       'form' => $form->createView(),
         'listAdverts' => $listAdverts));
-      
+
 	}
 
   public function editAction($id, Request $request){
@@ -169,18 +197,18 @@ class AdvertController extends Controller
 
      $em = $this->getDoctrine()->getManager();
      $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
-
+     $user = $this->getUser();
       //If user got 1 pass
       $userId = $this->getUser()->getId();
       $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-    
+
       if(null === $advert){
 
         throw new NotFoundHttpException("Le mot de passe d'id ".$id." n'existe pas.");
       }
       $userId = $this->getUser()->getId();
       $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-      $form = $this->get('form.factory')->create(AdvertEditType::class, $advert);
+      $form = $this->get('form.factory')->create(AdvertEditType::class, $advert, array('currentUser' => $user));
 
 
       if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
@@ -238,25 +266,25 @@ class AdvertController extends Controller
               'listAdverts' => $listAdverts));
       }
       return $this->redirectToRoute('fos_user_security_login');
-  } 
-  
+  }
+
   public function listAction(){
 
      $em = $this->getDoctrine()->getManager();
      $listAdverts =  $em->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategories(array('Développeur', 'Intégrateur'));
-  
+
      return $this->render('PasswordManagerPlatformBundle:Advert:list.html.twig', array(
      'listAdverts' => $listAdverts
      ));
   }
 
   public function menuAction($page){
-	  
+
 	    $em = $this->getDoctrine()->getManager();
       $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->getAdverts();
-	   
+
       return $this->render('PasswordManagerPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts ));
   }
-  
+
 
 }

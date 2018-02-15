@@ -32,6 +32,14 @@ class Advert
 
    private $categories;
 
+
+    /**
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\Group", cascade={"persist"})
+     * @Assert\NotBlank()
+     */
+
+    private $groups;
+
     /**
     * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")*
     */

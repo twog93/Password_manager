@@ -2,8 +2,9 @@
 
 namespace PasswordManager\Bundle\UserBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+
 use FOS\UserBundle\Model\Group as BaseGroup;
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Group
@@ -23,4 +24,47 @@ class Group extends BaseGroup
      */
     protected $id;
 
+
+    /**
+     * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\User")
+     * @ORM\JoinTable(name="user_group",
+     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
+     *     )
+     */
+    protected $users;
+
+    /**
+     * Add user
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\User $user
+     *
+     * @return Group
+     */
+    public function addUser(\PasswordManager\Bundle\UserBundle\Entity\User $user)
+    {
+        $this->users[] = $user;
+
+        return $this;
+    }
+
+    /**
+     * Remove user
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\User $user
+     */
+    public function removeUser(\PasswordManager\Bundle\UserBundle\Entity\User $user)
+    {
+        $this->users->removeElement($user);
+    }
+
+    /**
+     * Get users
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUsers()
+    {
+        return $this->users;
+    }
 }

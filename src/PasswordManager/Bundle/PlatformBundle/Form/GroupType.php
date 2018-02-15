@@ -7,7 +7,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 
-class CategoryType extends AbstractType
+class GroupType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -23,16 +23,8 @@ class CategoryType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'PasswordManager\Bundle\UserBundle\Entity\Group'
+            'data_class' => 'PasswordManager\UsermBundle\Entity\Group'
         ));
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getBlockPrefix()
-    {
-        return 'passwordmanager_bundle_userbundle_group';
     }
 
 

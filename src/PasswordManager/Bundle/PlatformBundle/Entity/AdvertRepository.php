@@ -8,7 +8,7 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
 
 class AdvertRepository extends EntityRepository{
   
-  public function getAdvertWithCategories(array $categoryNames)
+    public function getAdvertWithCategories(array $categoryNames)
   {
     $qb = $this->createQueryBuilder('a');
 
@@ -46,9 +46,7 @@ class AdvertRepository extends EntityRepository{
             ->getResult()
             ;
     }
-
-
-   public function getAdverts($page, $nbPerPage)
+    public function getAdverts($page, $nbPerPage)
   {
      $query = $this->createQueryBuilder('a')
       // Jointure sur l'attribut image
@@ -78,7 +76,6 @@ class AdvertRepository extends EntityRepository{
             ->getResult();
         
     }
-
     public function myFindGroup($groupNames)
     {
 
@@ -95,18 +92,14 @@ class AdvertRepository extends EntityRepository{
             ->getResult();
 
     }
-
     public function getAdvertWithGroupByAuthor(array $groupNames)
     {
-        $qb = $this->createQueryBuilder('g');
-
-        // jointure avec l'entité Group avec pour alias « g »
-        $qb
-            ->join('g.groups', 'a')
+        $qb = $this->createQueryBuilder('g')
+        ->join('g.groups', 'a')
             ->addSelect('a')
         ;
 
-        // Puis on filtre sur le nom des groups à l'aide d'un IN
+
         $qb->where($qb->expr()->in('a.name', $groupNames));
         // Enfin, on retourne le résultat
         return $qb
@@ -114,25 +107,17 @@ class AdvertRepository extends EntityRepository{
             ->getResult()
             ;
     }
-
-    /*public function getAdvertWithGroupByAuthor(array $groupNames)
+    public function getAdvertShared()
     {
-        $qb = $this->createQueryBuilder('a');
+        $qb = $this->createQueryBuilder('a')
+        ->where('a.shared = :user')
+        ->setParameter('user', true);
 
-        // jointure avec l'entité Group avec pour alias « g »
-        $qb
-            ->join('a.groups', 'g')
-            ->addSelect('g')
-        ;
-
-        // Puis on filtre sur le nom des groups à l'aide d'un IN
-        $qb->where($qb->expr()->in('g.name', $groupNames));
-        // Enfin, on retourne le résultat
         return $qb
             ->getQuery()
             ->getResult()
             ;
-    }*/
+    }
 
 
 

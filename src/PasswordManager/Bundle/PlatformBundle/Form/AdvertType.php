@@ -53,6 +53,7 @@ class AdvertType extends AbstractType
                 'class' => 'PasswordManagerUserBundle:Group',
                 'choice_label' => 'name',
                 'label' =>'Partagé dans mon groupe',
+      'preferred_choices' => array('Sans groupe'),
                 'multiple' =>true,
          //query_builder' => function(GroupRepository $repository){return $repository->getGroupWithUser();}
             'query_builder' => function(GroupRepository $repository) use ($pattern){
@@ -67,7 +68,11 @@ class AdvertType extends AbstractType
             'expanded' => true,
             'required' => true,
             ))
-        ->add('shared', CheckboxType::class,array('label' => 'Partagé ce mot de passe au groupe'))
+        ->add('shared', CheckboxType::class,array(
+            'label' => 'Partagé ce mot de passe au groupe',
+            'required' => false,
+
+        ))
         ->add('save', SubmitType::class,array('label' => 'Ajouté ce mot de passe'));
 
 

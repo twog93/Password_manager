@@ -9,7 +9,6 @@ use PasswordManager\Bundle\UserBundle\Repository\GroupRepository;
 use PasswordManager\Bundle\PlatformBundle\Entity\AdvertSkill;
 use PasswordManager\Bundle\PlatformBundle\Entity\Skill;
 use PasswordManager\Bundle\PlatformBundle\Entity\Application;
-use PasswordManager\Bundle\PlatformBundle\Entity\Image;
 use PasswordManager\Bundle\PlatformBundle\Entity\Advert;
 use PasswordManager\Bundle\UserBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -40,7 +39,6 @@ class AdvertController extends Controller
 
      return $this->render('PasswordManagerPlatformBundle:Advert:index.html.twig', array('listAdverts' => $listAdverts));
   }
-
   public function listAnnonceAction(){
 
      $em = $this->getDoctrine()->getManager();
@@ -48,7 +46,6 @@ class AdvertController extends Controller
 
      return $this->render('PasswordManagerPlatformBundle:Advert:application.html.twig', array('listApplications' => $listApplications ));
   }
-
   public function viewAction($id){
 
       //If user got 1 pass
@@ -74,12 +71,10 @@ class AdvertController extends Controller
         'listAdverts' => $listAdverts
 		));
   }
-
   public function viewSlugAction($year, $slug, $format){
 
     return new Response("Affichage de l'annonce d'id : ".$year . $slug . $format);
   }
-  
   public function indexAction($category){
 
       // Check if user
@@ -90,6 +85,7 @@ class AdvertController extends Controller
           $listCategory = [];
           array_push($listCategory , $category);
           //Get current user
+
           $user = $this->getUser();
           $userId = $user->getId();
 
@@ -100,11 +96,13 @@ class AdvertController extends Controller
             array_push($listGroupOfUser, $value->getName());
           }
           //get password list
-            dump($listCategory[0]);
-            //Sort by category
-            if($listCategory[0] != "all" or $listCategory[0] == ''){
-                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
 
+            //Display list of password , sorted by categories and create by current user.
+            if($listCategory[0] != "all" && $listCategory[0] != "shared"){
+                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
+                dump($listAdverts);
+                dump($listCategory);
+                dump($listCategory[0]);
                 if (!$listAdverts) {
 
                     throw $this->createNotFoundException("Vous n'avez pas de contenu dans cette catégorie");
@@ -115,40 +113,35 @@ class AdvertController extends Controller
                     'listAdverts' => $listAdverts,
                 ));
             }
-            else
-                {
+            elseif($listCategory[0] == "shared"){
+                $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertShared();
+                dump($listCategory);
+                dump($listCategory[0]);
 
-                    // add condtion if pass was shared
-                //      if($shared){
-                //        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
-                //        return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
-                //        'listAdverts' => $listAdverts,
-                //     ));
-                //
-                //
-                //}else{
-                //
-                // $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
-                //      return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
-                 //   'listAdverts' => $listAdverts,
-                //     ))
-                //   }
-                    dump($userGroup);
-                $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
-                        'listAdverts' => $listAdverts,
-                    ));
+                    'listAdverts' => $listPassShared,
+                ));
+            }
+            else{
 
+                $listPassOfUser = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+                dump($listPassOfUser);
+                dump($listCategory);
+                dump($listCategory[0]);
+                return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
+
+                    'listAdverts' => $listPassOfUser,
+                ));
 
             }
+
 
 
           }
 
       return $this->redirectToRoute('fos_user_security_login');
   }
-
   public function addAction(Request $request){
 
       if (!$this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
@@ -189,7 +182,6 @@ class AdvertController extends Controller
         'listAdverts' => $listAdverts));
 
 	}
-
   public function editAction($id, Request $request){
 
       if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
@@ -231,7 +223,6 @@ class AdvertController extends Controller
       }
       return $this->redirectToRoute('fos_user_security_login');
   }
-
   public function deleteAction($id, Request $request){
 
       if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
@@ -267,7 +258,6 @@ class AdvertController extends Controller
       }
       return $this->redirectToRoute('fos_user_security_login');
   }
-
   public function listAction(){
 
      $em = $this->getDoctrine()->getManager();
@@ -277,7 +267,6 @@ class AdvertController extends Controller
      'listAdverts' => $listAdverts
      ));
   }
-
   public function menuAction($page){
 
 	    $em = $this->getDoctrine()->getManager();

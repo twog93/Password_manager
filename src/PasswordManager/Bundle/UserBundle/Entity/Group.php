@@ -27,10 +27,8 @@ class Group extends BaseGroup
 
     /**
      * @ORM\ManyToMany(targetEntity="PasswordManager\Bundle\UserBundle\Entity\User")
-     * @ORM\JoinTable(name="user_group",
-     *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="group_id", referencedColumnName="id")}
-     *     )
+     *
+     *
      */
     protected $users;
 

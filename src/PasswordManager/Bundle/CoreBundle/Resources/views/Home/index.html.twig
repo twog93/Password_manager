@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="py-5 gradient-overlay bg-dark text-white">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="py-5 col-md-6">
                 {% if   listAdverts is defined   %}
@@ -36,8 +36,8 @@
                     <div class="row">
                         <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
                         <div class="col-8">
-                            <h5 class="mb-3"><b>Liste des serveurs</b></h5>
-                            <p class="my-1">Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</p>
+                            <h3 class="mb-3"><b>Liste des serveurs</b></h3>
+                            <p class="my-1"><b>Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</b></p>
                             {% set i = 0 %}
                             {% for advert in listAdverts %}
                                 {% if not advert.categories.empty %}
@@ -65,8 +65,8 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Liste des serveurs</b></h5>
-                                        <p class="my-1">Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</p>
+                                        <h3 class="mb-3"><b>Liste des serveurs</b></h3>
+                                        <p class="my-1"><b>Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</b></p>
                                         <span class="num-pass-index">
                                             Cette catégorie est vide.
                                         </span>
@@ -82,8 +82,8 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès base de données</b></h5>
-                                        <p class="my-1">Accèder à vos bases de données.</p>
+                                        <h3 class="mb-3"><b>Accès base de données</b></h3>
+                                        <p class="my-1"><b>Accèder à vos bases de données.</b></p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
                                             {% if not advert.categories.empty %}
@@ -112,8 +112,8 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès base de données</b></h5>
-                                        <p class="my-1">Accèder à vos bases de données.</p>
+                                        <h3 class="mb-3"><b>Accès base de données</b></h3>
+                                        <p class="my-1"><b>Accèder à vos bases de données.</b></p>
                                         <span class="num-pass-index">
                                             Cette catégorie est vide.
                                         </span>
@@ -131,8 +131,8 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès site web par identifiant</b></h5>
-                                        <p class="my-1">Accèder à vos mots de passe de connection de vos sites web préférés.</p>
+                                        <h3 class="mb-3"><b>Accès site web par identifiant</b></h3>
+                                        <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
                                             {% if not advert.categories.empty %}
@@ -160,8 +160,8 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès site web par identifiant</b></h5>
-                                        <p class="my-1">Accèder à vos mots de passe de connection de vos sites web préférés.</p>
+                                        <h3 class="mb-3"><b>Accès site web par identifiant</b></h3>
+                                        <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         <span class="num-pass-index">Cette catégorie est vide.</span>
                                     </div>
                                 </div>
@@ -175,8 +175,8 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-code"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Liste de accès SSH</b></h5>
-                                        <p class="my-1">Accéder aux listes des mots de passe liés aux accès SSH.</p>
+                                        <h3 class="mb-3"><b>Liste de accès SSH</b></h3>
+                                        <p class="my-1"><b>Accéder aux listes des mots de passe liés aux accès SSH.</b></p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
                                             {% if not advert.categories.empty %}
@@ -204,15 +204,13 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès site web par identifiant</b></h5>
-                                        <p class="my-1">Accèder à vos mots de passe de connection de vos sites web préférés.</p>
+                                        <h3 class="mb-3"><b>Accès site web par identifiant</b></h3>
+                                        <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         <span class="num-pass-index">Cette catégorie est vide</span>
                                     </div>
                                 </div>
                             </a>
                     {%  endif %}
-                </div>
-                <div class="py-5 col-md-3">
                 </div>
                 <div class="py-5 col-md-6">
                     {% if   listAdverts is defined   %}
@@ -221,7 +219,7 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès aux divers mots de passe</b></h5>
+                                        <h3 class="mb-3"><b>Accès aux divers mots de passe</b></h3>
                                         <p class="my-1">Accèder à vos mots de passe inclassables.</p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
@@ -246,20 +244,47 @@
                         {% endif %}
                     {% endif %}
                     {% if listAdverts is empty %}
+                        <a class="link-categories-wel" href="/web/app_dev.php/platform?category=divers">
+                            <div class="row">
+                                <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
+                                <div class="col-8">
+                                    <h5 class="mb-3"><b>Accès aux divers mots de passe</b></h5>
+                                    <p class="my-1">Accèder à vos mots de passe inclassables.</p>
+                                    <span class="num-pass-index">Cette catégorie est vide</span>
+                                </div>
+                            </div>
+                        </a>
+                    {%  endif %}
+                </div>
+                <div class="py-5 col-md-6">
+                    {% if   listAdverts is defined   %}
+                        {% if  listAdverts  %}
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'shared'})}}">
+                                <div class="row">
+                                    <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fab fa-slideshare"></i></div>
+                                    <div class="col-8">
+                                        <h3 class="mb-3"><b>Accès aux mots de passe partagés</b></h3>
+                                        <p class="my-1"><b>Accèder aux mots de passe partagés dans votre groupe.</b></p>
+
+                                    </div>
+                                </div>
+                            </a>
+                        {% endif %}
+                    {% endif %}
+                    {% if listAdverts is empty %}
                             <a class="link-categories-wel" href="/web/app_dev.php/platform?category=divers">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                     <div class="col-8">
                                         <h5 class="mb-3"><b>Accès aux divers mots de passe</b></h5>
-                                        <p class="my-1">Accèder à vos mots de passe inclassables.</p>
+                                        <p class="my-1"><b>Accèder à vos mots de passe inclassables.</b></p>
                                         <span class="num-pass-index">Cette catégorie est vide</span>
                                     </div>
                                 </div>
                             </a>
                     {%  endif %}
                 </div>
-                <div class="py-5 col-md-3">
-                </div>
+
             </div>
             </div>
         </div>

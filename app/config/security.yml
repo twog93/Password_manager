@@ -43,8 +43,12 @@ security:
             #http_basic: ~
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+    acl:
+        connection: default
+
     access_control:
 
+              - { path: /admin, roles: ROLE_ADMIN }
               - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: http }
            # - { path: ^/admin, roles: ROLE_ADMIN }
       #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }

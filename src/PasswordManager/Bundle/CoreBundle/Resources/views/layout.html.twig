@@ -27,7 +27,7 @@
         {# nav  use asssetic#}
         <nav class="navbar navbar-expand-md bg-dark navbar-dark w-100" style="">
             <a class="navbar-brand" href="{{ path('password_manager_core_home') }}"><i class="fa fa-key fa-fw fa-lg"></i></a>
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="{{ path('password_manager_core_home') }}">Gestionnaire de mot de passe</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -46,16 +46,16 @@
                         {% endif %}
                     {% endif %}
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ path('fos_user_profile_show') }}">mon profil</a>
+                            <a class="nav-link" href="{{ path('fos_user_profile_show') }}">Mon profil</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ path('password_manager_core_pass_generator') }}">Générateur de mot de passe</a>
+                        <a class="nav-link " href="{{ path('password_manager_core_pass_generator') }}">Générateur de mot de passe</a>
                     </li>
                         <li class="nav-item">
                              <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Contact</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link text-white" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
+                        <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                      </li>
                     </ul>
                 </div>
@@ -67,7 +67,7 @@
         {# nav  Footer Section#}
         <footer>
             <div class="bg-secondary" style="">
-                <div class="container">
+                <div class="container-fluid">
                     <div class="row">
                         <div class="p-4 col-md-4">
                             <h2 class="mb-4 text-dark">Gestionnaire de mot de passe</h2>
@@ -116,6 +116,14 @@
                         }
                     }
                 );
+            });
+
+
+            var selector = '.nav-link';
+
+            $(selector).on('click', function(){
+                $(selector).removeClass('active');
+                $(this).addClass('active');
             });
         </script>
       {% endblock %}

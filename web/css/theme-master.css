@@ -91,12 +91,6 @@ a:hover{
     margin-bottom: 30px;
 }
 
-footer .col-md-12.mt-3 p.text-center.text-white {
-    margin-bottom: 11px;
-    margin-top: 10px;
-}
-
-
 #bg-index-first-content{
 
     background-image: url("../img/O7MF5N0.jpg");
@@ -264,4 +258,14 @@ div#generator-pass{
 
     margin-bottom:90px;
 
+}
+
+/*navbar link*/
+
+.navbar-nav.mr-auto .nav-item a {
+    font-size: 1.3em;
+}
+
+.nav-link.active {
+    color: #fff !important;
 }

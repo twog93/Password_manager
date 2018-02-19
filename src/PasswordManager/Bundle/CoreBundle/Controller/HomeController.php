@@ -24,7 +24,8 @@ class HomeController extends Controller
 
             return $this->render('PasswordManagerCoreBundle:Home:index.html.twig', array(
 
-                'listAdverts' => $listAdverts,));
+                'listAdverts' => $listAdverts,
+                'currentUser' => $this->getUser()->getUsername()));
 
         }
 		// renvois Login Page

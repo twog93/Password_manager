@@ -25,6 +25,9 @@
     <body>
     {% block body %}
         {# nav  use asssetic#}
+
+        {# Add value for active link#}
+
         <nav class="navbar navbar-expand-md bg-dark navbar-dark w-100" style="">
             <a class="navbar-brand" href="{{ path('password_manager_core_home') }}"><i class="fa fa-key fa-fw fa-lg"></i></a>
             <div class="container-fluid">
@@ -35,9 +38,11 @@
                 {# List menu + if user authentified#}
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+
                         <li class="nav-item">
+
                             <a class="nav-link" href="{{ path('password_manager_core_home') }}">Accueil</a>
-                    </li>
+                        </li>
                         {% if   listAdverts is defined   %}
                         {% if   listAdverts %}
                             <li class="nav-item">
@@ -54,6 +59,13 @@
                         <li class="nav-item">
                              <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Contact</a>
                      </li>
+                  {% if app.request.attributes.get('_route') == 'password_manager_core_home' %}
+                    {% if currentUser == "admin" %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Adminstration</a>
+                        </li>
+                     {%  endif %}
+                  {%  endif %}
                      <li class="nav-item">
                         <a class="nav-link" href="{{ path('fos_user_security_logout') }}">Déconnexion</a>
                      </li>
@@ -83,7 +95,7 @@
                     <div class="row">
                         <div class="p-4 col-md-4">
                             <h2 class="mb-4 text-dark">Gestionnaire de mot de passe</h2>
-                            <p class="text-white">Un outil pour vous simplifier la vie</p>
+                            <p class="text-white"><b><i>Un outil pour vous simplifier la vie</i></b></p>
                         </div>
                         <div class="p-4 col-md-4">
                             <h2 class="mb-4 text-secondary">Mapsite</h2>
@@ -102,15 +114,18 @@
                             </ul>
                         </div>
                         <div class="p-4 col-md-4">
-                            <h2 class="mb-4 text-secondary">Subscribe</h2>
-                            <p>
-                                <a href="mailto:contact-gdm@afbiodiversite.fr" class="text-white">contact-gdm@afbiodiversite.fr</a>
-                            </p>
+                            <i class="d-block mx-auto fa fa-5x fa fa-lock first-footer"></i>
+
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 mt-3">
-                            <p class="text-center text-white">© Copyright 2017 -  {{ 'now'|date('Y') }} Gestionnaire de mot de passe - All rights reserved. </p>
+                        <div class="col-md-4">
+                            <p class="text-center">
+                                <a href="mailto:contact-gdm@afbiodiversite.fr" class="text-white"><b>contact-gdm@afbiodiversite.fr</b></a>
+                            </p>
+                        </div>
+                        <div class="p-8 col-md-8">
+                            <p class="text-left text-white">© Copyright 2017 -  {{ 'now'|date('Y') }} Gestionnaire de mot de passe - All rights reserved. </p>
                         </div>
                     </div>
                 </div>

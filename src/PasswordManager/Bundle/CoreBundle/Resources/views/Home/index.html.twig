@@ -26,10 +26,10 @@
             </div>
         </div>
     </div>
-    <div class="py-5 gradient-overlay bg-dark text-white">
+    <div class="py-5 gradient-overlay bg-dark text-white" id="bg-index-second-content">
         <div class="container-fluid">
             <div class="row">
-                <div class="py-5 col-md-6">
+                <div class="py-5 col-md-6 transi">
                 {% if   listAdverts is defined   %}
                     {% if  listAdverts  %}
                     <a class="link-categories-wel" href='{{ path('password_manager_platform_home',{'category':"FTP,SFTP"})}}'>
@@ -75,14 +75,14 @@
                             </a>
                     {% endif %}
                 </div>
-                <div class="py-5 col-md-6">
+                <div class="py-5 col-md-6 transi">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Sql'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès base de données</b></h3>
+                                        <h3 class="mb-3"><b>Base de données</b></h3>
                                         <p class="my-1"><b>Accèder à vos bases de données.</b></p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
@@ -112,7 +112,7 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès base de données</b></h3>
+                                        <h3 class="mb-3"><b>Base de données</b></h3>
                                         <p class="my-1"><b>Accèder à vos bases de données.</b></p>
                                         <span class="num-pass-index">
                                             Cette catégorie est vide.
@@ -124,14 +124,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="py-5 col-md-6">
+                <div class="py-5 col-md-6 transi">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'user-admin'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès site web par identifiant</b></h3>
+                                        <h3 class="mb-3"><b>Site web par identifiant</b></h3>
                                         <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
@@ -160,7 +160,7 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès site web par identifiant</b></h3>
+                                        <h3 class="mb-3"><b>Site web par identifiant</b></h3>
                                         <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         <span class="num-pass-index">Cette catégorie est vide.</span>
                                     </div>
@@ -168,14 +168,14 @@
                             </a>
                     {% endif %}
                 </div>
-                <div class="py-5 col-md-6">
+                <div class="py-5 col-md-6 transi">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Ssh'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-code"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Liste de accès SSH</b></h3>
+                                        <h3 class="mb-3"><b>Liste des accès SSH</b></h3>
                                         <p class="my-1"><b>Accéder aux listes des mots de passe liés aux accès SSH.</b></p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
@@ -204,7 +204,7 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès site web par identifiant</b></h3>
+                                        <h3 class="mb-3"><b>Site web par identifiant</b></h3>
                                         <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         <span class="num-pass-index">Cette catégorie est vide</span>
                                     </div>
@@ -212,14 +212,16 @@
                             </a>
                     {%  endif %}
                 </div>
-                <div class="py-5 col-md-6">
+            </div>
+            <div class="row">
+                <div class="py-5 col-md-6 transi">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Autres'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès aux divers mots de passe</b></h3>
+                                        <h3 class="mb-3"><b>Divers mots de passe</b></h3>
                                         <p class="my-1">Accèder à vos mots de passe inclassables.</p>
                                         {% set j = 0 %}
                                         {% for advert in listAdverts %}
@@ -248,7 +250,7 @@
                             <div class="row">
                                 <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                 <div class="col-8">
-                                    <h5 class="mb-3"><b>Accès aux divers mots de passe</b></h5>
+                                    <h5 class="mb-3"><b>Divers mots de passe</b></h5>
                                     <p class="my-1">Accèder à vos mots de passe inclassables.</p>
                                     <span class="num-pass-index">Cette catégorie est vide</span>
                                 </div>
@@ -256,15 +258,16 @@
                         </a>
                     {%  endif %}
                 </div>
-                <div class="py-5 col-md-6">
+                <div class="py-5 col-md-6 transi">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'shared'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fab fa-slideshare"></i></div>
                                     <div class="col-8">
-                                        <h3 class="mb-3"><b>Accès aux mots de passe partagés</b></h3>
+                                        <h3 class="mb-3"><b>Mots de passe partagés</b></h3>
                                         <p class="my-1"><b>Accèder aux mots de passe partagés dans votre groupe.</b></p>
+                                        <span class="num-pass-index">Listes des mots de passe partagés au sein du groupe</span>
 
                                     </div>
                                 </div>
@@ -276,7 +279,7 @@
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                     <div class="col-8">
-                                        <h5 class="mb-3"><b>Accès aux divers mots de passe</b></h5>
+                                        <h5 class="mb-3"><b>Divers mots de passe</b></h5>
                                         <p class="my-1"><b>Accèder à vos mots de passe inclassables.</b></p>
                                         <span class="num-pass-index">Cette catégorie est vide</span>
                                     </div>
@@ -284,9 +287,9 @@
                             </a>
                     {%  endif %}
                 </div>
-
             </div>
-            </div>
+        </div>
+    </div>
         </div>
     </div>
 {% endblock %}

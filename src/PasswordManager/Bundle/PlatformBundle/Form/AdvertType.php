@@ -65,7 +65,7 @@ class AdvertType extends AbstractType
             'class' => 'PasswordManagerPlatformBundle:Category',
             'choice_label' => 'name',
             'multiple' => true,
-            'expanded' => true,
+            'expanded' => false,
             'required' => true,
             ))
         ->add('shared', CheckboxType::class,array(

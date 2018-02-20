@@ -62,7 +62,7 @@
                   {% if app.request.attributes.get('_route') == 'password_manager_core_home' %}
                     {% if currentUser == "admin" %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ path('password_manager_core_contact') }}">Adminstration</a>
+                            <a class="nav-link" href="{{ path('sonata_admin_dashboard') }}">Administration</a>
                         </li>
                      {%  endif %}
                   {%  endif %}

@@ -10,6 +10,9 @@
 
 {% block passwordmanager_platform_body_index %}
     {{ parent() }}
+
+    {#set flag variable#}
+    {% set categorie = "all" %}
     <div class="py-5 text-center opaque-overlay" id="bg-index-first-content" >
         <div class="container py-5">
             <div class="row">
@@ -32,7 +35,8 @@
                 <div class="py-5 col-md-6 transi">
                 {% if   listAdverts is defined   %}
                     {% if  listAdverts  %}
-                    <a class="link-categories-wel" href='{{ path('password_manager_platform_home',{'category':"FTP,SFTP"})}}'>
+                        {#{{ path('password_manager_platform_home',{'category':"FTP,SFTP"})}} #}
+                    <a class="link-categories-wel" href='{{ path('password_manager_platform_home',{'category':'FTP,SFTP'})}}'>
                     <div class="row">
                         <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
                         <div class="col-8">
@@ -44,6 +48,7 @@
                                     {% for category in advert.categories %}
                                         {% if category.name == "FTP,SFTP" %}
                                             {% set i = i + 1 %}
+                                            {%  set categorie = "FTP,SFTP"  %}
                                         {% endif %}
                                     {% endfor %}
                                 {% endif %}
@@ -61,7 +66,7 @@
                     {% endif %}
                 {% endif %}
                     {% if listAdverts is empty %}
-                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=ftp-sftp">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_add')}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
                                     <div class="col-8">
@@ -75,11 +80,13 @@
                             </a>
                     {% endif %}
                 </div>
+
                 <div class="py-5 col-md-6 transi">
                     {% if   listAdverts is defined   %}
                         {% if  listAdverts  %}
-                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Sql'})}}">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Sql' })}}">
                                 <div class="row">
+
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
                                         <h3 class="mb-3"><b>Base de données</b></h3>
@@ -90,6 +97,7 @@
                                                 {% for category in advert.categories %}
                                                     {% if category.name == "Sql" %}
                                                         {% set j = j + 1 %}
+                                                        {%  set categorie = "Sql"  %}
                                                     {% endif %}
                                                 {% endfor %}
                                             {% endif %}
@@ -108,7 +116,7 @@
                     {% endif %}
                     {% if  listAdverts is empty  %}
 
-                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=sql">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-map-o"></i></div>
                                     <div class="col-8">
@@ -156,7 +164,7 @@
                         {% endif %}
                     {% endif %}
                     {% if listAdverts is empty %}
-                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=user-admin">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
@@ -200,7 +208,7 @@
                         {% endif %}
                     {% endif %}
                     {% if listAdverts is empty %}
-                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=user-admin">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
                                     <div class="col-8">
@@ -246,7 +254,7 @@
                         {% endif %}
                     {% endif %}
                     {% if listAdverts is empty %}
-                        <a class="link-categories-wel" href="/web/app_dev.php/platform?category=divers">
+                        <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                             <div class="row">
                                 <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                 <div class="col-8">
@@ -275,7 +283,7 @@
                         {% endif %}
                     {% endif %}
                     {% if listAdverts is empty %}
-                            <a class="link-categories-wel" href="/web/app_dev.php/platform?category=divers">
+                            <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
                                     <div class="col-8">

@@ -336,6 +336,9 @@ ul#link-to-register-init li a {
 ul.navbar-nav.mr-auto .nav-item .nav-link:active {
     color: #ffffff;
 }
+select#contact_categorieContact {
+    height: 35px;
+}
 
 @media screen and (max-width: 1100px)
 {
@@ -357,3 +360,4 @@ ul.navbar-nav.mr-auto .nav-item .nav-link:active {
         margin-top: 20px;
     }
 }
+

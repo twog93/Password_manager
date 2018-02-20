@@ -47,6 +47,14 @@ class Contact
      *
      * @return int
      */
+
+    /**
+     * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\CoreBundle\Entity\CategoryContact")
+     *
+     */
+    private $categorieContact;
+
+
     public function getId()
     {
         return $this->id;
@@ -123,5 +131,28 @@ class Contact
     {
         return $this->user;
     }
-}
 
+    /**
+     * Set categorieContact
+     *
+     * @param \PasswordManager\Bundle\CoreBundle\Entity\CategoryContact $categorieContact
+     *
+     * @return Contact
+     */
+    public function setCategorieContact(\PasswordManager\Bundle\CoreBundle\Entity\CategoryContact $categorieContact = null)
+    {
+        $this->categorieContact = $categorieContact;
+
+        return $this;
+    }
+
+    /**
+     * Get categorieContact
+     *
+     * @return \PasswordManager\Bundle\CoreBundle\Entity\CategoryContact
+     */
+    public function getCategorieContact()
+    {
+        return $this->categorieContact;
+    }
+}

@@ -28,6 +28,11 @@
                     {# Les erreurs générales du formulaire. #}
                     {{ form_errors(form) }}
                     <div class="form-group">
+                        {{ form_label(form.categorieContact, "Choisissez la catégorie") }}
+                        {{ form_widget(form.categorieContact, {'attr': {'pattern': '.*'}}) }}
+                        {{ form_errors(form.categorieContact) }}
+                    </div>
+                    <div class="form-group">
                         {{ form_label(form.subject, "Sujet de votre demande") }}
                         {{ form_widget(form.subject, {'attr': {'pattern': '.*'}}) }}
                         {{ form_errors(form.subject) }}

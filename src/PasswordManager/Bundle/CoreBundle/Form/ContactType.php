@@ -26,8 +26,16 @@ class ContactType extends AbstractType
 
 	//add 2 inputs for model
         $builder
+            ->add('categorieContact',EntityType::class, array(
+                'class' => 'PasswordManagerCoreBundle:CategoryContact',
+                'choice_label' => 'motive',
+                'multiple' => false,
+                'expanded' => false,
+                'required' => true,
+            ))
         ->add('subject')
         ->add('body')
+
         ->add('save', SubmitType::class);
 
     }

@@ -3,6 +3,7 @@
 namespace PasswordManager\Bundle\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Contact
@@ -23,14 +24,14 @@ class Contact
 
     /**
      * @var string
-     *
+     *@Assert\Length(min=6, minMessage=" Votre sujet doit comporter au minimum {{ limit }} caractères.")
      * @ORM\Column(name="subject", type="string", length=255)
      */
     private $subject;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="body", type="text")
      */
     private $body;
@@ -46,6 +47,14 @@ class Contact
      *
      * @return int
      */
+
+    /**
+     * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\CoreBundle\Entity\CategoryContact")
+     *
+     */
+    private $categorieContact;
+
+
     public function getId()
     {
         return $this->id;
@@ -97,6 +106,30 @@ class Contact
     public function getBody()
     {
         return $this->body;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \PasswordManager\Bundle\UserBundle\Entity\User $user
+     *
+     * @return Contact
+     */
+    public function setUser(\PasswordManager\Bundle\UserBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PasswordManager\Bundle\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
 

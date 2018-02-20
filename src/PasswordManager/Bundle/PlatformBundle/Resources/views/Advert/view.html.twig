@@ -26,24 +26,7 @@
       </div>
     </div>
   </div>
-{#{% if advert.image is not null %}
-<img
-  src="{{ asset(advert.image.uploadDir ~ '/' ~ advert.image.id ~ '.' ~ advert.image.url) }}"
-  alt="{{ advert.image.alt }}"
-/>
-{% endif %}#}
-{#
-  {% if listAdvertSkills|length > 0 %}
-  <div>
-    Cette annonce requiert les compétences suivantes :
-    <ul>
-      {% for advertSkill in listAdvertSkills %}
-        <li>{{ advertSkill.skill.name }} : niveau {{ advertSkill.level }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endif %}
-#}
+
   <div>
   {% for list in listApplication %}
     <p> {{ list.content }}"</p>

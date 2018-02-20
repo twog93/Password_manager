@@ -20,7 +20,11 @@ class AppKernel extends Kernel
             new PasswordManager\Bundle\UserBundle\PasswordManagerUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
-           // new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -28,13 +32,13 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
 			$bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
-			$bundles[] = new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle();
+		//	$bundles[] = new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle();
             $bundles[] = new Ambta\DoctrineEncryptBundle\AmbtaDoctrineEncryptBundle();
             $bundles[] = new Sonata\CoreBundle\SonataCoreBundle();
-            $bundles[] = new Sonata\BlockBundle\SonataBlockBundle();
-            $bundles[] = new Knp\Bundle\MenuBundle\KnpMenuBundle();
-            $bundles[] =  new Sonata\AdminBundle\SonataAdminBundle();
-            $bundles[] = new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle();
+         //   $bundles[] = new Sonata\BlockBundle\SonataBlockBundle();
+         //   $bundles[] = new Knp\Bundle\MenuBundle\KnpMenuBundle();
+         //   $bundles[] =  new Sonata\AdminBundle\SonataAdminBundle();
+         //   $bundles[] = new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle();
 
 
             if ('dev' === $this->getEnvironment()) {

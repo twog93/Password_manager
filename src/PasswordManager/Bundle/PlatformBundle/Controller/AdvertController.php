@@ -100,12 +100,10 @@ class AdvertController extends Controller
             //Display list of password , sorted by categories and create by current user.
             if($listCategory[0] != "all" && $listCategory[0] != "shared"){
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
-                dump($listAdverts);
-                dump($listCategory);
-                dump($listCategory[0]);
                 if (!$listAdverts) {
 
-                    throw $this->createNotFoundException("Vous n'avez pas de contenu dans cette catégorie");
+                    throw new \Exception("Vous n'avez pas de contenu dans cette catégorie");
+
                 }
 
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
@@ -115,8 +113,6 @@ class AdvertController extends Controller
             }
             elseif($listCategory[0] == "shared"){
                 $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertShared();
-                dump($listCategory);
-                dump($listCategory[0]);
 
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
@@ -126,9 +122,6 @@ class AdvertController extends Controller
             else{
 
                 $listPassOfUser = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-                dump($listPassOfUser);
-                dump($listCategory);
-                dump($listCategory[0]);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
                     'listAdverts' => $listPassOfUser,

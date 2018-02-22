@@ -73,7 +73,7 @@ class AdvertType extends AbstractType
             'required' => false,
 
         ))
-        ->add('save', SubmitType::class,array('label' => 'Ajouté ce mot de passe'));
+        ->add('save', SubmitType::class,array('label' => 'Ajouter ce mot de passe'));
 
 
     }

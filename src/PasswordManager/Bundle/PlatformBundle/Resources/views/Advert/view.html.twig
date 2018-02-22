@@ -36,15 +36,16 @@
       <div class="col-sm-12">
         <div class="card text-center">
           <div class="card-header">
-            <h2>{{ advert.title }}</h2>
+            <h2><i class="fa fa-key fa-fw fa-lg"> </i> {{ advert.title }}</h2>
           </div>
           <div class="card-block">
             <br/><br/>
-            <p class="card-text" style="text-align: center;padding: 30px;"> {{ advert.content }}</p>
+            <p class="card-text" style="text-align: center;padding: 30px;"><i><b>Informations complémentaires :</b></i> {{ advert.content }}</p>
 
             {% if advert.url %}
             <p>
-              <a href="{{ advert.url }}" target="_blank" class="btn btn-primary">Accéder au site Web</a>
+              <a href="{{ advert.url }}" target="_blank" class="btn btn-default go-link"><i class="glyphicon glyphicon-link"></i> Accéder au site Web</a>
+
             </p>
         {% endif %}
           </div>
@@ -64,12 +65,13 @@
             </button>
           </p>
         </div>
-          <div>
+          <p style="color:#868e96;text-align:center;margin:0px 0 10px 0;"><i class="fa fa-asterisk" aria-hidden="true"><span style="margin-left:10px;">Cliquer sur l'icone pour copier directement le mot de passe dans le presse-papier</span></i></p>
+          <div id="view-pass">
             <a href="{{ path('password_manager_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
               <i class="glyphicon glyphicon-edit"></i>
               Modifier le mot de passe
             </a>
-            <a href="{{ path('password_manager_platform_delete', {'id': advert.id}) }}" class="btn btn-secondary">
+            <a href="{{ path('password_manager_platform_delete', {'id': advert.id}) }}" class="btn btn-default">
               <i class="glyphicon glyphicon-trash"></i>
               Supprimer le mot de passe
             </a>
@@ -81,8 +83,8 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <p>
-          <a href="{{ path('password_manager_platform_home') }}" class="btn btn-default">
+        <p id="btn-back-list">
+          <a href="{{ path('password_manager_platform_home') }}" class="btn btn-default back-link">
             <i class="glyphicon glyphicon-chevron-left"></i>
             Retour à la liste
           </a>

@@ -140,7 +140,9 @@ file that was distributed with this source code.
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                         <span class="sr-only">Toggle navigation</span>
                     </a>
-
+                    <a href="#" style="font-size: 18px;color: #333;" >
+                        <span>Espace d'administration du gestionnaire de mots de passe</span>
+                    </a>
                     <div class="navbar-left">
                         {% block sonata_breadcrumb %}
                             <div class="hidden-xs">
@@ -239,7 +241,12 @@ file that was distributed with this source code.
                         {% block side_bar_after_nav %}
                             <p class="text-center small" style="border-top: 1px solid #444444; padding-top: 20px">
                                 {% block side_bar_after_nav_content %}
-                                    <a href="https://sonata-project.org" rel="noreferrer" target="_blank"><i class="fa fa-key fa-fw fa-lg fa-5x"></i></a>
+                                    <a href="{{ path('password_manager_core_home') }}" rel="noreferrer" ><i class="fa fa-key fa-fw fa-lg fa-5x"></i></a>
+                                {% endblock %}
+                            </p>
+                            <p class="text-center small" style=" padding-top: 20px">
+                                {% block side_bar_after_nav_content2 %}
+                                    <h4 style="text-align: center;"><a href="{{ path('password_manager_core_home') }}" rel="noreferrer" >Retourner à l'accueil</i></a></h4>
                                 {% endblock %}
                             </p>
                         {% endblock %}
@@ -352,6 +359,39 @@ file that was distributed with this source code.
                         </div>
                         <div class="col-md-8">
                             <i class="fa fa-info fa-5x" aria-hidden="true"><h1 style="display: inline;margin-left: 20px;">Bienvenue sur l'espace d'admistration de l'application</h1></i>
+                            <h4 style="margin:20px 0 20px;text-align:center;">Cet accès vous permet de gérer l'ensemble des données instruites dans l'application</h4>
+                            <ul style="text-align: center">
+                                <li><b>Advert => Mots de passe</b>
+                                <ul>
+                                    <li>Ajouter un nouveau mot de passe</li>
+                                    <li>Modifier un mot de passe existant </li>
+                                    <li>Supprimer un mot de passe existant </li>
+                                </ul>
+                                </li>
+                            </ul>
+                            <ul  style="text-align: center">
+                                <li><b>User => utilisateurs</b>
+                                    <ul>
+                                        <li>Ajouter un nouvel utilisateur</li>
+                                        <li>Modifier un utilisateur existant
+                                        <ul><li>
+                                              Nom, Roles, email,groupe..
+                                            </li>
+                                        </ul></li>
+                                        <li>Supprimer  un utilisateur existant</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul  style="text-align: center">
+                                <li><b>Group => Groupe d'utilisateur</b>
+                                    <ul>
+                                        <li>Ajouter un nouveau groupe</li>
+                                        <li>Modifier un groupe existant
+                                          </li>
+                                        <li>Supprimer  un groupe existant</li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                         <div class="col-md-2">
                         </div>

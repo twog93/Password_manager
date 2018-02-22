@@ -34,7 +34,7 @@
         <table id="list-pass-table"  class="table-striped">
                         <thead>
                         <tr>
-                            <th class="sorting">Id</th>
+
                             <th class="sorting">Titre</th>
                             <th class="sorting">Lien du site web</th>
                             <th class="sorting">Login</th>
@@ -49,11 +49,11 @@
                         <tbody>
                         {% for advert in listAdverts %}
                             <tr>
-                                <td> {{ advert.id }}</td>
-                                <td>{{ advert.title }}</td>
-                                <td> <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}">
-                                        {{ advert.title }}
-                                    </a></td>
+
+                                <td><a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}"><b>{{ advert.title }}</b></a></td>
+                                <td>
+                                    <a href="advert.url">{{ advert.url }}</a>
+                                    </td>
                                 <td>{{ advert.login }}</td>
                                 <td>{{ advert.password }}</td>
                                 <td>le {{ advert.date|date('d/m/Y') }}</td>
@@ -79,7 +79,7 @@
                     {% endfor %}
                 </ul>#}
 
-            <div style="width:50%;display:block;margin:0 auto;">
+            <div style="width:50%;display:block;margin:30px auto;">
                 <a class="btn btn-lg btn-secondary mx-1" href="{{ path('password_manager_platform_add') }}" style="margin: 0 auto;display: block;">Ajouter un mot de passe à ma liste</a>
             </div>
         </div>

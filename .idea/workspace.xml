@@ -2,13 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ad327d-d6c0-4d94-a2b1-b6298283288b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/RoleAdmin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_prod.yml" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/email/resetting.email.twig" afterPath="$PROJECT_DIR$/app/Resources/views/email/resetting.email.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact-admin.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact-admin.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertEditType.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertEditType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertType.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/delete.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/delete.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/GroupAdmin.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/GroupAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/UserAdmin.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/UserAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/theme-master.css" afterPath="$PROJECT_DIR$/web/css/theme-master.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,51 +43,208 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="error.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
+      <file leaf-file-name="mailing-contact.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AdvertController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="104" column="90" lean-forward="false" selection-start-line="104" selection-start-column="90" selection-end-line="104" selection-end-column="90" />
+            <state relative-caret-position="882">
+              <caret line="327" column="58" lean-forward="false" selection-start-line="327" selection-start-column="58" selection-end-line="327" selection-end-column="99" />
               <folding>
-                <element signature="e#69#140#0#PHP" expanded="true" />
-                <element signature="e#1426#1788#0#PHP" expanded="false" />
-                <element signature="e#1791#2138#0#PHP" expanded="false" />
-                <element signature="e#2141#3269#0#PHP" expanded="false" />
-                <element signature="e#3272#3414#0#PHP" expanded="false" />
-                <element signature="e#5578#6953#0#PHP" expanded="false" />
-                <element signature="e#6956#8463#0#PHP" expanded="false" />
-                <element signature="e#8466#9726#0#PHP" expanded="false" />
+                <element signature="e#7737#7786#0#HTML" expanded="true" />
+                <element signature="e#7800#7858#0#HTML" expanded="true" />
+                <element signature="e#7873#7912#0#HTML" expanded="true" />
+                <element signature="e#8295#8320#0#HTML" expanded="true" />
+                <element signature="e#8572#8610#0#HTML" expanded="true" />
+                <element signature="e#8700#8741#0#HTML" expanded="true" />
+                <element signature="e#8742#8748#1#HTML" expanded="true" />
+                <element signature="e#8870#8911#0#HTML" expanded="true" />
+                <element signature="e#8912#8918#1#HTML" expanded="true" />
+                <element signature="e#9370#9479#0#HTML" expanded="true" />
+                <element signature="e#10374#10412#0#HTML" expanded="true" />
+                <element signature="e#10504#10545#0#HTML" expanded="true" />
+                <element signature="e#10546#10552#1#HTML" expanded="true" />
+                <element signature="e#10869#10923#0#HTML" expanded="true" />
+                <element signature="e#10982#11111#0#HTML" expanded="true" />
+                <element signature="e#11363#11404#0#HTML" expanded="true" />
+                <element signature="e#11405#11411#1#HTML" expanded="true" />
+                <element signature="e#11581#11713#0#HTML" expanded="true" />
+                <element signature="e#11771#11789#0#HTML" expanded="true" />
+                <element signature="e#12069#12124#0#HTML" expanded="true" />
+                <element signature="e#12450#12491#0#HTML" expanded="true" />
+                <element signature="e#12492#12498#1#HTML" expanded="true" />
+                <element signature="e#13316#13371#0#HTML" expanded="true" />
+                <element signature="e#13413#13541#0#HTML" expanded="true" />
+                <element signature="e#13735#13884#0#HTML" expanded="true" />
+                <element signature="e#13925#13943#0#HTML" expanded="true" />
+                <element signature="e#14130#14279#0#HTML" expanded="true" />
+                <element signature="e#14320#14338#0#HTML" expanded="true" />
+                <element signature="e#14501#14632#0#HTML" expanded="true" />
+                <element signature="e#14673#14691#0#HTML" expanded="true" />
+                <element signature="e#14749#14767#0#HTML" expanded="true" />
+                <element signature="e#14826#14844#0#HTML" expanded="true" />
+                <element signature="e#15002#15153#0#HTML" expanded="true" />
+                <element signature="e#15194#15212#0#HTML" expanded="true" />
+                <element signature="e#15403#15555#0#HTML" expanded="true" />
+                <element signature="e#15596#15614#0#HTML" expanded="true" />
+                <element signature="e#15787#15823#0#HTML" expanded="true" />
+                <element signature="e#16124#16180#0#HTML" expanded="true" />
+                <element signature="e#16550#16649#0#HTML" expanded="true" />
+                <element signature="e#16732#16866#0#HTML" expanded="true" />
+                <element signature="e#17699#17853#0#HTML" expanded="true" />
+                <element signature="e#17894#17912#0#HTML" expanded="true" />
+                <element signature="e#18087#18240#0#HTML" expanded="true" />
+                <element signature="e#18281#18299#0#HTML" expanded="true" />
+                <element signature="e#18504#18657#0#HTML" expanded="true" />
+                <element signature="e#18698#18716#0#HTML" expanded="true" />
+                <element signature="e#18727#18733#0#HTML" expanded="true" />
+                <marker date="1519295946742" expanded="true" signature="1056:1162" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="1072:1146" ph="{...}" />
+                <marker date="1519295946742" expanded="true" signature="7482:7660" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="7521:7645" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="8072:8131" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="8093:8131" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="8118:8131" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="9631:9704" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="9705:9874" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="9849:9874" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="10084:10234" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="10121:10234" ph="..." />
+                <marker date="1519295946742" expanded="true" signature="10205:10234" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <file leaf-file-name="mailing-contact-admin.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact-admin.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+            <state relative-caret-position="324">
+              <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme-master.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/theme-master.css">
+      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="365" column="1" lean-forward="false" selection-start-line="365" selection-start-column="1" selection-end-line="365" selection-end-column="1" />
+            <state relative-caret-position="198">
+              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding>
+                <element signature="e#371#1078#0#PHP" expanded="false" />
+                <element signature="e#4525#4802#0#PHP" expanded="false" />
+                <element signature="e#4839#5509#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contact.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2484">
+              <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/ContactType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contact.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/contact.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="76" lean-forward="false" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resetting.email.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/email/resetting.email.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="335" column="60" lean-forward="true" selection-start-line="335" selection-start-column="60" selection-end-line="335" selection-end-column="60" />
+              <folding>
+                <element signature="e#7721#7770#0#HTML" expanded="true" />
+                <element signature="e#7784#7843#0#HTML" expanded="true" />
+                <element signature="e#7858#7897#0#HTML" expanded="true" />
+                <element signature="e#8268#8293#0#HTML" expanded="true" />
+                <element signature="e#8537#8575#0#HTML" expanded="true" />
+                <element signature="e#8673#8714#0#HTML" expanded="true" />
+                <element signature="e#8715#8721#1#HTML" expanded="true" />
+                <element signature="e#8855#8896#0#HTML" expanded="true" />
+                <element signature="e#8897#8903#1#HTML" expanded="true" />
+                <element signature="e#9387#9496#0#HTML" expanded="true" />
+                <element signature="e#10371#10409#0#HTML" expanded="true" />
+                <element signature="e#10501#10542#0#HTML" expanded="true" />
+                <element signature="e#10543#10549#1#HTML" expanded="true" />
+                <element signature="e#10844#10898#0#HTML" expanded="true" />
+                <element signature="e#10950#11079#0#HTML" expanded="true" />
+                <element signature="e#11301#11342#0#HTML" expanded="true" />
+                <element signature="e#11343#11349#1#HTML" expanded="true" />
+                <element signature="e#11497#11629#0#HTML" expanded="true" />
+                <element signature="e#11680#11698#0#HTML" expanded="true" />
+                <element signature="e#11950#12005#0#HTML" expanded="true" />
+                <element signature="e#12308#12349#0#HTML" expanded="true" />
+                <element signature="e#12350#12356#1#HTML" expanded="true" />
+                <element signature="e#13211#13266#0#HTML" expanded="true" />
+                <element signature="e#13308#13436#0#HTML" expanded="true" />
+                <element signature="e#13620#13769#0#HTML" expanded="true" />
+                <element signature="e#13810#13828#0#HTML" expanded="true" />
+                <element signature="e#14052#14203#0#HTML" expanded="true" />
+                <element signature="e#14244#14262#0#HTML" expanded="true" />
+                <element signature="e#14627#14778#0#HTML" expanded="true" />
+                <element signature="e#14819#14837#0#HTML" expanded="true" />
+                <element signature="e#15365#15421#0#HTML" expanded="true" />
+                <element signature="e#15769#15868#0#HTML" expanded="true" />
+                <element signature="e#15941#16075#0#HTML" expanded="true" />
+                <element signature="e#16886#16942#0#HTML" expanded="true" />
+                <element signature="e#16984#17098#0#HTML" expanded="true" />
+                <element signature="e#17276#17429#0#HTML" expanded="true" />
+                <element signature="e#17470#17488#0#HTML" expanded="true" />
+                <element signature="e#17697#17753#0#HTML" expanded="true" />
+                <element signature="e#18079#18148#0#HTML" expanded="true" />
+                <element signature="e#18328#18557#0#HTML" expanded="true" />
+                <element signature="e#19351#19505#0#HTML" expanded="true" />
+                <element signature="e#19546#19564#0#HTML" expanded="true" />
+                <element signature="e#19739#19892#0#HTML" expanded="true" />
+                <element signature="e#19933#19951#0#HTML" expanded="true" />
+                <element signature="e#20161#20314#0#HTML" expanded="true" />
+                <element signature="e#20355#20373#0#HTML" expanded="true" />
+                <element signature="e#20384#20390#0#HTML" expanded="true" />
+                <marker date="1519301151110" expanded="true" signature="1404:1510" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="1420:1494" ph="{...}" />
+                <marker date="1519301151110" expanded="true" signature="7498:7656" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="7533:7645" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="8057:8104" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="8074:8104" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="8091:8104" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="9648:9721" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="9722:9883" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="9858:9883" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="10093:10231" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="10126:10231" ph="..." />
+                <marker date="1519301151110" expanded="true" signature="10202:10231" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,17 +253,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>em</find>
-      <find>$qb</find>
-      <find>group</find>
-      <find>$em =</find>
-      <find>$em</find>
-      <find>class PasswordResettingListener</find>
-      <find>-</find>
-      <find>application</find>
-      <find>getAdvertWithCategoriesByAuthor</find>
-      <find>getAdvertWithGroupByAuthor</find>
-      <find>shared</find>
       <find>notice</find>
       <find>h5</find>
       <find>footer .col-md-12.mt-3 p.text-center.text-white</find>
@@ -114,6 +272,17 @@
       <find>cette catégo</find>
       <find>dum</find>
       <find>dump</find>
+      <find>retour</find>
+      <find>supprimer</find>
+      <find>bg-login</find>
+      <find>suppr</find>
+      <find>class=&quot;fa fa-key fa-fw fa-lg fa-5x&quot;</find>
+      <find>#text-delete-pass</find>
+      <find>list-pass-table_filter</find>
+      <find>{{ path('password_manager_core_home') }}</find>
+      <find>ABSO</find>
+      <find>de votre</find>
+      <find>lock</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -122,24 +291,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/list-all.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/ApplicationRepository.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/CategoryRepository.php" />
-        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/generate_password.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Advert.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/GroupType.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Repository/UserRepository.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/UserAdmin.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Currentuser/Currentuser.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/DependencyInjection.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/services.yml" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Currentuser/Currentuser.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Repository/GroupRepository.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertEditType.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Form/GroupType.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Form/RegistrationType.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
@@ -150,29 +309,39 @@
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/Group.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/AdvertRepository.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Resetting/check_email.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/welcome.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/CategoryContactType.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/CategoryContact.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/ContactRepository.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/CategoryContactRepository.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/contact.html.twig" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/ContactType.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertType.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config_prod.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php" />
-        <option value="$PROJECT_DIR$/web/css/theme-master.css" />
+        <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertType.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertEditType.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/delete.html.twig" />
+        <option value="$PROJECT_DIR$/web/css/theme-master.css" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/GroupAdmin.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/RoleAdmin.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/UserAdmin.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact-admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/email/resetting.email.twig" />
       </list>
     </option>
   </component>
@@ -184,8 +353,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1948" />
-    <option name="y" value="108" />
+    <option name="x" value="312" />
+    <option name="y" value="163" />
     <option name="width" value="1390" />
     <option name="height" value="918" />
   </component>
@@ -223,37 +392,7 @@
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
               <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="TwigBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="TwigBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="TwigBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Exception" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
@@ -265,7 +404,18 @@
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
               <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="default" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="email" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
@@ -300,45 +450,126 @@
               <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PlatformBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="password" type="b2602c69:ProjectViewProjectNode" />
-              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PlatformBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
               <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="password" type="b2602c69:ProjectViewProjectNode" />
               <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="CoreBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Profile" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Registration" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resetting" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="password" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PasswordManager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Bundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="UserBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Security" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -355,6 +586,7 @@
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin" />
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Form" />
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form" />
     </key>
@@ -402,10 +634,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184972000" />
+    <option name="totallyTimeSpent" value="209384000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1745" y="-4" width="1615" height="1054" extended-state="6" />
+    <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489164" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -446,126 +678,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="26" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1022">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertEditType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="e#62#102#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/Group.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="94" lean-forward="false" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/SecurityController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/add.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Registration/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Registration/confirmed.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Resetting/request.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="60" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/welcome.html.twig" />
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Resetting/check_email.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="34" column="44" lean-forward="false" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding>
-            <element signature="e#2316#2336#0#HTML" expanded="false" />
-            <element signature="e#3011#3316#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Resetting/reset.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -603,14 +720,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="54" column="29" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="e#139#179#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -618,6 +730,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -632,6 +745,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -688,56 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="39" column="2" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/contact.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="76" lean-forward="true" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/ContactType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="52" column="60" lean-forward="false" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
-          <folding>
-            <element signature="e#63#103#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="29" column="130" lean-forward="false" selection-start-line="29" selection-start-column="130" selection-end-line="29" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -762,46 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="132" column="17" lean-forward="false" selection-start-line="132" selection-start-column="17" selection-end-line="132" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -818,18 +842,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+    <entry file="file://$USER_HOME$/Bureau/safe.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/img/background-login.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+        <state relative-caret-position="540">
+          <caret line="30" column="14" lean-forward="false" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/theme-master.css">
+    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="365" column="1" lean-forward="false" selection-start-line="365" selection-start-column="1" selection-end-line="365" selection-end-column="1" />
+        <state relative-caret-position="450">
+          <caret line="25" column="74" lean-forward="false" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
           <folding />
         </state>
       </provider>
@@ -839,7 +873,7 @@
         <state relative-caret-position="324">
           <caret line="104" column="90" lean-forward="false" selection-start-line="104" selection-start-column="90" selection-end-line="104" selection-end-column="90" />
           <folding>
-            <element signature="e#69#140#0#PHP" expanded="true" />
+            <element signature="e#69#140#0#PHP" expanded="false" />
             <element signature="e#1426#1788#0#PHP" expanded="false" />
             <element signature="e#1791#2138#0#PHP" expanded="false" />
             <element signature="e#2141#3269#0#PHP" expanded="false" />
@@ -851,11 +885,364 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig">
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="26" column="54" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/Profile/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="19" column="81" lean-forward="false" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="87" column="82" lean-forward="false" selection-start-line="87" selection-start-column="82" selection-end-line="87" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/AdvertEditType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/delete.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="45" column="3" lean-forward="false" selection-start-line="45" selection-start-column="3" selection-end-line="45" selection-end-column="3" />
+          <folding>
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/Advert/view.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="892">
+          <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+          <folding>
+            <element signature="e#1396#1437#0#HTML" expanded="false" />
+            <element signature="e#2534#2594#0#HTML" expanded="false" />
+            <element signature="e#2646#2671#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/Group.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/theme-master.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="81" column="56" lean-forward="false" selection-start-line="81" selection-start-column="56" selection-end-line="81" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/GroupAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="26" lean-forward="false" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#60#92#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/UserAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" column="75" lean-forward="false" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/RoleAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
+          <folding>
+            <element signature="e#59#102#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="76" lean-forward="false" selection-start-line="3" selection-start-column="76" selection-end-line="3" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="243" column="104" lean-forward="false" selection-start-line="243" selection-start-column="104" selection-end-line="243" selection-end-column="104" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#a#1;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#section#0;n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#1;n#div#1;n#div#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#2;n#div#1;n#div#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/ContactType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2484">
+          <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#371#1078#0#PHP" expanded="false" />
+            <element signature="e#4525#4802#0#PHP" expanded="false" />
+            <element signature="e#4839#5509#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="882">
+          <caret line="327" column="58" lean-forward="false" selection-start-line="327" selection-start-column="58" selection-end-line="327" selection-end-column="99" />
+          <folding>
+            <element signature="e#7737#7786#0#HTML" expanded="true" />
+            <element signature="e#7800#7858#0#HTML" expanded="true" />
+            <element signature="e#7873#7912#0#HTML" expanded="true" />
+            <element signature="e#8295#8320#0#HTML" expanded="true" />
+            <element signature="e#8572#8610#0#HTML" expanded="true" />
+            <element signature="e#8700#8741#0#HTML" expanded="true" />
+            <element signature="e#8742#8748#1#HTML" expanded="true" />
+            <element signature="e#8870#8911#0#HTML" expanded="true" />
+            <element signature="e#8912#8918#1#HTML" expanded="true" />
+            <element signature="e#9370#9479#0#HTML" expanded="true" />
+            <element signature="e#10374#10412#0#HTML" expanded="true" />
+            <element signature="e#10504#10545#0#HTML" expanded="true" />
+            <element signature="e#10546#10552#1#HTML" expanded="true" />
+            <element signature="e#10869#10923#0#HTML" expanded="true" />
+            <element signature="e#10982#11111#0#HTML" expanded="true" />
+            <element signature="e#11363#11404#0#HTML" expanded="true" />
+            <element signature="e#11405#11411#1#HTML" expanded="true" />
+            <element signature="e#11581#11713#0#HTML" expanded="true" />
+            <element signature="e#11771#11789#0#HTML" expanded="true" />
+            <element signature="e#12069#12124#0#HTML" expanded="true" />
+            <element signature="e#12450#12491#0#HTML" expanded="true" />
+            <element signature="e#12492#12498#1#HTML" expanded="true" />
+            <element signature="e#13316#13371#0#HTML" expanded="true" />
+            <element signature="e#13413#13541#0#HTML" expanded="true" />
+            <element signature="e#13735#13884#0#HTML" expanded="true" />
+            <element signature="e#13925#13943#0#HTML" expanded="true" />
+            <element signature="e#14130#14279#0#HTML" expanded="true" />
+            <element signature="e#14320#14338#0#HTML" expanded="true" />
+            <element signature="e#14501#14632#0#HTML" expanded="true" />
+            <element signature="e#14673#14691#0#HTML" expanded="true" />
+            <element signature="e#14749#14767#0#HTML" expanded="true" />
+            <element signature="e#14826#14844#0#HTML" expanded="true" />
+            <element signature="e#15002#15153#0#HTML" expanded="true" />
+            <element signature="e#15194#15212#0#HTML" expanded="true" />
+            <element signature="e#15403#15555#0#HTML" expanded="true" />
+            <element signature="e#15596#15614#0#HTML" expanded="true" />
+            <element signature="e#15787#15823#0#HTML" expanded="true" />
+            <element signature="e#16124#16180#0#HTML" expanded="true" />
+            <element signature="e#16550#16649#0#HTML" expanded="true" />
+            <element signature="e#16732#16866#0#HTML" expanded="true" />
+            <element signature="e#17699#17853#0#HTML" expanded="true" />
+            <element signature="e#17894#17912#0#HTML" expanded="true" />
+            <element signature="e#18087#18240#0#HTML" expanded="true" />
+            <element signature="e#18281#18299#0#HTML" expanded="true" />
+            <element signature="e#18504#18657#0#HTML" expanded="true" />
+            <element signature="e#18698#18716#0#HTML" expanded="true" />
+            <element signature="e#18727#18733#0#HTML" expanded="true" />
+            <marker date="1519295946742" expanded="true" signature="1056:1162" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="1072:1146" ph="{...}" />
+            <marker date="1519295946742" expanded="true" signature="7482:7660" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="7521:7645" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="8072:8131" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="8093:8131" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="8118:8131" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="9631:9704" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="9705:9874" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="9849:9874" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="10084:10234" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="10121:10234" ph="..." />
+            <marker date="1519295946742" expanded="true" signature="10205:10234" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact-admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/email/resetting.email.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="335" column="60" lean-forward="true" selection-start-line="335" selection-start-column="60" selection-end-line="335" selection-end-column="60" />
+          <folding>
+            <element signature="e#7721#7770#0#HTML" expanded="true" />
+            <element signature="e#7784#7843#0#HTML" expanded="true" />
+            <element signature="e#7858#7897#0#HTML" expanded="true" />
+            <element signature="e#8268#8293#0#HTML" expanded="true" />
+            <element signature="e#8537#8575#0#HTML" expanded="true" />
+            <element signature="e#8673#8714#0#HTML" expanded="true" />
+            <element signature="e#8715#8721#1#HTML" expanded="true" />
+            <element signature="e#8855#8896#0#HTML" expanded="true" />
+            <element signature="e#8897#8903#1#HTML" expanded="true" />
+            <element signature="e#9387#9496#0#HTML" expanded="true" />
+            <element signature="e#10371#10409#0#HTML" expanded="true" />
+            <element signature="e#10501#10542#0#HTML" expanded="true" />
+            <element signature="e#10543#10549#1#HTML" expanded="true" />
+            <element signature="e#10844#10898#0#HTML" expanded="true" />
+            <element signature="e#10950#11079#0#HTML" expanded="true" />
+            <element signature="e#11301#11342#0#HTML" expanded="true" />
+            <element signature="e#11343#11349#1#HTML" expanded="true" />
+            <element signature="e#11497#11629#0#HTML" expanded="true" />
+            <element signature="e#11680#11698#0#HTML" expanded="true" />
+            <element signature="e#11950#12005#0#HTML" expanded="true" />
+            <element signature="e#12308#12349#0#HTML" expanded="true" />
+            <element signature="e#12350#12356#1#HTML" expanded="true" />
+            <element signature="e#13211#13266#0#HTML" expanded="true" />
+            <element signature="e#13308#13436#0#HTML" expanded="true" />
+            <element signature="e#13620#13769#0#HTML" expanded="true" />
+            <element signature="e#13810#13828#0#HTML" expanded="true" />
+            <element signature="e#14052#14203#0#HTML" expanded="true" />
+            <element signature="e#14244#14262#0#HTML" expanded="true" />
+            <element signature="e#14627#14778#0#HTML" expanded="true" />
+            <element signature="e#14819#14837#0#HTML" expanded="true" />
+            <element signature="e#15365#15421#0#HTML" expanded="true" />
+            <element signature="e#15769#15868#0#HTML" expanded="true" />
+            <element signature="e#15941#16075#0#HTML" expanded="true" />
+            <element signature="e#16886#16942#0#HTML" expanded="true" />
+            <element signature="e#16984#17098#0#HTML" expanded="true" />
+            <element signature="e#17276#17429#0#HTML" expanded="true" />
+            <element signature="e#17470#17488#0#HTML" expanded="true" />
+            <element signature="e#17697#17753#0#HTML" expanded="true" />
+            <element signature="e#18079#18148#0#HTML" expanded="true" />
+            <element signature="e#18328#18557#0#HTML" expanded="true" />
+            <element signature="e#19351#19505#0#HTML" expanded="true" />
+            <element signature="e#19546#19564#0#HTML" expanded="true" />
+            <element signature="e#19739#19892#0#HTML" expanded="true" />
+            <element signature="e#19933#19951#0#HTML" expanded="true" />
+            <element signature="e#20161#20314#0#HTML" expanded="true" />
+            <element signature="e#20355#20373#0#HTML" expanded="true" />
+            <element signature="e#20384#20390#0#HTML" expanded="true" />
+            <marker date="1519301151110" expanded="true" signature="1404:1510" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="1420:1494" ph="{...}" />
+            <marker date="1519301151110" expanded="true" signature="7498:7656" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="7533:7645" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="8057:8104" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="8074:8104" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="8091:8104" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="9648:9721" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="9722:9883" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="9858:9883" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="10093:10231" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="10126:10231" ph="..." />
+            <marker date="1519301151110" expanded="true" signature="10202:10231" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

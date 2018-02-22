@@ -155,4 +155,13 @@ class Contact
     {
         return $this->categorieContact;
     }
+    /**
+     * Get motive
+     *
+     * @return \PasswordManager\Bundle\CoreBundle\Entity\CategoryContact
+     */
+    public function getMotiveCategorieContact($category)
+    {
+        return $category->motive;
+    }
 }

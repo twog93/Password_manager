@@ -5,7 +5,7 @@
 
 {% block body_text %}
 {% autoescape false %}
-Bonjour {{ user.username }} !
+Cher utilisateur, {{ user.username }} !
 
 Vous pouvez initialiser votre mot de passe par le biais de ce lien :  {{ confirmationUrl }}
 
@@ -66,6 +66,13 @@ L'équipe support
         div[style*="margin: 16px 0"] {
             margin:0 !important;
         }
+        a{
+            color:#343A46 !important;
+        }
+        .button-td:hover >a{
+            color:#ffffff !important;
+        }
+
 
         /* What it does: Stops Outlook from adding extra spacing to tables. */
         table,
@@ -141,9 +148,13 @@ L'équipe support
         }
         .button-td:hover,
         .button-a:hover {
+
             background: #555555 !important;
             border-color: #555555 !important;
         }
+
+        .button-link:hover{
+               color:#ffffff !important;}
 
         /* Media Queries */
         @media screen and (max-width: 480px) {
@@ -202,8 +213,8 @@ L'équipe support
     <![endif]-->
 
 </head>
-<body width="100%" bgcolor="#F1F1F1" style="margin: 0; mso-line-height-rule: exactly;">
-    <center style="width: 100%; background: #F1F1F1; text-align: left;">
+<body width="100%" bgcolor="#343A46" style="margin: 0; mso-line-height-rule: exactly;">
+    <center style="width: 100%; background: #343A46; text-align: left;">
         <div style="max-width: 680px; margin: auto;" class="email-container">
             <!--[if mso]>
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="680" align="center">
@@ -215,7 +226,7 @@ L'équipe support
                 <!-- HEADER : BEGIN -->
                 <tr>
                     <td bgcolor="#F1F1F1">
-				<table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:500px; margin: auto;">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:500px; margin: auto;">
                                 <tbody><tr>
                                     <td height="10" style="font-size:20px; line-height:10px;">&nbsp;</td>
                                 </tr>
@@ -225,7 +236,7 @@ L'équipe support
                                 </tr>
 
                             </tbody>
-							</table>
+                            </table>
                     </td>
                 </tr>
                 <!-- HEADER : END -->
@@ -233,7 +244,7 @@ L'équipe support
                 <!-- HERO : BEGIN -->
                 <tr>
                     <!-- Bulletproof Background Images c/o https://backgrounds.cm -->
-                    <td background="{{ absolute_url(asset('img/footer-background.jpg')) }}" bgcolor="#222222" align="center" valign="top" style="text-align: center; background-position: center center !important; background-size: cover !important;">
+                    <td background="{{ absolute_url(asset('img/O7MF5N0-mail.jpg')) }}" bgcolor="#222222" align="center" valign="top" style="text-align: center; background-position: center center !important; background-size: cover !important;">
                         <!--[if gte mso 9]>
                         <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px; height:380px; background-position: center center !important;">
                         <v:fill type="tile" src="background.png" color="#222222" />
@@ -258,12 +269,15 @@ L'équipe support
                                      <tr>
                                          <td valign="top" style="text-align: center; padding: 60px 0 10px 20px;">
 
-                                             <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 30px; line-height: 36px; color: #ffffff; font-weight: bold;">Gestionnaire de mot de passe</h1>
+                                             <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 2.5em; line-height: 36px; color: #ffffff; font-weight: bold;">Gestionnaire de mot de passe</h1>
                                          </td>
                                      </tr>
+                                    <tr>
+                                        <td height="40" style="font-size:20px; line-height:20px;">&nbsp;</td>
+                                    </tr>
                                      <tr>
-                                         <td valign="top" style="text-align: center; padding: 10px 20px 15px 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #ffffff;">
-                                             <h3 style="margin: 0;">L'application qui gère vos mots de passe.</h3>
+                                         <td valign="top" style="text-align: center; padding: 10px 20px 15px 20px; font-family: sans-serif; font-size: px; line-height: 20px; color: #ffffff;">
+                                             <h3 style="margin: 0;">L'application qui gère vos mots de passe</h3>
                                          </td>
                                      </tr>
                                      <tr>
@@ -271,7 +285,6 @@ L'équipe support
                                          </td>
                                      </tr>
                                   </table>
-
                                   </td>
                                 </tr>
 
@@ -296,10 +309,8 @@ L'équipe support
 
                 <!-- INTRO : BEGIN -->
                 <tr>
-				 {% block fos_user_content %}
-                    <td bgcolor="#f2f2f2">
-					{% block email %}
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                     <td bgcolor="#f2f2f2">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px 40px 20px 40px; text-align: left;">
                                     <h1 style="margin: 0; font-family: 'Montserrat', sans-serif; font-size: 20px; line-height: 26px; color: #343a40; font-weight: bold;">Initialisation de votre mot de passe</h1>
@@ -307,12 +318,12 @@ L'équipe support
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:bold;">
-                                    <p style="margin: 0;">Vous avez rempli une demande d'initialisation de votre mot de pase de votre compte.</p>
+                                    <p style="margin: 0;">Vous avez rempli une demande d'initialisation du mot de pase de votre compte.</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td style="padding: 0px 40px 20px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: left; font-weight:normal;">
-                                    <p style="margin: 0;">Bonjour {{ user.username }}, vous avez effectuer une demande d'initialisation de votre mot de passe .Cliquer directement sur le lien dans cet email pour modifier votre mot de passe.</p>
+                                    <p style="margin: 0;">Cher utilisateur, vous avez effectuer une demande d'initialisation de votre mot de passe pour le compte<b>{{ user.username }} </b></p><p> Cliquer directement sur le lien dans cet email pour modifier votre mot de passe.</p>
                                 </td>
                             </tr>
                             <tr>
@@ -327,7 +338,7 @@ L'équipe support
                                     <table width="180" align="left">
                                         <tr>
                                           <td width="70">
-                                            <img src="{{ absolute_url(asset('img/room-key.png')) }}" width="62" height="62" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
+                                            <img src="{{ absolute_url(asset('img/lock.png')) }}" title="lock.png" width="34" height="34Fbonjou" style="margin:0; padding:0; border:none; display:block;" border="0" alt="">
                                           </td>
                                           <td width="110">
 
@@ -354,7 +365,7 @@ L'équipe support
 
                 <!-- CTA : BEGIN -->
                 <tr>
-                    <td bgcolor="#ffffff">
+                    <td bgcolor="#868E96">
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px 40px 5px 40px; text-align: center;">
@@ -368,20 +379,17 @@ L'équipe support
                             </tr>
                             <tr>
                                 <td valign="middle" align="center" style="text-align: center; padding: 0px 20px 40px 20px;">
-						{% endblock  %}
-                                    <!-- Button : BEGIN -->
+                                                            <!-- Button : BEGIN -->
                                     <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow">
                                         <tr>
                                             <td style="border-radius: 50px; background: #ffffff; text-align: center;" class="button-td">
-                                                <a href="{{ confirmationUrl }}" style="background: #ffffff; border: 15px solid #ffffff; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">
-                                                    <span style="color:#343a40;" class="button-link">Modfier mon mot de passe</span>
+                                                <a href="http://localhost/password/web/app_dev.php/resetting/reset/6JIQVPZAHK1zAcHC4fZIwtpglY_MgM_Q8SBRoTcy9Zc" style="background: #ffffff; border: 15px solid #ffffff; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 50px; font-weight: bold;" class="button-a">Modfier mon mot de passe
                                                 </a>
                                             </td>
                                         </tr>
                                     </table>
                                     <!-- Button : END -->
-							{% endblock fos_user_content %}
-                                </td>
+                                                            </td>
                             </tr>
 
                         </table>

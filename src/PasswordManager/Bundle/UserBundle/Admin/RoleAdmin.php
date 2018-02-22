@@ -8,7 +8,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 Use PasswordManager\Bundle\UserBundle\Entity\Group;
 
-class GroupAdmin extends AbstractAdmin
+class RoleAdmin extends AbstractAdmin
 {
 
     public function getNewInstance()

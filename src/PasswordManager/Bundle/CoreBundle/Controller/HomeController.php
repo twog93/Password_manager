@@ -44,12 +44,13 @@ class HomeController extends Controller
         }
 
 
-        //Check if user have Pass List true
-        $user = $this->getUser();
+   /*     //Check if user have Pass List true
+
         $userId = $this->getUser()->getId();
-        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);*/
 
         //Add Contact entity by form
+        $user = $this->getUser();
         $contact = new Contact();
         $form = $this->get('form.factory')->create(ContactType::class, $contact);
 
@@ -60,7 +61,6 @@ class HomeController extends Controller
             $userId = $this->getUser()->getId();
             $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
-
             //Send email User
             $message = (new \Swift_Message('Confirmation de réception de votre message'))
                 ->setFrom('contact-gmp@afbiodiversite.fr')
@@ -70,6 +70,7 @@ class HomeController extends Controller
                         'PasswordManagerCoreBundle:Home:mailing-contact.html.twig',
                         array('subject' => $contact->getSubject(),
                             'author' => $user->getUsername(),
+                            'motive' => $contact->getCategorieContact()->getMotive(),
                             'body' => $contact->getBody())
                     ),
                     'text/html'
@@ -84,6 +85,7 @@ class HomeController extends Controller
                         'PasswordManagerCoreBundle:Home:mailing-contact-admin.html.twig',
                         array('subject' => $contact->getSubject(),
                             'author' => $user->getUsername(),
+                            'motive' => $contact->getCategorieContact()->getMotive(),
                             'body' => $contact->getBody(),
                             'email' => $user->getEmail())
                     ),
@@ -91,6 +93,7 @@ class HomeController extends Controller
                 );
 
 
+            //$test= getMotiveCategorieContact($category);
             //swiftmailer Send Mail
             $mailer->send($message);
             $mailer->send($messageToAdmin);
@@ -111,8 +114,7 @@ class HomeController extends Controller
 
         // On passe la méthode createView() du formulaire à la vue
         return $this->render('PasswordManagerCoreBundle:Home:contact.html.twig', array(
-            'form' => $form->createView(),
-            'listAdverts' => $listAdverts,));
+            'form' => $form->createView(),));
     }
 
     protected function checkGetPass(){

@@ -14,17 +14,20 @@
                     <div class="row">
                         <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa-trash-o"></i></div>
                         <div class="col-8">
-                            <h5 class="mb-3"><b>Suppression : </b></h5>
-                            <p class="my-1">{% for category in advert.categories %}
-                                    {{ category.name }}{% if not loop.last %}, {% endif %}
-                                {% endfor %} </p>
+                            <h5 class="mb-3"><b>Suppression </b></h5>
+                            <p class="my-1">Catégorie :{% for category in advert.categories %}
+                                                {{ category.name }}
+                                                {% if not loop.last %},
+                                                {% endif %}
+                                            {% endfor %} </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
- <h2 id="list-mdp-title" >Supprimer un mot de passe</h2>
+    <h2 id="list-mdp-title" ><i class="fa-2x fa fa-eraser"></i>  Supprimer le mot de passe</h2>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -32,7 +35,13 @@
                 <p>
                  Etes-vous certain de vouloir supprimer le mot de passe <b>"{{ advert.title }}" </b>?
                     <br/><br/>
-                </p>
+                </p >
+                {% if advert.shared == true %}
+                    <p style="color:#d9534f;margin-bottom: 25px;"><b>
+                            <i class="fa-3x fa fa-exclamation-triangle"></i> Ce mot de passe est en cours de partage.
+                        </b></p>
+                {% endif %}
+
 
                 <form action="{{ path('password_manager_platform_delete', {'id': advert.id}) }}" method="post">
                     <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}" class="btn btn-default">

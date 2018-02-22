@@ -1,8 +1,7 @@
-
 {% extends "PasswordManagerCoreBundle::layout.html.twig" %}
 
 {% block title %}
-    Accueil | {{ parent() }}
+    Erreur | {{ parent() }}
 {% endblock %}
  {% block body %}
      {{ parent() }}
@@ -21,10 +20,10 @@
                             <a class="btn btn-lg btn-dark mx-1 text-white "  href="{{ path('password_manager_platform_home')}}">Consulter ma liste de mot de passe</a>
                         {% endif %}
                     {% endif %}
-                    <h1>{{ dump() }}</h1>
-                    <h2>{{ status_code }}</h2>
+                    <a class="btn btn-lg btn-secondary mx-1"  href="{{ path('password_manager_platform_add') }}">Ajouter un mot de passe à ma liste</a>
+                    <h2>{{- exception.message|nl2br|format_file_from_text -}}</h2>
 
-                    {{ dump() }}
+                    <img src="{{ absolute_url(asset('img/safe.gif'))}}" />
                 </div>
             </div>
         </div>

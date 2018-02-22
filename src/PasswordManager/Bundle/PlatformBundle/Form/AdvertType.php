@@ -40,8 +40,7 @@ class AdvertType extends AbstractType
 
             $pattern[] = $value->getName() ;
         }
-
-        dump($pattern);
+        
 
         $builder
         ->add('title')

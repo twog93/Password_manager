@@ -21,9 +21,10 @@
                         {% endif %}
                     {% endif %}
                     <a class="btn btn-lg btn-secondary mx-1"  href="{{ path('password_manager_platform_add') }}">Ajouter un mot de passe à ma liste</a>
+
+                    {% if exception.message == "Vous n'avez pas de contenu dans cette catégorie" %}
                     <h2 class="display-3 mb-4 error title" >{{- exception.message|nl2br|format_file_from_text -}}</h2>
-
-
+                        {% endif %}
                 </div>
             </div>
         </div>

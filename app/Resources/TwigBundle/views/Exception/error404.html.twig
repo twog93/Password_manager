@@ -9,21 +9,19 @@
  {% endblock %}
 
 {% block passwordmanager_platform_body_index %}
-    <div class="py-5 text-center opaque-overlay" id="bg-index-first-content" >
+    <div class="py-5 text-center" id="bg-index-first-content-error-404" >
         <div class="container py-5">
             <div class="row">
-                <div class="col-md-12 text-white">
-                    <h1 class="display-3 mb-4">Bienvenue sur le gestionnaire de passe</h1>
-                    <p class="lead mb-5">un outil dédié pour vos besoins  de stockage de mot de passe</p>
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
-                            <a class="btn btn-lg btn-dark mx-1 text-white "  href="{{ path('password_manager_platform_home')}}">Consulter ma liste de mot de passe</a>
-                        {% endif %}
-                    {% endif %}
-                    <a class="btn btn-lg btn-secondary mx-1"  href="{{ path('password_manager_platform_add') }}">Ajouter un mot de passe à ma liste</a>
-                    <h2>{{- exception.message|nl2br|format_file_from_text -}}</h2>
-
-                    <img src="{{ absolute_url(asset('img/safe.gif'))}}" />
+                <div class="col-md-12 ">
+                    <img  src="{{ absolute_url(asset('img/404.gif'))}}" /><h2 style="color:#2a6496;">Attention, cette page n'existe pas ou n'est plus disponible.</h2>
+                    <div class="col-sm-12">
+                        <p id="btn-back-list" style="margin-top:100px;">
+                            <a href="{{ path('password_manager_core_home') }}" class="btn btn-default error">
+                                <i class="glyphicon glyphicon-chevron-left"></i>
+                                Retourner à l'accueil
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

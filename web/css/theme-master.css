@@ -45,6 +45,12 @@ a{
     color:#343a40;
 }
 
+.btn.btn-default.error{
+    background-color: #2a6496;
+    padding:15px;
+    color: #ffffff;
+}
+
 @media(min-width: 768px){
 
     nav .navbar {
@@ -382,6 +388,12 @@ select#contact_categorieContact {
     background-image: url(../img/error.jpg);
     width: 100%;
     height:715px;
+}
+
+#bg-index-first-content-error-404{
+    width: 100%;
+    height:715px;
+    background-color: #ffffff !important;
 }
 
 h1.display-3.mb-4.error.title, p.lead.mb-5.error.text, h2.display-3.mb-4.error.title{

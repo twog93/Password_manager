@@ -16,9 +16,12 @@ class AdvertEditType extends AbstractType
     /**
      * {@inheritdoc}
      */
+
+
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-		 $builder->remove('groups')->remove('image')
+		 $builder->remove('image')
         ->add('save', SubmitType::class,array('label' => 'Modifier mon mot de passe'));
 		
     }

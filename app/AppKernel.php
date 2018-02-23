@@ -35,7 +35,7 @@ class AppKernel extends Kernel
 			$bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
 		//	$bundles[] = new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle();
             $bundles[] = new Ambta\DoctrineEncryptBundle\AmbtaDoctrineEncryptBundle();
-         //   $bundles[] = new Sonata\CoreBundle\SonataCoreBundle();
+        //    $bundles[] = new Sonata\CoreBundle\SonataCoreBundle();
          //   $bundles[] = new Sonata\BlockBundle\SonataBlockBundle();
          //   $bundles[] = new Knp\Bundle\MenuBundle\KnpMenuBundle();
          //   $bundles[] =  new Sonata\AdminBundle\SonataAdminBundle();

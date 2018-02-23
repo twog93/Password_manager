@@ -8,7 +8,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = [
-            new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+       new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Sonata\CoreBundle\SonataCoreBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -34,7 +35,7 @@ class AppKernel extends Kernel
 			$bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
 		//	$bundles[] = new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle();
             $bundles[] = new Ambta\DoctrineEncryptBundle\AmbtaDoctrineEncryptBundle();
-            $bundles[] = new Sonata\CoreBundle\SonataCoreBundle();
+         //   $bundles[] = new Sonata\CoreBundle\SonataCoreBundle();
          //   $bundles[] = new Sonata\BlockBundle\SonataBlockBundle();
          //   $bundles[] = new Knp\Bundle\MenuBundle\KnpMenuBundle();
          //   $bundles[] =  new Sonata\AdminBundle\SonataAdminBundle();

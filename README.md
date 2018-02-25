@@ -1,17 +1,22 @@
+
+
 Password Manager
 ============
 
 
-[![N|Solid](https://symfony.com/images/v5/pictos/home-main-illu.svg)](http://gerald-duveau.fr)
 
+
+![Symfony 3](https://symfony.com/images/v5/pictos/home-main-illu.svg)
+
+
+![enter image description here](https://www.afbiodiversite.fr/sites/default/files/logo-afb_1_2.jpg)
 
 Password Manager is a web application developed with the framework Symfony 3, as part of my professional activities.
 This application is intended to facilitate the management of passwords
 
 
 
-
-# These objectives:
+These objectives:
 
 - Secure management of password storage.
 - Transversality of the use of these passwords in the context of work.

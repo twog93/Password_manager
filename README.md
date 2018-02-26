@@ -1,3 +1,4 @@
+
 Gestionnaire de mot de passe
 ============
 
@@ -69,6 +70,13 @@ Email support : contact-gmp@afbiodiversite.fr
 
 # Base documentation utilisateur :
 
+ - ***Accueil :*** Vision des mots de passe par filtre ( type de MDP, MDP partagés)
+ - ***Mes mots de passe:*** Liste de tous les mots de passe utilisateur
+ - ***Mon profil :*** Consultation de son profil (groupe, roles)
+ -  ***Générateur de mot de passe :*** Outil pour générer un mot de passe sécurisé (8 caractères)
+ - ***Contact :***   Formulaire de contact pour le support utilisateur
+
+----------
 
 
 ----------
@@ -77,7 +85,7 @@ Email support : contact-gmp@afbiodiversite.fr
 ----------
 
 
-----------
+
 
 
 Password Manager is a web application developed with the framework Symfony 3, as part of my professional activities.
@@ -115,3 +123,6 @@ MIT
 
 
 Developped by Gérald DUVEAU
+s}
+C --> D
+```

@@ -9,16 +9,16 @@ Gestionnaire de mot de passe
 ![enter image description here](https://www.afbiodiversite.fr/sites/default/files/logo-afb_1_2.jpg)
 
 
-# Les objectifs :
+# **Les objectifs :**
 
  - Faciliter la gestion des mots de passes en interne
  - Sécuriser la gestion des mots de passe
  - Permettre aux utilisateurs de partager des mots de passe entre eux
 
 
-# Technologies utilisées
+# **Technologies utilisées**
 
-## ***Languages, framework*** :
+## *Languages, framework* :
 
  - Php
  - Javascript
@@ -38,7 +38,7 @@ Gestionnaire de mot de passe
 ----------
 
 
-# Sécurité
+# **Sécurité**
 
 **Protocole :**
 
@@ -55,7 +55,7 @@ Gestionnaire de mot de passe
 
  - Utilisation du protocole LDAP pour les utilisateurs
 
-# L'application :
+# **L'application :**
 
 ***Gestionnaire de mot de passe*** 
 
@@ -68,7 +68,7 @@ Login : [Espace de connection](http://dev.gmp.afbiodiversite.fr.aten-23.ovea.com
 Email support : contact-gmp@afbiodiversite.fr
 
 
-# Base documentation utilisateur :
+# **Base documentation utilisateur :**
 
  - ***Accueil :*** Vision des mots de passe par filtre ( type de MDP, MDP partagés)
  - ***Mes mots de passe:*** Liste de tous les mots de passe utilisateur

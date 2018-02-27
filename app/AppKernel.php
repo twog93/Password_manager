@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
+            new Ambta\DoctrineEncryptBundle\AmbtaDoctrineEncryptBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
@@ -34,7 +35,7 @@ class AppKernel extends Kernel
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
 			$bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
 		//	$bundles[] = new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle();
-            $bundles[] = new Ambta\DoctrineEncryptBundle\AmbtaDoctrineEncryptBundle();
+        //    $bundles[] = new Ambta\DoctrineEncryptBundle\AmbtaDoctrineEncryptBundle();
         //    $bundles[] = new Sonata\CoreBundle\SonataCoreBundle();
          //   $bundles[] = new Sonata\BlockBundle\SonataBlockBundle();
          //   $bundles[] = new Knp\Bundle\MenuBundle\KnpMenuBundle();

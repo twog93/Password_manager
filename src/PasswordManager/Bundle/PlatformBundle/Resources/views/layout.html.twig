@@ -41,6 +41,8 @@
                             <th class="sorting">Mot de passe</th>
                             <th class="sorting">Ajouté le</th>
                             <th class="sorting">Catégorie</th>
+                            <th class="sorting">Partagé</th>
+
 
                         </tr>
                         </thead>
@@ -65,6 +67,13 @@
                                             {% endfor %}
                                     {% endif %}
                                 </td>
+                                <td> {% if  advert.shared %}
+                                             Oui
+                                    {% endif %}
+                                    {% else %}
+                                    Non
+
+                               </td>
                             </tr>
                         {% endfor %}
                         </tbody>

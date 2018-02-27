@@ -102,7 +102,7 @@ class Advert
 
     /**
      * @ORM\Column(name="password", type="string", length=255)
-     * @Assert\Length(min=4, minMessage="Pour des raisons de sécurité, votre mot de passe ne peut être inférieur à {{ limit }} caractères.")
+     * @Assert\Length(min=5, minMessage="Pour des raisons de sécurité, votre mot de passe ne peut être inférieur à {{ limit }} caractères.")
      * @Encrypted
      * @var int
      */

@@ -39,11 +39,15 @@ class ProfileController extends BaseController
     /*****************************************************
      * Add new functionality (e.g. log the profile) *
      *****************************************************/
+        //Get User Roles form service
+    $roles = $this->container->get('password_manager_core.UserCondition');
+    $roles = $roles->getRolesAdmin();
 
     $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
     return $this->render('@FOSUser/Profile/show.html.twig', array(
         'user' => $user,
+        'roles' => $roles,
         'listAdverts' => $listAdverts,
         'userGroup' =>$usergroup,
 

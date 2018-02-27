@@ -115,8 +115,7 @@ class AdvertController extends Controller
             if($listCategory[0] != "all" && $listCategory[0] != "shared"){
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
                 $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesShared($listCategory);
-                dump($listCategory);
-                dump($listPassShared);
+
 
                 $merge = array_merge($listAdverts, $listPassShared);
 
@@ -148,7 +147,6 @@ class AdvertController extends Controller
 
                 $merge = array_merge($listPassOfUser, $listPassShared);
 
-                dump($merge);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
                     'listAdverts' => $merge,
@@ -294,22 +292,5 @@ class AdvertController extends Controller
       }
       return $this->redirectToRoute('fos_user_security_login');
   }
-/*  public function listAction(){
-
-     $em = $this->getDoctrine()->getManager();
-     $listAdverts =  $em->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategories(array('Développeur', 'Intégrateur'));
-
-     return $this->render('PasswordManagerPlatformBundle:Advert:list.html.twig', array(
-     'listAdverts' => $listAdverts
-     ));
-  }*/
- /* public function menuAction($page){
-
-	    $em = $this->getDoctrine()->getManager();
-      $listAdverts = $em->getRepository('PasswordManagerPlatformBundle:Advert')->getAdverts();
-
-      return $this->render('PasswordManagerPlatformBundle:Advert:menu.html.twig', array('listAdverts' => $listAdverts ));
-  }*/
-
 
 }

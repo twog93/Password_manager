@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45ad327d-d6c0-4d94-a2b1-b6298283288b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/AdvertRepository.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/AdvertRepository.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -49,8 +50,8 @@
       <file leaf-file-name="Advert.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Advert.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="506" column="22" lean-forward="false" selection-start-line="506" selection-start-column="20" selection-end-line="506" selection-end-column="29" />
+            <state relative-caret-position="266">
+              <caret line="494" column="31" lean-forward="false" selection-start-line="494" selection-start-column="20" selection-end-line="494" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -59,16 +60,19 @@
       <file leaf-file-name="AdvertController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="58" column="119" lean-forward="false" selection-start-line="58" selection-start-column="119" selection-end-line="58" selection-end-column="119" />
+            <state relative-caret-position="360">
+              <caret line="132" column="177" lean-forward="false" selection-start-line="132" selection-start-column="177" selection-end-line="132" selection-end-column="177" />
               <folding>
                 <element signature="e#69#140#0#PHP" expanded="true" />
                 <element signature="e#1426#1792#0#PHP" expanded="false" />
                 <element signature="e#1794#2146#0#PHP" expanded="false" />
-                <element signature="e#3482#3624#0#PHP" expanded="false" />
-                <element signature="e#6524#8132#0#PHP" expanded="false" />
-                <element signature="e#8135#9836#0#PHP" expanded="false" />
-                <marker date="1519723085948" expanded="true" signature="11299:11301" ph="{...}" />
+                <element signature="e#2149#3494#0#PHP" expanded="false" />
+                <element signature="e#3497#3639#0#PHP" expanded="false" />
+                <element signature="e#5050#5183#0#PHP" expanded="false" />
+                <element signature="e#5902#6514#0#PHP" expanded="false" />
+                <element signature="e#6601#8209#0#PHP" expanded="false" />
+                <element signature="e#8212#9913#0#PHP" expanded="false" />
+                <marker date="1519729034056" expanded="true" signature="11376:11378" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -77,8 +81,8 @@
       <file leaf-file-name="AdvertRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/AdvertRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+            <state relative-caret-position="684">
+              <caret line="103" column="44" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -227,7 +231,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-13" />
     <option name="y" value="221" />
     <option name="width" value="1390" />
@@ -379,15 +383,15 @@
       <workItem from="1518604856050" duration="21625000" />
       <workItem from="1518710336669" duration="6548000" />
       <workItem from="1519038949718" duration="19485000" />
-      <workItem from="1519721518413" duration="1550000" />
+      <workItem from="1519721518413" duration="7456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239812000" />
+    <option name="totallyTimeSpent" value="245718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="221" width="1617" height="1062" extended-state="6" />
+    <frame x="-13" y="221" width="1617" height="1062" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21424149" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -436,7 +440,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="34" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php</url>
+          <line>85</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -774,34 +785,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/AdvertRepository.php">
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Advert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="494" column="31" lean-forward="false" selection-start-line="494" selection-start-column="20" selection-end-line="494" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Advert.php">
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/AdvertRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="506" column="22" lean-forward="false" selection-start-line="506" selection-start-column="20" selection-end-line="506" selection-end-column="29" />
+        <state relative-caret-position="684">
+          <caret line="103" column="44" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/AdvertController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="58" column="119" lean-forward="false" selection-start-line="58" selection-start-column="119" selection-end-line="58" selection-end-column="119" />
+        <state relative-caret-position="360">
+          <caret line="132" column="177" lean-forward="false" selection-start-line="132" selection-start-column="177" selection-end-line="132" selection-end-column="177" />
           <folding>
             <element signature="e#69#140#0#PHP" expanded="true" />
             <element signature="e#1426#1792#0#PHP" expanded="false" />
             <element signature="e#1794#2146#0#PHP" expanded="false" />
-            <element signature="e#3482#3624#0#PHP" expanded="false" />
-            <element signature="e#6524#8132#0#PHP" expanded="false" />
-            <element signature="e#8135#9836#0#PHP" expanded="false" />
-            <marker date="1519723085948" expanded="true" signature="11299:11301" ph="{...}" />
+            <element signature="e#2149#3494#0#PHP" expanded="false" />
+            <element signature="e#3497#3639#0#PHP" expanded="false" />
+            <element signature="e#5050#5183#0#PHP" expanded="false" />
+            <element signature="e#5902#6514#0#PHP" expanded="false" />
+            <element signature="e#6601#8209#0#PHP" expanded="false" />
+            <element signature="e#8212#9913#0#PHP" expanded="false" />
+            <marker date="1519729034056" expanded="true" signature="11376:11378" ph="{...}" />
           </folding>
         </state>
       </provider>

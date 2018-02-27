@@ -48,8 +48,6 @@ class AdvertController extends Controller
   }*/
   public function viewAction($id){
 
-      //If user got 1 pass
-
       //Get User Roles form service
       $roles = $this->container->get('password_manager_core.UserCondition');
       $roles = $roles->getRolesAdmin();
@@ -57,17 +55,17 @@ class AdvertController extends Controller
       //Get User ID
       $userId = $this->getUser()->getId();
       $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+      //If pass exist
+      $em = $this->getDoctrine()->getManager();
+      $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
 
-    $em = $this->getDoctrine()->getManager();
-    $advert = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
+      if (null === $advert) {
+        throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
+      }
 
-    if (null === $advert) {
-      throw new NotFoundHttpException("L'annonce d'id ".$id." n'existe pas.");
-    }
-
-    $listApplication = $em->getRepository('PasswordManagerPlatformBundle:Application')->findBy(array('advert' => $advert));
-    $listAdvertSkills = $em->getRepository('PasswordManagerPlatformBundle:AdvertSkill')->findBy(array('advert' => $advert));
-    $listCategories = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
+        $listApplication = $em->getRepository('PasswordManagerPlatformBundle:Application')->findBy(array('advert' => $advert));
+        $listAdvertSkills = $em->getRepository('PasswordManagerPlatformBundle:AdvertSkill')->findBy(array('advert' => $advert));
+        $listCategories = $em->getRepository('PasswordManagerPlatformBundle:Advert')->find($id);
 	
     return $this->render('PasswordManagerPlatformBundle:Advert:view.html.twig', array(
 		'advert' => $advert,
@@ -114,10 +112,9 @@ class AdvertController extends Controller
             //Display list of password , sorted by categories and create by current user.
             if($listCategory[0] != "all" && $listCategory[0] != "shared"){
                 $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesByAuthor($userId, $listCategory);
-                $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesShared($listCategory);
+               // $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithCategoriesShared($listCategory);
+                //$merge = array_merge($listAdverts, $listPassShared);
 
-
-                $merge = array_merge($listAdverts, $listPassShared);
 
                 if (!$listAdverts) {
 
@@ -125,31 +122,30 @@ class AdvertController extends Controller
 
                 }
 
-
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
-                    'listAdverts' => $merge,
+                    'listAdverts' => $listAdverts,
                     'roles'       =>$roles,
                 ));
             }
             elseif($listCategory[0] == "shared"){
-                $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertShared();
 
+                $listPassSharedGrouped = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertWithGroupByAuthor($listGroupOfUser);
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
-                    'listAdverts' => $listPassShared,
+                    'listAdverts' => $listPassSharedGrouped,
                     'roles'       =>$roles,
                 ));
             }
             else{
-                $listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertShared();
+                //$listPassShared = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->getAdvertShared();
                 $listPassOfUser = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
 
-                $merge = array_merge($listPassOfUser, $listPassShared);
+                //$merge = array_merge($listPassOfUser, $listPassShared);
 
                 return $this->render('PasswordManagerPlatformBundle:Advert:list-all.html.twig', array(
 
-                    'listAdverts' => $merge,
+                    'listAdverts' => $listPassOfUser,
                     'roles'       =>$roles,
                 ));
 

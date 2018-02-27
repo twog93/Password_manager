@@ -94,13 +94,15 @@ class AdvertRepository extends EntityRepository{
     }
     public function getAdvertWithGroupByAuthor(array $groupNames)
     {
-        $qb = $this->createQueryBuilder('g')
-        ->join('g.groups', 'a')
-            ->addSelect('a')
+        $qb = $this->createQueryBuilder('a')
+        ->join('a.groups', 'grp')
+            ->addSelect('grp')
         ;
 
 
-        $qb->where($qb->expr()->in('a.name', $groupNames));
+        $qb->where($qb->expr()->in('grp.name', $groupNames))
+            ->andWhere('a.shared = :shared')
+            ->setParameter('shared', true);
         // Enfin, on retourne le résultat
         return $qb
             ->getQuery()
@@ -119,25 +121,6 @@ class AdvertRepository extends EntityRepository{
             ;
     }
 
-    public function getAdvertWithCategoriesShared( array $categoryNames)
-    {
-        $qb = $this->createQueryBuilder('a');
-
-        // On fait une jointure avec l'entité Category avec pour alias « c »
-        $qb
-            ->join('a.categories', 'c')
-            ->addSelect('c')
-        ;
-
-        // Puis on filtre sur le nom des catégories à l'aide d'un IN
-        $qb->where($qb->expr()->in('c.name', $categoryNames))->andWhere('a.shared = :shared')
-        ->setParameter('shared', true);
-        // Enfin, on retourne le résultat
-        return $qb
-            ->getQuery()
-            ->getResult()
-            ;
-    }
 
 
 

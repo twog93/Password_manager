@@ -19,5 +19,6 @@ app/config/parameters.yml
 /i.php
 /var\logs
 /tests/
-/app/config/config.yml
+app/config/config.yml
 /web/config.php
+app/config/security.yml

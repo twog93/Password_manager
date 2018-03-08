@@ -21,4 +21,4 @@ app/config/parameters.yml
 /tests/
 app/config/config.yml
 /web/config.php
-app/config/security.yml
+/app/config/security.yml

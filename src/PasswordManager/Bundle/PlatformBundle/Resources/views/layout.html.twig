@@ -29,7 +29,7 @@
         <h2 id="list-mdp-title">Liste de mes mots de passe</h2>
         <h4 id="sub-list-mdp-title">Pour plus d'information et gérer votre mot de passe , cliquer sur la colonne <b>de votre choix</b></h4>
         <h5 id="sub-list-mdp-title">Pour votre confort, vous pouvez faire une recherche, trier, vos mots de passe.</h5>
-
+    {{ dump(roles) }}
 
         <table id="list-pass-table"  class="table-striped">
                         <thead>
@@ -70,9 +70,6 @@
                                 <td> {% if  advert.shared %}
                                              Oui
                                     {% endif %}
-                                    {% else %}
-                                    Non
-
                                </td>
                             </tr>
                         {% endfor %}

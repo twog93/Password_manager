@@ -104,7 +104,7 @@ class AdvertController extends Controller
 
         //Get User Roles form service
           $roles = $this->container->get('password_manager_core.UserCondition');
-          $roles->getRolesAdmin();
+          $roles = $roles->getRolesAdmin();
 
 
           //get password list

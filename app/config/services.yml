@@ -17,9 +17,10 @@ services:
             class:   PasswordManager\Bundle\CoreBundle\UserCondition\PasswordManagerUserCondition
             arguments: ["@security.token_storage"]
             public: true
+
     Symfony\Component\Ldap\Ldap:
             arguments: ['@Symfony\Component\Ldap\Adapter\ExtLdap\Adapter']
-        Symfony\Component\Ldap\Adapter\ExtLdap\Adapter:
+    Symfony\Component\Ldap\Adapter\ExtLdap\Adapter:
             arguments:
                 -   host: 159.180.228.235
                     port: 389

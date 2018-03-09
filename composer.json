@@ -41,8 +41,7 @@
         "symfony/swiftmailer-bundle": "^2.3.10",
         "symfony/symfony": "3.3.9",
         "symfony/var-dumper": "3.3.8",
-        "twig/twig": "^1.0||^2.0",
-        "imag/ldap-bundle": "dev-master"
+        "twig/twig": "^1.0||^2.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

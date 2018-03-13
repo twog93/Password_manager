@@ -22,9 +22,9 @@ services:
             arguments: ['@Symfony\Component\Ldap\Adapter\ExtLdap\Adapter']
     Symfony\Component\Ldap\Adapter\ExtLdap\Adapter:
             arguments:
-                -   host: 159.180.228.235
+                -   host: 10.250.0.22
                     port: 389
-                    encryption: tls
+                    #encryption: tls
                     options:
                         protocol_version: 3
                         referrals: true

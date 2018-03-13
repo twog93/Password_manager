@@ -10,3 +10,7 @@ password_manager_core_pass_generator:
     path:    /generateur/mot-de-passe
     defaults:  { _controller:PasswordManagerCoreBundle:Home:generator }
 #routing to password generator page
+password_manager_core_pass_test_ldap:
+    path:    /test/ldap
+    defaults:  { _controller:PasswordManagerCoreBundle:Home:ldap }
+#routing to password generator page

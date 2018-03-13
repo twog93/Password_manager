@@ -160,5 +160,28 @@ class HomeController extends Controller
 
 
     }
+
+    public function ldapAction(){
+
+        $server = "10.250.0.22";
+
+        $port = "389";
+
+        $racine = " dc=afbiodiversite,dc=fr";
+
+        $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
+
+        $rootpw = "ID_retr!2017";
+        echo "Connexion...<br>";
+
+        $ds=ldap_connect($server);
+        $sr=ldap_bind($ds,$rootdn,$rootpw);
+        return $this->render('PasswordManagerCoreBundle:Home:ldap.html.twig', array(
+
+            'kdao' => $sr,));
+
+    }
+
+
 }
 

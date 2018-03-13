@@ -172,9 +172,14 @@ class HomeController extends Controller
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
 
         $rootpw = "ID_retr!2017";
-        echo "Connexion...<br>";
+
 
         $ds=ldap_connect($server);
+        // on teste : le serveur LDAP est-il trouvé ?
+        if ($ds)
+            echo "Le résultat de connexion est ".$ds ."<br />";
+        else
+            die("connexion impossible au serveur LDAP");
         $sr=ldap_bind($ds,$rootdn,$rootpw);
         return $this->render('PasswordManagerCoreBundle:Home:ldap.html.twig', array(
 

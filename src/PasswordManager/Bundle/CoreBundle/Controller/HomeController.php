@@ -171,10 +171,10 @@ class HomeController extends Controller
             $user ="sysldapconnect@afbiodiversite.fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
         $justthese = array("ou", "sn", "givenname", "mail");
-
+        $filter="(CN=Gérald Duveau)";
 
         $rootpw = "ID_retr!2017";
-        $filter="(|(sn=$person*)(givenname=$person*))";
+
 
 
         $ldapconn=ldap_connect($server);
@@ -184,7 +184,7 @@ class HomeController extends Controller
             $ldapbind = ldap_bind($ldapconn, $user, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
 
-                $result = ldap_search($ldapconn, $racine, "objectClass=".$person) or die ("Error in search query: " . ldap_error($ldapconn));
+                $result = ldap_search($ldapconn, $racine,$filter) or die ("Error in search query: " . ldap_error($ldapconn));
                 dump($result);
                 $data = ldap_get_entries($ldapconn, $result);
 

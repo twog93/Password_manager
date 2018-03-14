@@ -177,18 +177,19 @@ class HomeController extends Controller
         $filter="(|(sn=$person*)(givenname=$person*))";
 
 
-        $ldapconn=ldap_connect($server);
+        $ldapconn=ldap_connect($server, 3268);
 
         if($ldapconn) {
 
             $ldapbind = ldap_bind($ldapconn, $user, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
-                echo "LDAP bind successful...<br /><br />";
+                $msg = "LDAP bind successful...<br /><br />";
+                dump($msg);
                 $result = ldap_search($ldapconn, $racine, "(cn=*)") or die ("Error in search query: " . ldap_error($ldapconn));
+                dump($result);
                 $data = ldap_get_entries($ldapconn, $result);
-                echo '<h1>Dump all data</h1><pre>';
-                print_r($data);
-                echo '</pre>';
+
+
             }
         }
 
@@ -197,7 +198,9 @@ class HomeController extends Controller
 
         return $this->render('PasswordManagerCoreBundle:Home:ldap.html.twig', array(
 
-            'kdao' => $data,));
+            'kdao' => $msg,
+            "result" =>$result,
+            "data" => $data,));
 
     }
 

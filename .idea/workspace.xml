@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="45ad327d-d6c0-4d94-a2b1-b6298283288b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +58,8 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="192" column="9" lean-forward="true" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+            <state relative-caret-position="202">
+              <caret line="176" column="55" lean-forward="true" selection-start-line="176" selection-start-column="55" selection-end-line="176" selection-end-column="55" />
               <folding>
                 <element signature="e#64#109#0#PHP" expanded="true" />
                 <element signature="e#4680#4957#0#PHP" expanded="false" />
@@ -71,8 +72,8 @@
       <file leaf-file-name="ldap.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+            <state relative-caret-position="126">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -167,9 +168,9 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/app/config/services.yml" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
       </list>
     </option>
@@ -329,12 +330,12 @@
       <workItem from="1519721518413" duration="7456000" />
       <workItem from="1520523082512" duration="221000" />
       <workItem from="1520523632815" duration="1667000" />
-      <workItem from="1520929043189" duration="26253000" />
+      <workItem from="1520929043189" duration="26707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281494000" />
+    <option name="totallyTimeSpent" value="281948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
@@ -726,14 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="828">
@@ -758,10 +751,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="192" column="9" lean-forward="true" selection-start-line="192" selection-start-column="9" selection-end-line="192" selection-end-column="9" />
+        <state relative-caret-position="202">
+          <caret line="176" column="55" lean-forward="true" selection-start-line="176" selection-start-column="55" selection-end-line="176" selection-end-column="55" />
           <folding>
             <element signature="e#64#109#0#PHP" expanded="true" />
             <element signature="e#4680#4957#0#PHP" expanded="false" />

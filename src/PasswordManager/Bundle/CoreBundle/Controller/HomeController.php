@@ -171,7 +171,7 @@ class HomeController extends Controller
         $racine = "dc=afbiodiversite,dc=fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
         $justthese = array("ou", "sn", "givenname", "mail");
-        $filter="(CN=gerald.duveau@afbiodiversite.fr)";
+        $filter = "(cn=*)";
 
         $rootpw = "ID_retr!2017";
 

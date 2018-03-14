@@ -164,19 +164,23 @@ class HomeController extends Controller
     public function ldapAction(){
 
         $server = "ldap://159.180.228.235";
-
+        $person = "gerald";
         $port = "389";
         $user ="sysldapconnect@afbiodiversite.fr";
         $racine = " dc=afbiodiversite,dc=fr";
             $user ="sysldapconnect@afbiodiversite.fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
+        $justthese = array("ou", "sn", "givenname", "mail");
+
 
         $rootpw = "ID_retr!2017";
+        $filter="(|(sn=$person*)(givenname=$person*))";
 
 
         $ldapconn=ldap_connect($server);
         $ldapbind = ldap_bind($ldapconn, $user, $rootpw);
-
+        $result=ldap_search($ldapconn, $racine, $filter, $justthese);
+        $info = ldap_get_entries($ldapconn, $result);
 
 
 

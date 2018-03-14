@@ -184,7 +184,7 @@ class HomeController extends Controller
             $ldapbind = ldap_bind($ldapconn, $user, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
 
-                $result = ldap_search($ldapconn, $racine, "(cn=*)") or die ("Error in search query: " . ldap_error($ldapconn));
+                $result = ldap_search($ldapconn, $racine, "objectClass=".$person) or die ("Error in search query: " . ldap_error($ldapconn));
                 dump($result);
                 $data = ldap_get_entries($ldapconn, $result);
 

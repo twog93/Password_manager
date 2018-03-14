@@ -3,15 +3,7 @@
 {% block passwordmanager_platform_body_index %}
 
  <h1>Test protocole LDAP</h1>
-  {{ dump(kdao) }}
+  {{ dump(result) }}
+    {{ dump(data) }}
 
-    {{ dump(kdao) }}
-
-    La connection est :
-    {% if kdao %}
-        est passée
-        {% endif %}
-    {%  else %}
-        pas passée
-        {%  endif %}
 {% endblock %}

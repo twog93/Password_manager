@@ -181,7 +181,7 @@ class HomeController extends Controller
         ldap_set_option($ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3);
         if($ldapconn) {
 
-            $ldapbind = ldap_bind($ldapconn, $user2, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
+            $ldapbind = ldap_bind($ldapconn, $user, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
                 dump($ldapconn);
                 dump($ldapbind);

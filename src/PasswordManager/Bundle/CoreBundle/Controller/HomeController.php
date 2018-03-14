@@ -186,9 +186,9 @@ class HomeController extends Controller
                 dump($ldapconn);
                 dump($ldapbind);
                 $result = ldap_search($ldapconn, $racine,$filter) or die ("Error in search query: " . ldap_error($ldapconn));
-
+                dump($result);
                 $data = ldap_get_entries($ldapconn, $result);
-
+                dump($data);
 
             }
         }

@@ -167,8 +167,8 @@ class HomeController extends Controller
         $person = "gerald";
         $port = "389";
         $user ="sysldapconnect@afbiodiversite.fr";
+        $user2 ="cn=sysldapconnect@afbiodiversite.fr,dc=fr";
         $racine = "dc=afbiodiversite,dc=fr";
-            $user ="sysldapconnect@afbiodiversite.fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
         $justthese = array("ou", "sn", "givenname", "mail");
         $filter="(CN=duveau)";
@@ -178,10 +178,10 @@ class HomeController extends Controller
 
 
         $ldapconn=ldap_connect($server);
-
+        ldap_set_option($ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3);
         if($ldapconn) {
 
-            $ldapbind = ldap_bind($ldapconn, $rootdn, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
+            $ldapbind = ldap_bind($ldapconn, $user2, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
                 dump($ldapconn);
                 dump($ldapbind);

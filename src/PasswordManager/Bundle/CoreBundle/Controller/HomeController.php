@@ -170,6 +170,8 @@ class HomeController extends Controller
         $user2 ="cn=sysldapconnect@afbiodiversite.fr,dc=fr";
         $racine = "dc=afbiodiversite,dc=fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
+        $search = "OU=****,DC=****,DC=***";
+        $FiltreSearch   = "(&(objectClass=user)(objectCategory=person)(sn=*))";
         $justthese = array("ou", "sn", "givenname", "mail");
         $filter="(CN=gerald.duveau@afbiodiversite.fr)";
 
@@ -181,16 +183,17 @@ class HomeController extends Controller
         ldap_set_option($ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3);
         if($ldapconn) {
 
-            $ldapbind = ldap_bind($ldapconn, $user, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
+            $ldapbind = ldap_bind($ldapconn, $user, $FiltreSearch) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
-
-                $result = ldap_search($ldapconn, $racine,$filter) or die ("Error in search query: " . ldap_error($ldapconn));
+                $result = ldap_search($ldapconn, $search,$filter) or die ("Error in search query: " . ldap_error($ldapconn));
+                //$result = ldap_search($ldapconn, $racine,$filter) or die ("Error in search query: " . ldap_error($ldapconn));
                 dump($result);
                 $data = ldap_get_entries($ldapconn, $result);
                 dump($data);
 
             }
         }
+        ldap_close($ldapconn);
 
 
 

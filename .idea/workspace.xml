@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ad327d-d6c0-4d94-a2b1-b6298283288b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config/temp/parameters.yml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/ldap.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,8 +87,8 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="173" column="33" lean-forward="false" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+            <state relative-caret-position="562">
+              <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding>
                 <element signature="e#64#109#0#PHP" expanded="true" />
                 <element signature="e#4680#4957#0#PHP" expanded="false" />
@@ -344,12 +342,12 @@
       <workItem from="1519721518413" duration="7456000" />
       <workItem from="1520523082512" duration="221000" />
       <workItem from="1520523632815" duration="1667000" />
-      <workItem from="1520929043189" duration="19563000" />
+      <workItem from="1520929043189" duration="20127000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274804000" />
+    <option name="totallyTimeSpent" value="275368000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1615" height="1054" extended-state="6" />
@@ -774,8 +772,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="173" column="33" lean-forward="false" selection-start-line="173" selection-start-column="33" selection-end-line="173" selection-end-column="33" />
+        <state relative-caret-position="562">
+          <caret line="181" column="0" lean-forward="true" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding>
             <element signature="e#64#109#0#PHP" expanded="true" />
             <element signature="e#4680#4957#0#PHP" expanded="false" />

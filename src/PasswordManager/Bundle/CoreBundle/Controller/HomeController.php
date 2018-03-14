@@ -168,34 +168,21 @@ class HomeController extends Controller
         $port = "389";
         $user ="sysldapconnect@afbiodiversite.fr";
         $racine = " dc=afbiodiversite,dc=fr";
-
+            $user ="sysldapconnect@afbiodiversite.fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
 
         $rootpw = "ID_retr!2017";
 
-        define(LDAP_OPT_DIAGNOSTIC_MESSAGE, 0x0032);
 
         $ldapconn=ldap_connect($server);
-       // $ldapbind = ldap_bind($sr, $user, $rootpw);
-       // $sr=ldap_bind($ds,$rootdn,$rootpw);
-
-       // $ldapbind = ldap_bind($ldapconn, $user, $rootpw);
+        $ldapbind = ldap_bind($ldapconn, $user, $rootpw);
 
 
 
 
-        $bind = ldap_bind($ldapconn, 'sysldapconnect@afbiodiversite.fr', 'ID_retr!2017');
-
-if ($bind) {
-    if (ldap_get_option($handle, LDAP_OPT_DIAGNOSTIC_MESSAGE, $extended_error)) {
-        echo "Error Binding to LDAP: $extended_error";
-    } else {
-        echo "Error Binding to LDAP: No additional information is available.";
-    }
-}
         return $this->render('PasswordManagerCoreBundle:Home:ldap.html.twig', array(
 
-            'kdao' => $bind,));
+            'kdao' => $ldapbind,));
 
     }
 

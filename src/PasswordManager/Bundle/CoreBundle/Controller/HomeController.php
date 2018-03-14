@@ -163,27 +163,39 @@ class HomeController extends Controller
 
     public function ldapAction(){
 
-        $server = "10.250.0.22";
+        $server = "ldap://159.180.228.235";
 
         $port = "389";
-
+        $user ="sysldapconnect@afbiodiversite.fr";
         $racine = " dc=afbiodiversite,dc=fr";
 
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
 
         $rootpw = "ID_retr!2017";
 
+        define(LDAP_OPT_DIAGNOSTIC_MESSAGE, 0x0032);
 
-        $ds=ldap_connect($server);
-        // on teste : le serveur LDAP est-il trouvé ?
-        if ($ds)
-            echo "Le résultat de connexion est ".$ds ."<br />";
-        else
-            die("connexion impossible au serveur LDAP");
-        $sr=ldap_bind($ds,$rootdn,$rootpw);
+        $ldapconn=ldap_connect($server);
+       // $ldapbind = ldap_bind($sr, $user, $rootpw);
+       // $sr=ldap_bind($ds,$rootdn,$rootpw);
+
+       // $ldapbind = ldap_bind($ldapconn, $user, $rootpw);
+
+
+
+
+        $bind = ldap_bind($ldapconn, 'sysldapconnect@afbiodiversite.fr', 'ID_retr!2017');
+
+if ($bind) {
+    if (ldap_get_option($handle, LDAP_OPT_DIAGNOSTIC_MESSAGE, $extended_error)) {
+        echo "Error Binding to LDAP: $extended_error";
+    } else {
+        echo "Error Binding to LDAP: No additional information is available.";
+    }
+}
         return $this->render('PasswordManagerCoreBundle:Home:ldap.html.twig', array(
 
-            'kdao' => $sr,));
+            'kdao' => $bind,));
 
     }
 

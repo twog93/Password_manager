@@ -169,7 +169,7 @@ class HomeController extends Controller
         $user ="sysldapconnect@afbiodiversite.fr";
         $user2 ="cn=sysldapconnect@afbiodiversite.fr,dc=fr";
         //$racine = "dc=afbiodiversite,dc=fr";
-        $racine = "OU=Utilisateurs,OU=AFB,DC=afbiodiversite,DC=fr"
+        $racine = "OU=Utilisateurs,OU=AFB,DC=afbiodiversite,DC=fr";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
         $search = "OU=****,DC=****,DC=***";
         $FiltreSearch   = "(&(objectClass=user)(objectCategory=person)(sn=*))";

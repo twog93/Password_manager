@@ -168,12 +168,13 @@ class HomeController extends Controller
         $port = "389";
         $user ="sysldapconnect@afbiodiversite.fr";
         $user2 ="cn=sysldapconnect@afbiodiversite.fr,dc=fr";
-        $racine = "dc=afbiodiversite,dc=fr";
+        //$racine = "dc=afbiodiversite,dc=fr";
+        $racine = "OU=Utilisateurs,OU=AFB,DC=afbiodiversite,DC=fr"
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
         $search = "OU=****,DC=****,DC=***";
         $FiltreSearch   = "(&(objectClass=user)(objectCategory=person)(sn=*))";
         $justthese = array("ou", "sn", "givenname", "mail");
-        $filter="(CN=gerald.duveau@afbiodiversite.fr)";
+        $filter="(CN=DUVEAU Gerald)";
 
         $rootpw = "ID_retr!2017";
 
@@ -185,7 +186,7 @@ class HomeController extends Controller
 
             $ldapbind = ldap_bind($ldapconn, $user, $rootpw) or die ("Error trying to bind: ".ldap_error($ldapconn));
             if ($ldapbind) {
-                $result = ldap_search($ldapconn, $search,$FiltreSearch) or die ("Error in search query: " . ldap_error($ldapconn));
+                $result = ldap_search($ldapconn, $racine,$FiltreSearch) or die ("Error in search query: " . ldap_error($ldapconn));
                 //$result = ldap_search($ldapconn, $racine,$filter) or die ("Error in search query: " . ldap_error($ldapconn));
                 dump($result);
                 $data = ldap_get_entries($ldapconn, $result);

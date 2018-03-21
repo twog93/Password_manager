@@ -27,7 +27,7 @@ services:
                     #encryption: tls
                     options:
                         protocol_version: 3
-                        referrals: true
+                        referrals: false
 
     # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:

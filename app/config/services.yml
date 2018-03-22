@@ -1,5 +1,4 @@
-# Learn more about services, parameters and containers at
-# https://symfony.com/doc/current/service_container.html
+
 parameters:
     #parameter_name: value
 
@@ -13,32 +12,36 @@ services:
         # this means you cannot fetch services directly from the container via $container->get()
         # if you need to do this, you can override this setting on individual services
         public: false
+        #Conditions roles
     password_manager_core.UserCondition:
             class:   PasswordManager\Bundle\CoreBundle\UserCondition\PasswordManagerUserCondition
             arguments: ["@security.token_storage"]
             public: true
-
-    Symfony\Component\Ldap\Ldap:
-            arguments: ['@Symfony\Component\Ldap\Adapter\ExtLdap\Adapter']
-    Symfony\Component\Ldap\Adapter\ExtLdap\Adapter:
+    #Authentication service for Ldap
+    app.ldap:
+        class: Symfony\Component\Ldap\Ldap
+        factory:
+            - 'Symfony\Component\Ldap\Ldap'
+            - 'create'
+        arguments:
+                    - 'ext_ldap'
+                    -
+                        host: %host%
+                        port: 389
+                        version: 3
+                        encryption: 'none'
+    #Provider service
+    app.provider.ldap:
+            class: PasswordManager\Bundle\UserBundle\Security\LdapUserProvider
             arguments:
-                -   host: 159.180.228.235
-                    port: 389
-                    #encryption: tls
-                    options:
-                        protocol_version: 3
-                        referrals: false
+                - "@app.ldap"
+                - "%ldap_base_dn%"
+                - "%ldap_dn_admin%"
+                - "%ldap_password%"
+                - [ROLE_USER]
+                - "uid"
+                - "@doctrine.orm.default_entity_manager"
 
-    # add more services, or override services that need manual wiring
-    # AppBundle\Service\ExampleService:
-    #     arguments:
-    #         $someArgument: 'some_value'
-  # ...
-#    app.form.registration:
-#        class: PasswordManager\Bundle\UserBundle\Form\RegistrationType
-#        tags:
-#            - { name: form.type, alias: app_user_registration }
-  # ...Add path for admin form
     admin.advert:
         class: PasswordManager\Bundle\PlatformBundle\Admin\AdvertAdmin
         arguments: [~, PasswordManager\Bundle\PlatformBundle\Entity\Advert, ~]

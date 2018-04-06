@@ -12,6 +12,7 @@ use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use PasswordManager\Bundle\UserBundle\Entity\User;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class LdapUserProvider implements UserProviderInterface
 {
@@ -35,8 +36,9 @@ class LdapUserProvider implements UserProviderInterface
      * @param string        $filter
      * @param string        $passwordAttribute
      */
-    public function __construct(LdapInterface $ldap, $baseDn, $searchDn = null, $searchPassword = null, array $defaultRoles = array(), $uidKey = 'sAMAccountName', EntityManager $em, $filterAdmin = '(memberUid={username})', $filter = '({uid_key}={username})', $passwordAttribute = null)
+    public function __construct(LdapInterface $ldap, $baseDn, $searchDn = null, $searchPassword = null, array $defaultRoles = array(), $uidKey = 'uid', EntityManager $em, $filterAdmin = '(memberUid={username})', $filter = '({uid_key}={username})', $passwordAttribute = null)
     {
+
         $this->ldap = $ldap;
         $this->baseDn = $baseDn;
         $this->searchDn = $searchDn;
@@ -64,7 +66,6 @@ class LdapUserProvider implements UserProviderInterface
 
         $entries = $search->execute();
         $count = count($entries);
-
         if (!$count) {
             throw new UsernameNotFoundException(sprintf('User "%s" not found.', $username));
         }
@@ -114,17 +115,24 @@ class LdapUserProvider implements UserProviderInterface
      */
     protected function loadUser($username, Entry $entry)
     {
-        $userRepository = $this->em->getRepository("AppBundle:User");
-        $user = $userRepository->findOneBy(array("username" => $username));
 
+        dump($this->getPassword($entry));
+        dump($this->passwordAttribute);
+        $userRepository = $this->em->getRepository("PasswordManagerUserBundle:User");
+        $user = $userRepository->findOneBy(array("username" => $username));
         if ($user === null) {
             $user = new User();
-            $user->setFirstname($entry->getAttribute("givenName")[0]);
-            $user->setLastname($entry->getAttribute("sn")[0]);
+            //$user->setFirstname($entry->getAttribute("givenName")[0]);
             $user->setEmail($entry->getAttribute("mail")[0]);
-            $user->setUsername($entry->getAttribute("uid")[0]);
+            $user->setUsername($entry->getAttribute("mail")[0]);
+            $user->setPassword("test");
             $user->setRoles($this->defaultRoles);
-
+           if (!$this->em->isOpen()) {
+                $this->em = $this->em->create(
+                    $this->em->getConnection(),
+                    $this->em->getConfiguration()
+                );
+            }
             $this->em->persist($user);
             $this->em->flush();
         } else {

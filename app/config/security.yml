@@ -31,7 +31,7 @@ security:
              # csrf_token_generator: security.csrf.token_manager
              form_login_ldap:
                      service: app.ldap
-                     dn_string: uid={username},OU=people,O=Wanadev,DC=wanadev,DC=org
+                     dn_string: uid={username},OU=Utilisateurs,OU=AFB,DC=afbiodiversite,DC=fr
                      check_path: fos_user_security_check
                      login_path: fos_user_security_login
                      default_target_path: /

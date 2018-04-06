@@ -39,9 +39,9 @@ services:
                 - "%ldap_dn_admin%"
                 - "%ldap_password%"
                 - [ROLE_USER]
-                - "uid"
+                - "mail"
                 - "@doctrine.orm.default_entity_manager"
-
+  #defined class for admin pages form
     admin.advert:
         class: PasswordManager\Bundle\PlatformBundle\Admin\AdvertAdmin
         arguments: [~, PasswordManager\Bundle\PlatformBundle\Entity\Advert, ~]

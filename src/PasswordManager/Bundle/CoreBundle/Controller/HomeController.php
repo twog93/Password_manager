@@ -164,7 +164,7 @@ class HomeController extends Controller
     public function ldapAction(){
 
         $server = "%host%";
-        $user = $this->container->getParameter('api_user')
+        $user = $this->container->getParameter('api_user');
 
         $racine = "%ldap_base_dn%";
         $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";

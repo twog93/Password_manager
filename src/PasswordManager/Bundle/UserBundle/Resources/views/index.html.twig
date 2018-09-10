@@ -16,7 +16,7 @@
                 <div class="col-md-12 text-white">
                     <h1 class="display-3 mb-4">Bienvenue sur le gestionnaire de passe</h1>
                     <p class="lead mb-5">un outil dédié pour vos besoins  de stockage de mot de passe</p>
-                    {% if  listAdverts  %}
+                    {% if  listPassswords  %}
                     <a class="btn btn-lg btn-outline-light mx-1"  href="{{ path('password_manager_platform_add') }}">Ajouter un mot de passe à ma liste</a>
                     <a class="btn btn-lg btn-primary mx-1"  href="{{ path('password_manager_platform_home')}}">Consulter ma liste de mot de passe</a>
                     {% else %}

@@ -49,25 +49,25 @@
                         {# Table list of password sort by category #}
                         {% block passwordmanager_platform_list %}
                         <tbody>
-                        {% for advert in listAdverts %}
+                        {% for password in listPasswords %}
                             <tr>
 
-                                <td><a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}"><b>{{ advert.title }}</b></a></td>
+                                <td><a href="{{ path('password_manager_platform_view', {'id': password.id}) }}"><b>{{ password.title }}</b></a></td>
                                 <td>
-                                    <a href="advert.url">{{ advert.url }}</a>
+                                    <a href="password.url">{{ password.url }}</a>
                                     </td>
-                                <td>{{ advert.login }}</td>
-                                <td>{{ advert.password }}</td>
-                                <td>le {{ advert.date|date('d/m/Y') }}</td>
+                                <td>{{ password.login }}</td>
+                                <td>{{ password.password }}</td>
+                                <td>le {{ password.date|date('d/m/Y') }}</td>
                                 <td>
-                                    {% if not advert.categories.empty %}
+                                    {% if not password.categories.empty %}
 
-                                            {% for category in advert.categories %}
+                                            {% for category in password.categories %}
                                                 {{ category.name }}{% if not loop.last %}<br> {% endif %}
                                             {% endfor %}
                                     {% endif %}
                                 </td>
-                                <td> {% if  advert.shared %}
+                                <td> {% if  password.shared %}
                                              Oui
                                     {% endif %}
                                     {% else %}

@@ -19,8 +19,8 @@
                 <div class="col-md-12 text-white">
                     <h1 class="display-3 mb-4">Bienvenue sur le gestionnaire de passe</h1>
                     <p class="lead mb-5">un outil dédié pour vos besoins  de stockage de mot de passe</p>
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   Passwords is defined   %}
+                        {% if  listPasswordss  %}
                             <a class="btn btn-lg btn-dark mx-1 text-white "  href="{{ path('password_manager_platform_home')}}">Consulter ma liste de mot de passe</a>
                         {% endif %}
                     {% endif %}
@@ -33,8 +33,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="py-5 col-md-6 transi">
-                {% if   listAdverts is defined   %}
-                    {% if  listAdverts  %}
+                {% if   listPasswords is defined   %}
+                    {% if  listPasswords  %}
                         {#{{ path('password_manager_platform_home',{'category':"FTP,SFTP"})}} #}
                     <a class="link-categories-wel" href='{{ path('password_manager_platform_home',{'category':'FTP,SFTP'})}}'>
                     <div class="row">
@@ -43,9 +43,9 @@
                             <h3 class="mb-3"><b>Liste des serveurs</b></h3>
                             <p class="my-1"><b>Accéder aux listes des mots de passe liés aux accès FTP, SFTP.</b></p>
                             {% set i = 0 %}
-                            {% for advert in listAdverts %}
-                                {% if not advert.categories.empty %}
-                                    {% for category in advert.categories %}
+                            {% for password in listPasswords %}
+                                {% if not password.categories.empty %}
+                                    {% for category in password.categories %}
                                         {% if category.name == "FTP,SFTP" %}
                                             {% set i = i + 1 %}
                                             {%  set categorie = "FTP,SFTP"  %}
@@ -65,7 +65,7 @@
                     </a>
                     {% endif %}
                 {% endif %}
-                    {% if listAdverts is empty %}
+                    {% if listPasswords is empty %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_add')}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-server"></i></div>
@@ -82,8 +82,8 @@
                 </div>
 
                 <div class="py-5 col-md-6 transi">
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   listPasswords is defined   %}
+                        {% if  listPasswords  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Sql' })}}">
                                 <div class="row">
 
@@ -92,9 +92,9 @@
                                         <h3 class="mb-3"><b>Base de données</b></h3>
                                         <p class="my-1"><b>Accèder à vos bases de données.</b></p>
                                         {% set j = 0 %}
-                                        {% for advert in listAdverts %}
-                                            {% if not advert.categories.empty %}
-                                                {% for category in advert.categories %}
+                                        {% for password in listPasswords %}
+                                            {% if not password.categories.empty %}
+                                                {% for category in password.categories %}
                                                     {% if category.name == "Sql" %}
                                                         {% set j = j + 1 %}
                                                         {%  set categorie = "Sql"  %}
@@ -114,7 +114,7 @@
                             </a>
                         {% endif %}
                     {% endif %}
-                    {% if  listAdverts is empty  %}
+                    {% if  listPasswords is empty  %}
 
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
@@ -133,8 +133,8 @@
             </div>
             <div class="row">
                 <div class="py-5 col-md-6 transi">
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   listPasswords is defined   %}
+                        {% if  listPasswords  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'user-admin'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
@@ -142,9 +142,9 @@
                                         <h3 class="mb-3"><b>Site web par identifiant</b></h3>
                                         <p class="my-1"><b>Accèder à vos mots de passe de connection de vos sites web préférés.</b></p>
                                         {% set j = 0 %}
-                                        {% for advert in listAdverts %}
-                                            {% if not advert.categories.empty %}
-                                                {% for category in advert.categories %}
+                                        {% for password in listPasswords %}
+                                            {% if not password.categories.empty %}
+                                                {% for category in password.categories %}
                                                     {% if category.name == "user-admin" %}
                                                         {% set j = j + 1 %}
                                                     {% endif %}
@@ -163,7 +163,7 @@
                             </a>
                         {% endif %}
                     {% endif %}
-                    {% if listAdverts is empty %}
+                    {% if listPasswords is empty %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
@@ -177,8 +177,8 @@
                     {% endif %}
                 </div>
                 <div class="py-5 col-md-6 transi">
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   listPasswords is defined   %}
+                        {% if  listPasswords  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Ssh'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-code"></i></div>
@@ -186,9 +186,9 @@
                                         <h3 class="mb-3"><b>Liste des accès SSH</b></h3>
                                         <p class="my-1"><b>Accéder aux listes des mots de passe liés aux accès SSH.</b></p>
                                         {% set j = 0 %}
-                                        {% for advert in listAdverts %}
-                                            {% if not advert.categories.empty %}
-                                                {% for category in advert.categories %}
+                                        {% for password in listPasswords %}
+                                            {% if not password.categories.empty %}
+                                                {% for category in password.categories %}
                                                     {% if category.name == "Ssh" %}
                                                         {% set j = j + 1 %}
                                                     {% endif %}
@@ -207,7 +207,7 @@
                             </a>
                         {% endif %}
                     {% endif %}
-                    {% if listAdverts is empty %}
+                    {% if listPasswords is empty %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fa-user"></i></div>
@@ -223,8 +223,8 @@
             </div>
             <div class="row">
                 <div class="py-5 col-md-6 transi">
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   listPasswords is defined   %}
+                        {% if  listPasswords  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'Autres'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
@@ -232,9 +232,9 @@
                                         <h3 class="mb-3"><b>Divers mots de passe</b></h3>
                                         <p class="my-1">Accèder à vos mots de passe inclassables.</p>
                                         {% set j = 0 %}
-                                        {% for advert in listAdverts %}
-                                            {% if not advert.categories.empty %}
-                                                {% for category in advert.categories %}
+                                        {% for password in listPasswords %}
+                                            {% if not password.categories.empty %}
+                                                {% for category in password.categories %}
                                                     {% if category.name == "Autres" %}
                                                         {% set j = j + 1 %}
                                                     {% endif %}
@@ -253,7 +253,7 @@
                             </a>
                         {% endif %}
                     {% endif %}
-                    {% if listAdverts is empty %}
+                    {% if listPasswords is empty %}
                         <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                             <div class="row">
                                 <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>
@@ -267,8 +267,8 @@
                     {%  endif %}
                 </div>
                 <div class="py-5 col-md-6 transi">
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   listPasswords is defined   %}
+                        {% if  listPasswords  %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_home',{'category':'shared'})}}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa fab fa-slideshare"></i></div>
@@ -282,7 +282,7 @@
                             </a>
                         {% endif %}
                     {% endif %}
-                    {% if listAdverts is empty %}
+                    {% if listPasswords is empty %}
                             <a class="link-categories-wel" href="{{ path('password_manager_platform_add') }}">
                                 <div class="row">
                                     <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa  fa-sign-in"></i></div>

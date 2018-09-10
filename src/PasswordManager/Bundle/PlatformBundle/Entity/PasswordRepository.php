@@ -10,11 +10,11 @@ class PasswordRepository extends EntityRepository{
   
     public function getPasswordWithCategories(array $categoryNames)
   {
-    $qb = $this->createQueryBuilder('a');
+    $qb = $this->createQueryBuilder('p');
 
     // On fait une jointure avec l'entité Category avec pour alias « c »
     $qb
-      ->join('a.categories', 'c')
+      ->join('p.categories', 'c')
       ->addSelect('c')
     ;
 
@@ -28,18 +28,18 @@ class PasswordRepository extends EntityRepository{
       ->getResult()
     ;
   }
-    public function getPasswordithCategoriesByAuthor($user_id, array $categoryNames)
+    public function getPasswordWithCategoriesByAuthor($user_id, array $categoryNames)
     {
-        $qb = $this->createQueryBuilder('a');
+        $qb = $this->createQueryBuilder('p');
 
         // On fait une jointure avec l'entité Category avec pour alias « c »
         $qb
-            ->join('a.categories', 'c')
+            ->join('p.categories', 'c')
             ->addSelect('c')
         ;
 
         // Puis on filtre sur le nom des catégories à l'aide d'un IN
-        $qb->where($qb->expr()->in('c.name', $categoryNames))->andWhere('a.user = :user_id')->setParameter('user_id', $user_id);
+        $qb->where($qb->expr()->in('c.name', $categoryNames))->andWhere('p.user = :user_id')->setParameter('user_id', $user_id);
         // Enfin, on retourne le résultat
         return $qb
             ->getQuery()
@@ -48,14 +48,14 @@ class PasswordRepository extends EntityRepository{
     }
     public function getPasswords($page, $nbPerPage)
   {
-     $query = $this->createQueryBuilder('a')
+     $query = $this->createQueryBuilder('p')
       // Jointure sur l'attribut image
-      ->leftJoin('a.image', 'i')
+      ->leftJoin('p.image', 'i')
       ->addSelect('i')
       // Jointure sur l'attribut categories
-      ->leftJoin('a.categories', 'c')
+      ->leftJoin('p.categories', 'c')
       ->addSelect('c')
-      ->orderBy('a.date', 'DESC')
+      ->orderBy('p.date', 'DESC')
       ->getQuery();
       
     $query->setFirstResult(($page-1) * $nbPerPage)->setMaxResults($nbPerPage);
@@ -66,8 +66,8 @@ class PasswordRepository extends EntityRepository{
     public function myFindUserId($user_id)
     {
 
-        $qb = $this->createQueryBuilder('a')
-            ->where('a.user = :user')
+        $qb = $this->createQueryBuilder('p')
+            ->where('p.user = :user')
             ->setParameter('user', $user_id)
         ;
 
@@ -80,9 +80,9 @@ class PasswordRepository extends EntityRepository{
     {
 
 
-        $qb = $this->createQueryBuilder('a');
+        $qb = $this->createQueryBuilder('p');
         $qb
-            ->join('a.fos_group', 'g')
+            ->join('p.fos_group', 'g')
             ->addSelect('g');
 
         $qb->where($qb->expr()->in('g.name', $groupNames));
@@ -94,14 +94,14 @@ class PasswordRepository extends EntityRepository{
     }
     public function getPasswordWithGroupByAuthor(array $groupNames)
     {
-        $qb = $this->createQueryBuilder('a')
-        ->join('a.groups', 'grp')
+        $qb = $this->createQueryBuilder('p')
+        ->join('p.groups', 'grp')
             ->addSelect('grp')
         ;
 
 
         $qb->where($qb->expr()->in('grp.name', $groupNames))
-            ->andWhere('a.shared = :shared')
+            ->andWhere('p.shared = :shared')
             ->setParameter('shared', true);
         // Enfin, on retourne le résultat
         return $qb
@@ -111,8 +111,8 @@ class PasswordRepository extends EntityRepository{
     }
     public function getPasswordhared()
     {
-        $qb = $this->createQueryBuilder('a')
-        ->where('a.shared = :shared')
+        $qb = $this->createQueryBuilder('p')
+        ->where('p.shared = :shared')
         ->setParameter('shared', true);
 
         return $qb

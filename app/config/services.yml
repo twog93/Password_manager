@@ -28,11 +28,11 @@ services:
 #        tags:
 #            - { name: form.type, alias: app_user_registration }
   # ...Add path for admin form
-    admin.advert:
-        class: PasswordManager\Bundle\PlatformBundle\Admin\AdvertAdmin
-        arguments: [~, PasswordManager\Bundle\PlatformBundle\Entity\Advert, ~]
+    admin.password:
+        class: PasswordManager\Bundle\PlatformBundle\Admin\PasswordAdmin
+        arguments: [~, PasswordManager\Bundle\PlatformBundle\Entity\Password, ~]
         tags:
-         - { name: sonata.admin, manager_type: orm, label: Advert }
+         - { name: sonata.admin, manager_type: orm, label: Password }
         public: true
     admin.user:
             class: PasswordManager\Bundle\UserBundle\Admin\UserAdmin

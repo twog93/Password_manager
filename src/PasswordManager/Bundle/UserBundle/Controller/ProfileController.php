@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use FOS\UserBundle\Event\GetResponseUserEvent;
 use FOS\UserBundle\Controller\ProfileController as BaseController;
 use Symfony\Component\HttpFoundation\Request;
-use PasswordManager\Bundle\PlatformBundle\Entity\AdvertRepository;
+use PasswordManager\Bundle\PlatformBundle\Entity\PasswordRepository;
 
 use FOS\UserBundle\Model\UserInterface;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
@@ -43,12 +43,12 @@ class ProfileController extends BaseController
     $roles = $this->container->get('password_manager_core.UserCondition');
     $roles = $roles->getRolesAdmin();
 
-    $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+    $listPasswords = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Password')->myFindUserId($userId);
 
     return $this->render('@FOSUser/Profile/show.html.twig', array(
         'user' => $user,
         'roles' => $roles,
-        'listAdverts' => $listAdverts,
+        'listPasswords' => $listPasswords,
         'userGroup' =>$usergroup,
 
     ));

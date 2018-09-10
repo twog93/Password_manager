@@ -8,11 +8,11 @@ use Doctrine\ORM\QueryBuilder;
 class ApplicationRepository extends EntityRepository{
 
 
-  public function getApplicationsWithAdvert($limit){
+  public function getApplicationsWithPassword($limit){
 
    $qb = $this->createQueryBuilder('a');
 
-   $qb->join('a.advert', 'adv')->addSelect('adv');
+   $qb->join('a.password', 'adv')->addSelect('adv');
 
    $qb->setMaxResults($limit);
 

@@ -43,8 +43,8 @@
 
                             <a class="nav-link" href="{{ path('password_manager_core_home') }}">Accueil</a>
                         </li>
-                        {% if   listAdverts is defined   %}
-                        {% if   listAdverts %}
+                        {% if   listPasswords is defined   %}
+                        {% if   listPasswords %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ path('password_manager_platform_home') }}">Mes mots de passe</a>
                             </li>
@@ -99,8 +99,8 @@
                             <h2 class="mb-4 text-secondary">Mapsite</h2>
                             <ul id="list-footer" class="list-unstyled">
                                 <li><a href="{{ path('password_manager_core_home') }}" class="text-white" >Accueil</a></li>
-                                {% if  listAdverts is defined  %}
-                                    {% if  listAdverts  %}
+                                {% if  listPasswords is defined  %}
+                                    {% if  listPasswords  %}
                                         <li>
                                             <a href="{{ path('password_manager_platform_home') }}" class="text-white">Mes mots de passe</a>
                                         </li>

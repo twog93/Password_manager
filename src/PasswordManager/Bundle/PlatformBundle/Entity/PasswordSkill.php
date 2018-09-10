@@ -5,12 +5,12 @@ namespace PasswordManager\Bundle\PlatformBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * AdvertSkill
+ * PasswordSkill
  *
- * @ORM\Table(name="advert_skill")
- * @ORM\Entity(repositoryClass="PasswordManager\Bundle\PlatformBundle\Repository\AdvertSkillRepository")
+ * @ORM\Table(name="password_skill")
+ * @ORM\Entity(repositoryClass="PasswordManager\Bundle\PlatformBundle\Repository\PasswordSkillRepository")
  */
-class AdvertSkill
+class PasswordSkill
 {
     /**
      * @var int
@@ -29,11 +29,11 @@ class AdvertSkill
     private $level;
 
     /**
-   * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Advert")
+   * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Password")
    * @ORM\JoinColumn(nullable=false)
    */
 
-    private $advert;
+    private $password;
 
      /**
    * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Skill")
@@ -56,7 +56,7 @@ class AdvertSkill
      *
      * @param string $level
      *
-     * @return AdvertSkill
+     * @return PasswordSkill
      */
     public function setLevel($level)
     {
@@ -76,27 +76,27 @@ class AdvertSkill
     }
 
     /**
-     * Set advert
+     * Set password
      *
-     * @param \PasswordManager\Bundle\PlatformBundle\Entity\Advert $advert
+     * @param \PasswordManager\Bundle\PlatformBundle\Entity\Password $password
      *
-     * @return AdvertSkill
+     * @return PasswordSkill
      */
-    public function setAdvert(\PasswordManager\Bundle\PlatformBundle\Entity\Advert $advert)
+    public function setPassword(\PasswordManager\Bundle\PlatformBundle\Entity\Password $password)
     {
-        $this->advert = $advert;
+        $this->password = $password;
 
         return $this;
     }
 
     /**
-     * Get advert
+     * Get password
      *
-     * @return \PasswordManager\Bundle\PlatformBundle\Entity\Advert
+     * @return \PasswordManager\Bundle\PlatformBundle\Entity\Password
      */
-    public function getAdvert()
+    public function getPassword()
     {
-        return $this->advert;
+        return $this->password;
     }
 
     /**
@@ -104,7 +104,7 @@ class AdvertSkill
      *
      * @param \PasswordManager\Bundle\PlatformBundle\Entity\Skill $skill
      *
-     * @return AdvertSkill
+     * @return PasswordSkill
      */
     public function setSkill(\PasswordManager\Bundle\PlatformBundle\Entity\Skill $skill)
     {

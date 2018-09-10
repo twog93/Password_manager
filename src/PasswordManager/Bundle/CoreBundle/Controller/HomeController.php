@@ -25,12 +25,12 @@ class HomeController extends Controller
         if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             //Display home Page
             $userId = $this->getUser()->getId();
-            $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+            $listPasswords = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Password')->myFindUserId($userId);
 
             return $this->render('PasswordManagerCoreBundle:Home:index.html.twig', array(
 
                 'roles' => $roles,
-                'listAdverts' => $listAdverts,
+                'listPasswords' => $listPasswords,
                 'currentUser' => $this->getUser()->getUsername()));
 
         }
@@ -64,7 +64,7 @@ class HomeController extends Controller
             $useremail = $this->getUser()->getEmail();
             $mailer = $this->container->get('mailer');
             $userId = $this->getUser()->getId();
-            $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+            $listPasswords = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Password')->myFindUserId($userId);
 
             //Send email User
             $message = (new \Swift_Message('Confirmation de réception de votre message'))
@@ -126,8 +126,8 @@ class HomeController extends Controller
     protected function checkGetPass(){
     //Under construction
         $userId = $this->getUser()->getId();
-        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
-        return $listAdverts;
+        $listPasswords = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Password')->myFindUserId($userId);
+        return $listPasswords;
 
     }
 
@@ -146,12 +146,12 @@ class HomeController extends Controller
         $roles = $this->container->get('password_manager_core.UserCondition');
         $roles = $roles->getRolesAdmin();
 
-        $listAdverts = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Advert')->myFindUserId($userId);
+        $listPasswords = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Password')->myFindUserId($userId);
 
 
         return $this->render('PasswordManagerCoreBundle:Home:generate_password.html.twig', array(
 
-            'listAdverts' => $listAdverts,
+            'listPasswords' => $listPasswords,
                 'roles' => $roles,
                 )
 

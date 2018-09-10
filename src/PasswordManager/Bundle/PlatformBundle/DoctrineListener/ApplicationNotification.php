@@ -28,7 +28,7 @@ class ApplicationNotification
     );
     
     $message
-      ->addTo($entity->getAdvert()->getAuthor()) // Ici bien sûr il faudrait un attribut "email", j'utilise "author" à la place
+      ->addTo($entity->getPassword()->getAuthor()) // Ici bien sûr il faudrait un attribut "email", j'utilise "author" à la place
       ->addFrom('admin@votresite.com')
     ;
 

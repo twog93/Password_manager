@@ -11,7 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use PasswordManager\Bundle\PlatformBundle\Entity\CategoryRepository;
 
-class AdvertEditType extends AbstractType
+class PasswordEditType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -29,7 +29,7 @@ class AdvertEditType extends AbstractType
 	 public function getParent()
 
   {
-    return AdvertType::class;
+    return PasswordType::class;
 
   }
 

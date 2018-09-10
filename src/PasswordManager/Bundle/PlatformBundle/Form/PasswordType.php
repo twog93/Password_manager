@@ -9,7 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+//use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use PasswordManager\Bundle\PlatformBundle\Entity\CategoryRepository;
@@ -20,7 +20,7 @@ use FOS\UserBundle\Form\Type\UsernameFormType;
 use PasswordManager\Bundle\UserBundle\Repository\GroupRepository;
 
 
-class AdvertType extends AbstractType
+class PasswordType extends AbstractType
 {
 
 
@@ -84,7 +84,7 @@ class AdvertType extends AbstractType
     {
         //$resolver->setRequired('currentUser');
         $resolver->setDefaults(array(
-            'data_class' => 'PasswordManager\Bundle\PlatformBundle\Entity\Advert',
+            'data_class' => 'PasswordManager\Bundle\PlatformBundle\Entity\Password',
             'currentUser' => '$user'
         ));
 
@@ -96,7 +96,7 @@ class AdvertType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'passwordmanager_bundle_platformbundle_advert';
+        return 'passwordmanager_bundle_platformbundle_password';
     }
 
 

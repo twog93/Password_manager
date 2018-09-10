@@ -15,8 +15,8 @@
                 <div class="col-md-12 text-white">
                     <h1 class="display-3 mb-4 error title">Gestionnaire de mots de passe</h1>
                     <p class="lead mb-5 error text">un outil dédié pour vos besoins  de stockage de mot de passe</p>
-                    {% if   listAdverts is defined   %}
-                        {% if  listAdverts  %}
+                    {% if   listPasswords is defined   %}
+                        {% if  listPasswords %}
                             <a class="btn btn-lg btn-dark mx-1 text-white "  href="{{ path('password_manager_platform_home')}}">Consulter ma liste de mot de passe</a>
                         {% endif %}
                     {% endif %}

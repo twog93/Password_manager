@@ -15,11 +15,11 @@ class Application
 {
 
   /**
-   * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Advert", inversedBy="applications")
+   * @ORM\ManyToOne(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Password", inversedBy="applications")
    * @ORM\JoinColumn(nullable=false)
    */
 
-  private $advert;
+  private $password;
 /**
    * @ORM\PrePersist
    */
@@ -28,7 +28,7 @@ class Application
 
   {
 
-    $this->getAdvert()->increaseApplication();
+    $this->getPassword()->increaseApplication();
 
   }
 
@@ -41,7 +41,7 @@ class Application
 
   {
 
-    $this->getAdvert()->decreaseApplication();
+    $this->getPassword()->decreaseApplication();
 
   }
 
@@ -171,26 +171,26 @@ class Application
     }
 
     /**
-     * Set advert
+     * Set password
      *
-     * @param \PasswordManager\Bundle\PlatformBundle\Entity\Advert $advert
+     * @param \PasswordManager\Bundle\PlatformBundle\Entity\Password $password
      *
      * @return Application
      */
-    public function setAdvert(\PasswordManager\Bundle\PlatformBundle\Entity\Advert $advert)
+    public function setPassword(\PasswordManager\Bundle\PlatformBundle\Entity\Password $password)
     {
-        $this->advert = $advert;
+        $this->password = $password;
 
         return $this;
     }
 
     /**
-     * Get advert
+     * Get password
      *
-     * @return \PasswordManager\Bundle\PlatformBundle\Entity\Advert
+     * @return \PasswordManager\Bundle\PlatformBundle\Entity\Password
      */
-    public function getAdvert()
+    public function getPassword()
     {
-        return $this->advert;
+        return $this->password;
     }
 }

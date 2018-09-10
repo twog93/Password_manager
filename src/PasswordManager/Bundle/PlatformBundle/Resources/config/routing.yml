@@ -1,42 +1,42 @@
 password_manager_platform_home:
     path:    /{category}
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:index , category: all }
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:index , category: all }
     requirements:
         category:  "[a-zA-Z0-9,.-]+"
 
 password_manager_platform_view:
-    path:    /advert/{id}
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:view }
+    path:    /password/{id}
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:view }
 
 password_manager_platform_view_slug:
     path:  /{year}/{slug}.{_format}
     defaults:
-        _controller: PasswordManagerPlatformBundle:Advert:viewSlug 
+        _controller: PasswordManagerPlatformBundle:Password:viewSlug
         format:     html
     requirements:
         year:  \d{4}
         format:  html|xml|csv
 
 password_manager_platform_add:
-    path:    /add/advert
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:add }
+    path:    /add/password
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:add }
 
 password_manager_platform_edit:
     path:    /edit/{id}
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:edit }
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:edit }
     requirements:
         id: \d+
 
 password_manager_platform_delete:
     path:      /delete/{id}
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:delete }
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:delete }
     requirements:
         id: \d+
 
 password_manager_platform_test:
     path:    /test
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:listAnnonce }
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:listAnnonce }
 
 password_manager_platform_ordered:
-    path:    /list/advert
-    defaults:  { _controller: PasswordManagerPlatformBundle:Advert:listAnnonce }
+    path:    /list/password
+    defaults:  { _controller: PasswordManagerPlatformBundle:Password:listAnnonce }

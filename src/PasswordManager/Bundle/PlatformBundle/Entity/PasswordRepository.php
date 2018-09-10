@@ -6,9 +6,9 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 
-class AdvertRepository extends EntityRepository{
+class PasswordRepository extends EntityRepository{
   
-    public function getAdvertWithCategories(array $categoryNames)
+    public function getPasswordWithCategories(array $categoryNames)
   {
     $qb = $this->createQueryBuilder('a');
 
@@ -28,7 +28,7 @@ class AdvertRepository extends EntityRepository{
       ->getResult()
     ;
   }
-    public function getAdvertWithCategoriesByAuthor($user_id, array $categoryNames)
+    public function getPasswordithCategoriesByAuthor($user_id, array $categoryNames)
     {
         $qb = $this->createQueryBuilder('a');
 
@@ -46,7 +46,7 @@ class AdvertRepository extends EntityRepository{
             ->getResult()
             ;
     }
-    public function getAdverts($page, $nbPerPage)
+    public function getPasswords($page, $nbPerPage)
   {
      $query = $this->createQueryBuilder('a')
       // Jointure sur l'attribut image
@@ -92,7 +92,7 @@ class AdvertRepository extends EntityRepository{
             ->getResult();
 
     }
-    public function getAdvertWithGroupByAuthor(array $groupNames)
+    public function getPasswordWithGroupByAuthor(array $groupNames)
     {
         $qb = $this->createQueryBuilder('a')
         ->join('a.groups', 'grp')
@@ -109,7 +109,7 @@ class AdvertRepository extends EntityRepository{
             ->getResult()
             ;
     }
-    public function getAdvertShared()
+    public function getPasswordhared()
     {
         $qb = $this->createQueryBuilder('a')
         ->where('a.shared = :shared')

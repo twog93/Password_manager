@@ -10,13 +10,13 @@ use Ambta\DoctrineEncryptBundle\Configuration\Encrypted;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 
 /**
- * Advert
+ * Password
  *
- * @ORM\Table(name="advert")
- * @ORM\Entity(repositoryClass="PasswordManager\Bundle\PlatformBundle\Entity\AdvertRepository")
+ * @ORM\Table(name="password")
+ * @ORM\Entity(repositoryClass="PasswordManager\Bundle\PlatformBundle\Entity\PasswordRepository")
  * @ORM\HasLifecycleCallbacks()
  */
-class Advert
+class Password
 {
 
 	/**
@@ -41,7 +41,7 @@ class Advert
     private $groups;
 
     /**
-    * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="advert")*
+    * @ORM\OneToMany(targetEntity="PasswordManager\Bundle\PlatformBundle\Entity\Application", mappedBy="password")*
     */
     private $applications;
 
@@ -145,7 +145,7 @@ class Advert
      *
      * @param \DateTime $date
      *
-     * @return advert
+     * @return password
      */
     public function setDate($date)
     {
@@ -169,7 +169,7 @@ class Advert
      *
      * @param string $title
      *
-     * @return advert
+     * @return Password
      */
     public function setTitle($title)
     {
@@ -193,7 +193,7 @@ class Advert
      *
      * @param string $content
      *
-     * @return Advert
+     * @return Password
      */
     public function setContent($content)
     {
@@ -239,7 +239,7 @@ class Advert
 
     $this->applications[] = $application;
 
-    $application->setAdvert($this);
+    $application->setPassword($this);
 
     return $this;
 
@@ -281,7 +281,7 @@ class Advert
      *
      * @param \DateTime $updatedAt
      *
-     * @return Advert
+     * @return Password
      */
     public function setUpdatedAt($updatedAt)
     {
@@ -348,7 +348,7 @@ class Advert
      *
      * @param string $slug
      *
-     * @return Advert
+     * @return Password
      */
     public function setSlug($slug)
     {
@@ -372,7 +372,7 @@ class Advert
      *
      * @param integer $nbApplications
      *
-     * @return Advert
+     * @return Password
      */
     public function setNbApplications($nbApplications)
     {
@@ -396,7 +396,7 @@ class Advert
      *
      * @param string $url
      *
-     * @return Advert
+     * @return Password
      */
     public function setUrl($url)
     {
@@ -420,7 +420,7 @@ class Advert
      *
      * @param string $login
      *
-     * @return Advert
+     * @return Password
      */
     public function setLogin($login)
     {
@@ -444,7 +444,7 @@ class Advert
      *
      * @param string $password
      *
-     * @return Advert
+     * @return Password
      */
     public function setPassword($password)
     {
@@ -468,7 +468,7 @@ class Advert
      *
      * @param \PasswordManager\Bundle\UserBundle\Entity\Group $group
      *
-     * @return Advert
+     * @return Password
      */
     public function addGroup(\PasswordManager\Bundle\UserBundle\Entity\Group $group)
     {
@@ -502,7 +502,7 @@ class Advert
      *
      * @param boolean $shared
      *
-     * @return Advert
+     * @return Password
      */
     public function setShared($shared)
     {

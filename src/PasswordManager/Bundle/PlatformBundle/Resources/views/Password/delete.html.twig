@@ -15,7 +15,7 @@
                         <div class="text-center col-4"><i class="d-block mx-auto fa fa-5x fa-trash-o"></i></div>
                         <div class="col-8">
                             <h5 class="mb-3"><b>Suppression </b></h5>
-                            <p class="my-1">Catégorie :{% for category in advert.categories %}
+                            <p class="my-1">Catégorie :{% for category in password.categories %}
                                                 {{ category.name }}
                                                 {% if not loop.last %},
                                                 {% endif %}
@@ -33,18 +33,18 @@
         <div class="col-md-12">
             <div id="text-delete-pass">
                 <p>
-                 Etes-vous certain de vouloir supprimer le mot de passe <b>"{{ advert.title }}" </b>?
+                 Etes-vous certain de vouloir supprimer le mot de passe <b>"{{ password.title }}" </b>?
                     <br/><br/>
                 </p >
-                {% if advert.shared == true %}
+                {% if password.shared == true %}
                     <p style="color:#d9534f;margin-bottom: 25px;"><b>
                             <i class="fa-3x fa fa-exclamation-triangle"></i> Ce mot de passe est en cours de partage.
                         </b></p>
                 {% endif %}
 
 
-                <form action="{{ path('password_manager_platform_delete', {'id': advert.id}) }}" method="post">
-                    <a href="{{ path('password_manager_platform_view', {'id': advert.id}) }}" class="btn btn-default">
+                <form action="{{ path('password_manager_platform_delete', {'id': password.id}) }}" method="post">
+                    <a href="{{ path('password_manager_platform_view', {'id': password.id}) }}" class="btn btn-default">
                     <i class="glyphicon glyphicon-chevron-left"></i>
                     Retour au mot de passe
                      </a>

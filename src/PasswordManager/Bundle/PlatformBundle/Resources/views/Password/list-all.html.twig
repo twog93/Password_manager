@@ -1,0 +1,29 @@
+{% extends "PasswordManagerPlatformBundle:Password:index.html.twig" %}
+{% block title %}
+  Liste de mes mots de passe | {{ parent() }}
+{% endblock %}
+
+{% block passwordmanager_platform_list_all %}
+    <tbody>
+    {% for password in listPassswords %}
+        <tr>
+            <td> {{ password.id }}</td>
+            <td>{{ password.title }}</td>
+            <td> <a href="{{ path('password_manager_platform_view', {'id': password.id}) }}">
+                    {{ password.title }}
+                </a></td>
+            <td>{{ password.login }}</td>
+            <td>{{ password.password }}</td>
+            <td>le {{ password.date|date('d/m/Y') }}</td>
+            <td>
+                {% if not password.categories.empty %}
+
+                    {% for category in password.categories %}
+                        {{ category.name }}{% if not loop.last %}<br> {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+ {% endblock %}

@@ -17,7 +17,7 @@
               <div class="col-8">
                 <h4 class="mb-3"><b>Détails du mot de passe</b></h4>
                 <h5 class="mb-3"><b>Catégorie : </b></h5>
-                <p class="my-1">{% for category in advert.categories %}
+                <p class="my-1">{% for category in password.categories %}
                       {{ category.name }}{% if not loop.last %}, {% endif %}
                   {% endfor %} </p>
             </div>
@@ -36,22 +36,22 @@
       <div class="col-sm-12">
         <div class="card text-center">
           <div class="card-header">
-            <h2><i class="fa fa-key fa-fw fa-lg"> </i> {{ advert.title }}</h2>
+            <h2><i class="fa fa-key fa-fw fa-lg"> </i> {{ password.title }}</h2>
           </div>
           <div class="card-block">
             <br/><br/>
-            <p class="card-text" style="text-align: center;padding: 30px;"><i><b>Informations complémentaires :</b></i> {{ advert.content }}</p>
+            <p class="card-text" style="text-align: center;padding: 30px;"><i><b>Informations complémentaires :</b></i> {{ password.content }}</p>
 
-            {% if advert.url %}
+            {% if password.url %}
             <p>
-              <a href="{{ advert.url }}" target="_blank" class="btn btn-default go-link"><i class="glyphicon glyphicon-link"></i> Accéder au site Web</a>
+              <a href="{{ password.url }}" target="_blank" class="btn btn-default go-link"><i class="glyphicon glyphicon-link"></i> Accéder au site Web</a>
 
             </p>
         {% endif %}
           </div>
           <div class="card-footer text-muted">
           <p>
-            <b>Login :</b><span id="selc-text" >{{ advert.login }}</span>
+            <b>Login :</b><span id="selc-text" >{{ password.login }}</span>
             <button class="field-clipboard" data-clipboard-target="#selc-text">
               Copier dans le presse-papier
             </button>
@@ -59,7 +59,7 @@
         </div>
           <div class="card-footer text-muted">
           <p>
-            <b>Mot de passe : </b><span id="selc-text-2" >{{ advert.password }}</span>
+            <b>Mot de passe : </b><span id="selc-text-2" >{{ password.password }}</span>
             <button style="float:right;margin-right:20px;" class="field-clipboard" data-clipboard-target="#selc-text-2">
               <img  style="width:16px;" src="{{ absolute_url(asset('img/copy.png')) }}" alt="Copier dans le presse-papier">
             </button>
@@ -67,11 +67,11 @@
         </div>
           <p style="color:#868e96;text-align:center;margin:0px 0 10px 0;"><i class="fa fa-asterisk" aria-hidden="true"><span style="margin-left:10px;">Cliquer sur l'icone pour copier directement le mot de passe dans le presse-papier</span></i></p>
           <div id="view-pass">
-            <a href="{{ path('password_manager_platform_edit', {'id': advert.id}) }}" class="btn btn-default">
+            <a href="{{ path('password_manager_platform_edit', {'id': password.id}) }}" class="btn btn-default">
               <i class="glyphicon glyphicon-edit"></i>
               Modifier le mot de passe
             </a>
-            <a href="{{ path('password_manager_platform_delete', {'id': advert.id}) }}" class="btn btn-default">
+            <a href="{{ path('password_manager_platform_delete', {'id': password.id}) }}" class="btn btn-default">
               <i class="glyphicon glyphicon-trash"></i>
               Supprimer le mot de passe
             </a>

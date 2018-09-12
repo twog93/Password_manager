@@ -49,10 +49,11 @@ class PasswordController extends Controller
   public function viewAction($id){
 
       //Get User Roles form service
-      $roles = $this->container->get('password_manager_coreœ.UserCondition');
+      $roles = $this->container->get('password_manager_core.UserCondition');
       $roles = $roles->getRolesAdmin();
 
       //Get User ID
+
       $userId = $this->getUser()->getId();
       $listPasswords = $this->getDoctrine()->getManager()->getRepository('PasswordManagerPlatformBundle:Password')->myFindUserId($userId);
       //If pass exist

@@ -2,35 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45ad327d-d6c0-4d94-a2b1-b6298283288b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Calculator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/password.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/password.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/standard_layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/services.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Admin/PasswordAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Admin/PasswordAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/PasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadCategory.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadPassword.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/file.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DoctrineListener/ApplicationNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DoctrineListener/ApplicationNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Application.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/ApplicationRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/ApplicationRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/PasswordRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/PasswordRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/PasswordSkill.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/PasswordSkill.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordEditType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordEditType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Repository/PasswordRepositoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Repository/PasswordRepositoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Repository/PasswordSkillRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Repository/PasswordSkillRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Repository/passwordRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Repository/passwordRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Controller/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Resources/views/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/DataFixtures/ORM/LoadUser.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +22,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
@@ -59,55 +43,66 @@
     <session id="-1486504965">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.5" value="6" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.7" value="7" />
           <entry key="project.open.time.8" value="5" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="console" value="1" />
-          <entry key="csv" value="2" />
-          <entry key="dist" value="1" />
+          <entry key="csv" value="3" />
+          <entry key="csv#" value="1" />
+          <entry key="dist" value="2" />
           <entry key="ico" value="1" />
-          <entry key="json" value="1" />
+          <entry key="json" value="2" />
           <entry key="lock" value="1" />
-          <entry key="php" value="82" />
+          <entry key="php" value="104" />
+          <entry key="phpunit" value="1" />
           <entry key="symfony_requirements" value="1" />
           <entry key="twig" value="36" />
-          <entry key="yml" value="14" />
+          <entry key="yml" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="JSON" value="2" />
-          <entry key="PHP" value="84" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="JSON" value="3" />
+          <entry key="PHP" value="107" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="Twig" value="36" />
-          <entry key="YAML" value="14" />
+          <entry key="XML" value="1" />
+          <entry key="YAML" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="56" />
-          <entry key="json" value="9" />
-          <entry key="php" value="411" />
+          <entry key="csv" value="17" />
+          <entry key="dummy" value="57" />
+          <entry key="json" value="12" />
+          <entry key="php" value="1350" />
           <entry key="twig" value="238" />
           <entry key="yml" value="73" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="9" />
-          <entry key="PHP" value="411" />
-          <entry key="PLAIN_TEXT" value="56" />
+          <entry key="JSON" value="12" />
+          <entry key="PHP" value="1350" />
+          <entry key="PLAIN_TEXT" value="74" />
           <entry key="Twig" value="238" />
           <entry key="YAML" value="73" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -115,46 +110,31 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadPassword.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-              <folding>
-                <element signature="e#76#126#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/PasswordManagerCoreBundle.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="33" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/UserCondition/PasswordManagerUserCondition.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
-              <folding>
-                <element signature="e#148#193#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Password.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="539">
+              <caret line="328" column="20" selection-start-line="328" selection-start-column="20" selection-end-line="328" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="50" />
               <folding>
-                <element signature="e#64#112#0#PHP" expanded="true" />
+                <element signature="e#60#92#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -162,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/PasswordController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="540">
+              <caret line="57" column="138" selection-start-line="57" selection-start-column="138" selection-end-line="57" selection-end-column="138" />
               <folding>
                 <element signature="e#69#140#0#PHP" expanded="true" />
               </folding>
@@ -172,49 +152,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="45" column="52" selection-start-line="45" selection-start-column="52" selection-end-line="45" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadCategory.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="58" />
+            <state relative-caret-position="5385">
+              <caret line="381" column="48" selection-start-line="381" selection-start-column="23" selection-end-line="381" selection-end-column="48" />
               <folding>
-                <element signature="e#76#126#0#PHP" expanded="true" />
+                <element signature="e#292#329#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/file.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13740">
-              <caret line="916" selection-start-line="916" selection-end-line="916" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="76" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -223,21 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dump</find>
-      <find>setsl</find>
-      <find>url</find>
-      <find>pass</find>
-      <find>groups</find>
-      <find>se</find>
-      <find>shared</find>
-      <find>$roles</find>
-      <find>layout.html.twig</find>
-      <find>layout</find>
-      <find>getAdvertWithCategoriesByAuthor</find>
-      <find>RegistrationController</find>
-      <find>Adverts</find>
-      <find>Advert</find>
-      <find>advert</find>
       <find>PasswordType</find>
       <find>sans groupe</find>
       <find>ByAuthor</find>
@@ -252,7 +181,22 @@
       <find>password_manager_core</find>
       <find>this-&gt;container</find>
       <find>his-&gt;container-&gt;ge</find>
+      <find>this-&gt;user()</find>
+      <find>getUser()</find>
       <find>user</find>
+      <find>getUser</find>
+      <find>addPassword</find>
+      <find>setTitle</find>
+      <find>addPass</find>
+      <find>content</find>
+      <find>alexand</find>
+      <find>getId</find>
+      <find>-&gt;getId</find>
+      <find>line</find>
+      <find>var_d</find>
+      <find>setShared</find>
+      <find>slug</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace>Passwords</replace>
@@ -266,16 +210,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/GroupAdmin.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/RoleAdmin.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin/UserAdmin.php" />
-        <option value="$PROJECT_DIR$/app/config/security.yml" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/Contact.php" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact-admin.html.twig" />
-        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/mailing-contact.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/email/resetting.email.twig" />
-        <option value="$PROJECT_DIR$/web/css/theme-master.css" />
         <option value="$PROJECT_DIR$/app/Resources/TwigBundle/views/Exception/error404.html.twig" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
@@ -316,6 +250,16 @@
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordType.php" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/PasswordRepository.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/tests/Controler/DefaultControllerTest.php" />
+        <option value="$PROJECT_DIR$/tests/Util/CalculatorTest.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Calculator.php" />
+        <option value="$PROJECT_DIR$/tests/PasswordManager/Bundle/PlatformBundle/CalculatorTest.php" />
+        <option value="$PROJECT_DIR$/phpunit.xml.dist" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/product.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Product.php" />
+        <option value="$PROJECT_DIR$/tests/PasswordManager/Bundle/PlatformBundle/ProductTest.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/PasswordController.php" />
+        <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/file.csv" />
         <option value="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadPassword.php" />
       </list>
     </option>
@@ -405,13 +349,36 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/imag/ldap-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3666" />
-    <option name="y" value="109" />
-    <option name="width" value="1670" />
-    <option name="height" value="787" />
+    <option name="x" value="960" />
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -419,6 +386,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -470,7 +438,7 @@
               <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="CoreBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="UserCondition" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
@@ -506,29 +474,101 @@
               <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
               <item name="Bundle" type="462c0819:PsiDirectoryNode" />
               <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
+              <item name="ORM" type="462c0819:PsiDirectoryNode" />
+              <item name="loadexistPass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="UserBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="password_manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="password_manager" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="PasswordManager" type="462c0819:PsiDirectoryNode" />
+              <item name="Bundle" type="462c0819:PsiDirectoryNode" />
+              <item name="PlatformBundle" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../standard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/DependencyInjection" />
-      <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM" />
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Admin" />
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Form" />
       <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/DependencyInjection" />
+      <recent name="$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,12 +583,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.tests">
     <configuration name="GroupRepository.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/password/src/PasswordManager/Bundle/UserBundle/Repository/GroupRepository.php">
       <method v="2" />
     </configuration>
+    <configuration name="CalculatorTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="App\Tests\Util\CalculatorTest" file="$PROJECT_DIR$/tests/Util/CalculatorTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine workingDirectory="$PROJECT_DIR$" />
+      <TestRunner directory="$PROJECT_DIR$/tests" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.GroupRepository.php" />
+      <item itemvalue="PHPUnit.CalculatorTest" />
+      <item itemvalue="PHPUnit.tests" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.CalculatorTest" />
         <item itemvalue="JavaScript Debug.GroupRepository.php" />
       </list>
     </recent_temporary>
@@ -581,28 +638,55 @@
       <workItem from="1536577344663" duration="1600000" />
       <workItem from="1536579194613" duration="1797000" />
       <workItem from="1536581640399" duration="1792000" />
-      <workItem from="1536583457401" duration="281000" />
+      <workItem from="1536583457401" duration="1850000" />
+      <workItem from="1536585324947" duration="1881000" />
+      <workItem from="1536587224902" duration="2101000" />
+      <workItem from="1536590375778" duration="793000" />
+      <workItem from="1536649841221" duration="1946000" />
+      <workItem from="1536652011815" duration="876000" />
+      <workItem from="1536655960893" duration="1798000" />
+      <workItem from="1536657779286" duration="1799000" />
+      <workItem from="1536665433633" duration="70000" />
+      <workItem from="1536669804280" duration="102000" />
+      <workItem from="1536670121003" duration="1973000" />
+      <workItem from="1536672201447" duration="1801000" />
+      <workItem from="1536674019598" duration="1802000" />
+      <workItem from="1536675860238" duration="1851000" />
+      <workItem from="1536733344574" duration="1541000" />
+      <workItem from="1536735168341" duration="1824000" />
+      <workItem from="1536739111152" duration="599000" />
+      <workItem from="1536741843715" duration="1806000" />
+      <workItem from="1536743668992" duration="883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258958000" />
+    <option name="totallyTimeSpent" value="285973000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="3600" y="-2" width="1680" height="1052" extended-state="6" />
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24051407" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26093918" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32864866" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32911393" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -610,17 +694,17 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2495356" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32986537" />
+      <window_info anchor="right" id="Database" order="3" weight="0.16061899" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2374541" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23959444" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286334" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="TODO" order="4" weight="0.32864866" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32911393" />
@@ -631,7 +715,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2495356" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32986537" />
+      <window_info anchor="right" id="Database" order="3" weight="0.16061899" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,72 +724,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadCategory.php</url>
-          <line>6</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="284" column="39" selection-start-line="284" selection-start-column="39" selection-end-line="284" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/generate_password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Home/contact.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/EntityRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/EnquiryRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Repository/CategoryContactRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/CategoryContactType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Form/ContactType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/CategoryContactRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Entity/CategoryContact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="148" column="114" selection-start-line="148" selection-start-column="114" selection-end-line="148" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/DependencyInjection/PasswordManagerCoreBundleExtension.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -726,11 +745,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -745,13 +759,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing_dev.yml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="67" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="67" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -794,24 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/cache/prod/appProdProjectContainer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8475">
           <caret line="571" column="147" selection-start-line="571" selection-start-column="147" selection-end-line="571" selection-end-column="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -824,9 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
           <caret line="114" column="19" selection-start-line="114" selection-start-column="19" selection-end-line="114" selection-end-column="19" />
-          <folding>
-            <element signature="e#64#98#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,19 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="5" selection-end-column="54" />
-          <folding>
-            <element signature="e#60#92#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Password.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="e#64#112#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,44 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadCategory.php">
+    <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="58" />
-          <folding>
-            <element signature="e#76#126#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/file.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13740">
-          <caret line="916" selection-start-line="916" selection-end-line="916" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="76" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#69#140#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="690">
+          <caret line="46" column="34" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -914,21 +857,156 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/CoreBundle/UserCondition/PasswordManagerUserCondition.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="465">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Controler/DefaultControllerTest.php" />
+    <entry file="file://$PROJECT_DIR$/tests/Util/CalculatorTest.php" />
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/views/layout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="60" column="76" selection-start-line="60" selection-start-column="76" selection-end-line="60" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/phpunit.xml.dist">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/PasswordManager/Bundle/PlatformBundle/CalculatorTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/bin/phpunit">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="53" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Calculator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/PasswordManagerPlatformBundle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="49" column="10" selection-start-line="49" selection-start-column="10" selection-end-line="49" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/PasswordManager/Bundle/PlatformBundle/ProductTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="36" column="14" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Form/PasswordType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadCategory.php" />
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/DataFixtures/ORM/LoadUser.php" />
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="50" />
           <folding>
-            <element signature="e#148#193#0#PHP" expanded="true" />
+            <element signature="e#60#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Controller/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="57" column="138" selection-start-line="57" selection-start-column="138" selection-end-line="57" selection-end-column="138" />
+          <folding>
+            <element signature="e#69#140#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/ControllerTrait.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5385">
+          <caret line="381" column="48" selection-start-line="381" selection-start-column="23" selection-end-line="381" selection-end-column="48" />
+          <folding>
+            <element signature="e#292#329#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/LoadPassword.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="119">
+          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding>
             <element signature="e#76#126#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/.~lock.file.csv#">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/DataFixtures/ORM/loadexistPass/file.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PasswordManager/Bundle/PlatformBundle/Entity/Password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="328" column="20" selection-start-line="328" selection-start-column="20" selection-end-line="328" selection-end-column="20" />
         </state>
       </provider>
     </entry>

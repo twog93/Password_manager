@@ -167,13 +167,13 @@ class HomeController extends Controller
         $user = $this->container->getParameter('api_user');
 
         $racine = "%ldap_base_dn%";
-        $rootdn = "cn=sysldapconnect@afbiodiversite.fr,dc=afbiodiversite,dc=fr";
+        $rootdn = "#root_dn";
         $search = "OU=****,DC=****,DC=***";
         $FiltreSearch   = "(&(objectClass=user)(objectCategory=person)(sn=*))";
         $justthese = array("ou", "sn", "givenname", "mail");
         $filter="(CN=DUVEAU Gerald)";
 
-        $rootpw = "ID_retr!2017";
+        $rootpw = "%ldap_pass%";
 
 
 
